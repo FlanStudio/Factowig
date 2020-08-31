@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -10,12 +11,15 @@ public class MovementController : MonoBehaviour
     public float speed = 15f;
     public float rotationSpeed = 10f;
 
+    private PlaceableSurfaceSelector selector;
+
     private void Awake()
     {
         Debug.Log("Game Started");
+
+        selector = GetComponent<PlaceableSurfaceSelector>();
     }
 
-    [System.Obsolete]
     private void Update()
     {
         movementNorm = Vector2.zero;
@@ -59,5 +63,10 @@ public class MovementController : MonoBehaviour
         transform.Rotate(Vector3.up, diffAngle * rotationSpeed * Time.deltaTime);
 
         #endregion
+
+        if(movementNorm != Vector2.zero)
+        {
+            selector.SelectPlaceableSurfaces(1.5f);
+        }
     }
 }
