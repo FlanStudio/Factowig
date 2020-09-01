@@ -19,11 +19,13 @@ public class PlaceableSurfaceSelector : MonoBehaviour
             selectedSurface.Hide();
         
         RaycastHit hitInfo;
-        if(Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, 1 << LayerMask.NameToLayer("PlaceableSurface")))
+        if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, 1 << LayerMask.NameToLayer("PlaceableSurface")))
         {
             selectedSurface = hitInfo.collider.gameObject.GetComponent<PlaceableSurface>();
             selectedSurface.Show();
-        }  
+        }
+        else
+            selectedSurface = null;
     }
 
     private void OnDrawGizmos()
