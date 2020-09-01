@@ -9,7 +9,7 @@ public class PlaceableSurfaceSelector : MonoBehaviour
 
     private float height = 1.5f;
 
-    private PlaceableSurface selectedSurface;
+    public PlaceableSurface selectedSurface { get; private set; }
 
     public void SelectPlaceableSurfaces(float height)
     {
