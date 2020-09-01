@@ -8,7 +8,8 @@ public class MovementController : MonoBehaviour
 {    
     private Vector2 movementNorm = Vector2.zero;
 
-    public float speed = 15f;
+    public float idleStickThreshold = 0.2f;
+    public float speed = 5f;
     public float rotationSpeed = 10f;
 
     private PlaceableSurfaceSelector selector;
@@ -51,6 +52,12 @@ public class MovementController : MonoBehaviour
                     break;
                 }
         }
+
+        if(movementNorm.magnitude < idleStickThreshold)
+        {
+            movementNorm = Vector2.zero;
+        }
+
         #endregion
 
         #region APPLY MOVEMENT
