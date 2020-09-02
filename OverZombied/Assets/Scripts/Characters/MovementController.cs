@@ -10,14 +10,16 @@ public class MovementController : MonoBehaviour
 
     public float idleStickThreshold = 0.2f;
     public float speed = 5f;
-    public float rotationSpeed = 10f;
+    public float rotationSpeed = 15f;
 
     private PlaceableSurfaceSelector selector;
 
+    private int _playerID = -1;
+    public int playerID { get { return _playerID; } }
+
     private void Awake()
     {
-        Debug.Log("Game Started");
-
+        _playerID = InputController.Instance.GetMyPlayerID();
         selector = GetComponent<PlaceableSurfaceSelector>();
     }
 
@@ -26,26 +28,27 @@ public class MovementController : MonoBehaviour
         movementNorm = Vector2.zero;
 
         #region MOVEMENT VECTOR
-        switch (InputController.Instance.controls)
+        switch (InputController.Instance.controlsMode[playerID])
         {
-            case InputController.Controls.KeyboardMouse:
+            case InputController.ControlsMode.KeyboardMouse:
                 {
-                    if (InputController.Instance.keyboard.wKey.isPressed)
+                    if (InputController.Instance.playerInput[playerID].keyboard.wKey.isPressed)
                         movementNorm += new Vector2(0, 1);
-                    if (InputController.Instance.keyboard.sKey.isPressed)
+                    if (InputController.Instance.playerInput[playerID].keyboard.sKey.isPressed)
                         movementNorm += new Vector2(0, -1);
-                    if (InputController.Instance.keyboard.aKey.isPressed)
+                    if (InputController.Instance.playerInput[playerID].keyboard.aKey.isPressed)
                         movementNorm += new Vector2(-1, 0);
-                    if (InputController.Instance.keyboard.dKey.isPressed)
+                    if (InputController.Instance.playerInput[playerID].keyboard.dKey.isPressed)
                         movementNorm += new Vector2(1, 0);
 
                     break;
                 }
                 
-            case InputController.Controls.Controller:
+            case InputController.ControlsMode.Controller:
                 {
                     Vector2 value = Vector2.zero;
-                    value = InputController.Instance.gamepad.leftStick.ReadValue();
+                    if(InputController.Instance.playerInput[playerID].gamepad != null)
+                        value = InputController.Instance.playerInput[playerID].gamepad.leftStick.ReadValue();
 
                     movementNorm = value;
                     

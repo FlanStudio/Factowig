@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickUpController : MonoBehaviour
 {
+    private MovementController movementController;
+
     private PlaceableSurfaceSelector selector;
 
     [SerializeField]
@@ -12,25 +14,29 @@ public class PickUpController : MonoBehaviour
     private void Awake()
     {
         selector = GetComponent<PlaceableSurfaceSelector>();
+        movementController = GetComponent<MovementController>();
     }
 
     private void Update()
     {
         #region ACTION KEY CHECK
-        switch (InputController.Instance.controls)
+        switch (InputController.Instance.controlsMode[movementController.playerID])
         {
-            case InputController.Controls.KeyboardMouse:
+            case InputController.ControlsMode.KeyboardMouse:
                 {
-                    if(InputController.Instance.keyboard.eKey.wasPressedThisFrame)
+                    if(InputController.Instance.playerInput[movementController.playerID].keyboard.eKey.wasPressedThisFrame)
                     {
                         ActionKeyPressed();
                     }
 
                     break;
                 }
-            case InputController.Controls.Controller:
+            case InputController.ControlsMode.Controller:
                 {
-                    if(InputController.Instance.gamepad.buttonSouth.wasPressedThisFrame)
+                    if (InputController.Instance.playerInput[movementController.playerID].gamepad == null)
+                        break;
+
+                    if(InputController.Instance.playerInput[movementController.playerID].gamepad.buttonSouth.wasPressedThisFrame)
                     {
                         ActionKeyPressed();
                     }

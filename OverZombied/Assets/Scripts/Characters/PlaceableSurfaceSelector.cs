@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaceableSurfaceSelector : MonoBehaviour
 {
     public bool drawGizmos = false;
-    public float interactRadius = 1.5f;
+    public float interactRadius = 5f;
 
     private float height = 1.5f;
 
