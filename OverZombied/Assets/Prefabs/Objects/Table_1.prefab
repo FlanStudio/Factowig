@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906959034418434354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.312, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.83, z: 0}
   m_LocalScale: {x: 1.2, y: 0.088373244, z: 1}
   m_Children: []
   m_Father: {fileID: 269813264445255571}
@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8239148887279787372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.132, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.404, z: 0}
   m_LocalScale: {x: 1, y: 0.78554, z: 1}
   m_Children: []
   m_Father: {fileID: 269813264445255571}
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213109949445012932, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.12
+      value: -0.583
       objectReference: {fileID: 0}
     - target: {fileID: 4213109949445012932, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_LocalPosition.z
@@ -262,6 +262,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213109949445012932, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213109949445012934, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_Size.y
+      value: 0.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213109949445012934, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213109949445012934, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213109949823184296, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213109949823184296, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
