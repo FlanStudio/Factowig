@@ -6,14 +6,14 @@ public class PickUpController : MonoBehaviour
 {
     private MovementController movementController;
 
-    private PlaceableSurfaceSelector selector;
+    private Selector selector;
 
     [SerializeField]
     private GameObject pickedGameObject;
 
     private void Awake()
     {
-        selector = GetComponent<PlaceableSurfaceSelector>();
+        selector = GetComponent<Selector>();
         movementController = GetComponent<MovementController>();
     }
 
@@ -49,24 +49,33 @@ public class PickUpController : MonoBehaviour
 
     private void ActionKeyPressed()
     {
-        if (selector.selectedSurface == null)
-            return;
+        if(selector.selectedSurface != null)
+        {
+            if (selector.selectedSurface.pickableObject != null)
+            {
+                if (pickedGameObject == null)
+                {
+                    pickedGameObject = selector.selectedSurface.pickableObject;
+                    selector.selectedSurface.pickableObject = null;
+                    pickedGameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                if (pickedGameObject != null)
+                {
+                    selector.selectedSurface.PlacePickableObject(pickedGameObject);
+                    pickedGameObject = null;
+                }
+            }
+        }
 
-        if(selector.selectedSurface.pickableObject != null)
+        if(selector.selectedGenerator != null)
         {
             if(pickedGameObject == null)
             {
-                pickedGameObject = selector.selectedSurface.pickableObject;
-                selector.selectedSurface.pickableObject = null;
-                pickedGameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            if(pickedGameObject != null)
-            {
-                selector.selectedSurface.PlacePickableObject(pickedGameObject);
-                pickedGameObject = null;
+                GameObject obj = selector.selectedGenerator.GetObject();
+                pickedGameObject = obj;
             }
         }
     }

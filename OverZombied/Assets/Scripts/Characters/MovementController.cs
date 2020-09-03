@@ -12,7 +12,7 @@ public class MovementController : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 15f;
 
-    private PlaceableSurfaceSelector selector;
+    private Selector selector;
 
     private int _playerID = -1;
     public int playerID { get { return _playerID; } }
@@ -20,7 +20,7 @@ public class MovementController : MonoBehaviour
     private void Awake()
     {
         _playerID = InputController.Instance.GetMyPlayerID();
-        selector = GetComponent<PlaceableSurfaceSelector>();
+        selector = GetComponent<Selector>();
     }
 
     private void Update()
@@ -76,7 +76,7 @@ public class MovementController : MonoBehaviour
 
         if(movementNorm != Vector2.zero)
         {
-            selector.SelectPlaceableSurfaces(1.5f);
+            selector.Select();
         }
     }
 }
