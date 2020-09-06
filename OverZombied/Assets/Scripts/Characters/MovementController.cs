@@ -17,6 +17,8 @@ public class MovementController : MonoBehaviour
     private int _playerID = -1;
     public int playerID { get { return _playerID; } }
 
+    public bool move = true;
+
     private void Awake()
     {
         _playerID = InputController.Instance.GetMyPlayerID();
@@ -64,7 +66,8 @@ public class MovementController : MonoBehaviour
         #endregion
 
         #region APPLY MOVEMENT
-        transform.Translate(new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.deltaTime, Space.World);
+        if(move)
+            transform.Translate(new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.deltaTime, Space.World);
         #endregion
 
         #region LOOK AHEAD

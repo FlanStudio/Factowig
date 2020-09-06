@@ -45,6 +45,41 @@ public class PickUpController : MonoBehaviour
                 }
         }
         #endregion
+
+        #region THROW KEY CHECK
+        switch (InputController.Instance.controlsMode[movementController.playerID])
+        {
+            case InputController.ControlsMode.KeyboardMouse:
+                {
+                    if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasPressedThisFrame)
+                    {
+                        ThrowKeyPressed();
+                    }
+                    else if(InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasReleasedThisFrame)
+                    {
+                        ThrowKeyReleased();
+                    }
+
+                    break;
+                }
+            case InputController.ControlsMode.Controller:
+                {
+                    if (InputController.Instance.playerInput[movementController.playerID].gamepad == null)
+                        break;
+
+                    if (InputController.Instance.playerInput[movementController.playerID].gamepad.buttonWest.wasPressedThisFrame)
+                    {
+                        ThrowKeyPressed();
+                    }
+                    else if (InputController.Instance.playerInput[movementController.playerID].gamepad.buttonWest.wasReleasedThisFrame)
+                    {
+                        ThrowKeyReleased();
+                    }
+
+                    break;
+                }
+        }
+        #endregion
     }
 
     private void ActionKeyPressed()
@@ -78,5 +113,17 @@ public class PickUpController : MonoBehaviour
                 pickedGameObject = obj;
             }
         }
+    }
+
+    private void ThrowKeyPressed()
+    {
+        //IF YOU HAVE SOMETHING THROWABLE IN HAND
+        movementController.move = false;
+    }
+
+    private void ThrowKeyReleased()
+    {
+        //TODO: THROW THE HOLDED OBJECT IN THE LOOKING DIRECTION
+        movementController.move = true;
     }
 }
