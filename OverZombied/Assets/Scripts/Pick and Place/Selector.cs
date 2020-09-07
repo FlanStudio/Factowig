@@ -10,6 +10,7 @@ public class Selector : MonoBehaviour
 
     public PlaceableSurface selectedSurface = null;
     public ObjectGenerator selectedGenerator = null;
+    public GameObject groundObject = null;
 
     public void Select()
     {
@@ -22,6 +23,7 @@ public class Selector : MonoBehaviour
 
         if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
         {
+            groundObject = null;
             selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
             selectedSurface = hitInfo.collider.gameObject.GetComponent<PlaceableSurface>();
             if (selectedSurface)
@@ -31,6 +33,18 @@ public class Selector : MonoBehaviour
         {
             selectedGenerator = null;
             selectedSurface = null;
+
+            //Check for grounded objects
+            RaycastHit hitInfoGrounded;
+
+            if (Physics.Raycast(new Vector3(transform.position.x, 0, transform.position.z), transform.forward, out hitInfoGrounded, interactRadius, 1 << LayerMask.NameToLayer("PickableObject")))
+            {
+                groundObject = hitInfoGrounded.collider.gameObject;
+            }
+            else
+            {
+                groundObject = null;
+            }
         }
     }
 

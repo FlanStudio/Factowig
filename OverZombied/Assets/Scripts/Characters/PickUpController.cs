@@ -9,7 +9,12 @@ public class PickUpController : MonoBehaviour
     private Selector selector;
 
     [SerializeField]
-    private GameObject pickedGameObject;
+    private PickableObject pickedObject;
+
+    public Vector3 localThrowDirection = Vector3.forward;
+    public float throwStrength = 10f;
+
+    public float dropDistance = 1f;
 
     private void Awake()
     {
@@ -84,46 +89,81 @@ public class PickUpController : MonoBehaviour
 
     private void ActionKeyPressed()
     {
+        selector.Select();
+
         if(selector.selectedSurface != null)
         {
             if (selector.selectedSurface.pickableObject != null)
             {
-                if (pickedGameObject == null)
+                if (pickedObject == null)
                 {
-                    pickedGameObject = selector.selectedSurface.pickableObject;
+                    pickedObject = selector.selectedSurface.pickableObject.GetComponent<PickableObject>();
                     selector.selectedSurface.pickableObject = null;
-                    pickedGameObject.SetActive(false);
+                    pickedObject.gameObject.SetActive(false);
                 }
             }
             else
             {
-                if (pickedGameObject != null)
+                if (pickedObject != null)
                 {
-                    selector.selectedSurface.PlacePickableObject(pickedGameObject);
-                    pickedGameObject = null;
+                    selector.selectedSurface.PlacePickableObject(pickedObject.gameObject);
+                    pickedObject = null;
                 }
             }
         }
 
-        if(selector.selectedGenerator != null)
+        else if(selector.selectedGenerator != null)
         {
-            if(pickedGameObject == null)
+            if(pickedObject == null)
             {
                 GameObject obj = selector.selectedGenerator.GetObject();
-                pickedGameObject = obj;
+                pickedObject = obj.GetComponent<PickableObject>();
+            }
+        }
+
+        else if(selector.groundObject != null)
+        {
+            if(pickedObject == null)
+            {
+                GameObject obj = selector.groundObject;
+                pickedObject = obj.GetComponent<PickableObject>();
+                pickedObject.rb.isKinematic = true;
+                pickedObject.gameObject.SetActive(false);
+            }
+        }
+
+        else
+        {
+            if(pickedObject != null)
+            {
+                //Drop on the floor
+                pickedObject.transform.position = transform.position + transform.forward * dropDistance + new Vector3(0f, pickedObject.GetComponent<Renderer>().bounds.extents.y, 0f); ;
+                pickedObject.gameObject.SetActive(true);
+                pickedObject.rb.isKinematic = false;
+                pickedObject = null;
             }
         }
     }
 
     private void ThrowKeyPressed()
     {
-        //IF YOU HAVE SOMETHING THROWABLE IN HAND
-        movementController.move = false;
+        if(pickedObject != null && pickedObject.throwable)
+        {
+            movementController.move = false;
+        }    
     }
 
     private void ThrowKeyReleased()
     {
-        //TODO: THROW THE HOLDED OBJECT IN THE LOOKING DIRECTION
+        if(pickedObject != null && pickedObject.throwable)
+        {
+            pickedObject.rb.isKinematic = false;
+            pickedObject.gameObject.SetActive(true);
+            pickedObject.transform.position = transform.position + new Vector3(0f, 1f, 0f) + transform.forward * dropDistance;
+            pickedObject.rb.AddForce(transform.TransformDirection(localThrowDirection).normalized * throwStrength, ForceMode.Impulse);
+            pickedObject = null;
+        }
+
         movementController.move = true;
     }
 }
