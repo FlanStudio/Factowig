@@ -15,8 +15,8 @@ TagManager:
   - 
   - PlaceableSurface
   - ObjectGenerator
-  - PickableObject
-  - 
+  - Ingredient
+  - Client
   - 
   - 
   - 

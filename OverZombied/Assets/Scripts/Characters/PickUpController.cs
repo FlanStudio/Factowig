@@ -16,6 +16,8 @@ public class PickUpController : MonoBehaviour
 
     public float dropDistance = 1f;
 
+    private bool startedThrowing = false;
+
     private void Awake()
     {
         selector = GetComponent<Selector>();
@@ -58,11 +60,15 @@ public class PickUpController : MonoBehaviour
                 {
                     if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasPressedThisFrame)
                     {
-                        ThrowKeyPressed();
+                        UseKeyPressed();
                     }
                     else if(InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasReleasedThisFrame)
                     {
-                        ThrowKeyReleased();
+                        UseKeyReleased();
+                    }
+                    else if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.isPressed)
+                    {
+                        UseKeyRepeated();
                     }
 
                     break;
@@ -74,11 +80,15 @@ public class PickUpController : MonoBehaviour
 
                     if (InputController.Instance.playerInput[movementController.playerID].gamepad.buttonWest.wasPressedThisFrame)
                     {
-                        ThrowKeyPressed();
+                        UseKeyPressed();
                     }
                     else if (InputController.Instance.playerInput[movementController.playerID].gamepad.buttonWest.wasReleasedThisFrame)
                     {
-                        ThrowKeyReleased();
+                        UseKeyReleased();
+                    }
+                    else if (InputController.Instance.playerInput[movementController.playerID].gamepad.buttonWest.isPressed)
+                    {
+                        UseKeyRepeated();
                     }
 
                     break;
@@ -91,7 +101,16 @@ public class PickUpController : MonoBehaviour
     {
         selector.Select();
 
-        if(selector.selectedSurface != null)
+        if(selector.selectedClient != null)
+        {
+            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.RESOURCE)
+            {
+                selector.selectedClient.GiveIngredient(pickedObject);
+                pickedObject = null;
+            }
+        }
+
+        else if(selector.selectedSurface != null)
         {
             if (selector.selectedSurface.pickableObject != null)
             {
@@ -145,23 +164,41 @@ public class PickUpController : MonoBehaviour
         }
     }
 
-    private void ThrowKeyPressed()
+    private void UseKeyRepeated()
     {
+        selector.Select();
+
+        if (selector.selectedClient != null)
+        {
+            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
+            {
+                selector.selectedClient.UseTool(pickedObject);
+            }
+        }
+    }
+
+    private void UseKeyPressed()
+    {
+        if (selector.selectedClient != null)
+            return;
+
         if(pickedObject != null && pickedObject.throwable)
         {
+            startedThrowing = true;
             movementController.move = false;
         }    
     }
 
-    private void ThrowKeyReleased()
+    private void UseKeyReleased()
     {
-        if(pickedObject != null && pickedObject.throwable)
+        if(startedThrowing && pickedObject != null && pickedObject.throwable)
         {
             pickedObject.rb.isKinematic = false;
             pickedObject.gameObject.SetActive(true);
             pickedObject.transform.position = transform.position + new Vector3(0f, 1f, 0f) + transform.forward * dropDistance;
             pickedObject.rb.AddForce(transform.TransformDirection(localThrowDirection).normalized * throwStrength, ForceMode.Impulse);
             pickedObject = null;
+            startedThrowing = false;
         }
 
         movementController.move = true;

@@ -38,7 +38,7 @@ public class ClientManager : MonoBehaviour
 
         uint amountChairs = (uint)Mathf.FloorToInt(chairsPercent * (clients.Count - startEnabled)) + startEnabled;
 
-        while(amountChairs > enabledChairs)
+        if(amountChairs > enabledChairs)
         {
             foreach(ClientBehavior chair in clients)
             {
