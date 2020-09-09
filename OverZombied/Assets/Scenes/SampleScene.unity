@@ -2906,6 +2906,10 @@ MonoBehaviour:
   - {fileID: 1848648378}
   - {fileID: 1757196245}
   - {fileID: 1950181341}
+  availableRecipes:
+  - {fileID: 11400000, guid: ce424dd444d71524e850c9c7888ccbeb, type: 2}
+  - {fileID: 11400000, guid: d192594f795cad14bbeb38535bf83cb9, type: 2}
+  - {fileID: 11400000, guid: 89a1674d433944f46a0232faa667d210, type: 2}
 --- !u!1 &2133948489
 GameObject:
   m_ObjectHideFlags: 0

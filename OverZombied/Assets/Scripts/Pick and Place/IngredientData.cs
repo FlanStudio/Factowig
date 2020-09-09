@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PickableObjectData", menuName = "FlanStudio/PickableObjectData", order = 1)]
-public class PickableObjectData : ScriptableObject
+[CreateAssetMenu(fileName = "Ingredient", menuName = "FlanStudio/Ingredient", order = 1)]
+public class IngredientData : ScriptableObject
 {
     public enum TYPE { TOOL, RESOURCE }
     public TYPE type = TYPE.TOOL;

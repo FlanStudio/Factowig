@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ClientManager : MonoBehaviour
 {
+    public static ClientManager Instance;
+
     public uint startEnabled = 2u;
     public float totalTime = 10f;
 
@@ -12,10 +14,14 @@ public class ClientManager : MonoBehaviour
     [SerializeField]
     private List<ClientBehavior> clients = new List<ClientBehavior>();
 
+    public List<Recipe> availableRecipes = new List<Recipe>();
+
     private uint enabledChairs = 0u;
 
     private void Awake()
     {
+        Instance = this;
+
         if(startEnabled <= clients.Count)
         {
             for(int i = 0; i < startEnabled; ++i)

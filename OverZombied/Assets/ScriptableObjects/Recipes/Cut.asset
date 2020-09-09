@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9954c2955378e434ab043a3cb65f4faf, type: 3}
-  m_Name: Hair Iron
+  m_Script: {fileID: 11500000, guid: 8fd6f5e9496dd8742a254bf86bc175bb, type: 3}
+  m_Name: Cut
   m_EditorClassIdentifier: 
-  type: 0
-  name: Hair Iron
-  actionPresses: 8
+  ingredients:
+  - {fileID: 11400000, guid: 76cddec1012bf58478383166a8faacd1, type: 2}

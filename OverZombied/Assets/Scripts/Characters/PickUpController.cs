@@ -9,7 +9,7 @@ public class PickUpController : MonoBehaviour
     private Selector selector;
 
     [SerializeField]
-    private PickableObject pickedObject;
+    private Ingredient pickedObject;
 
     public Vector3 localThrowDirection = Vector3.forward;
     public float throwStrength = 10f;
@@ -97,7 +97,7 @@ public class PickUpController : MonoBehaviour
             {
                 if (pickedObject == null)
                 {
-                    pickedObject = selector.selectedSurface.pickableObject.GetComponent<PickableObject>();
+                    pickedObject = selector.selectedSurface.pickableObject.GetComponent<Ingredient>();
                     selector.selectedSurface.pickableObject = null;
                     pickedObject.gameObject.SetActive(false);
                 }
@@ -117,7 +117,7 @@ public class PickUpController : MonoBehaviour
             if(pickedObject == null)
             {
                 GameObject obj = selector.selectedGenerator.GetObject();
-                pickedObject = obj.GetComponent<PickableObject>();
+                pickedObject = obj.GetComponent<Ingredient>();
             }
         }
 
@@ -126,7 +126,7 @@ public class PickUpController : MonoBehaviour
             if(pickedObject == null)
             {
                 GameObject obj = selector.groundObject;
-                pickedObject = obj.GetComponent<PickableObject>();
+                pickedObject = obj.GetComponent<Ingredient>();
                 pickedObject.rb.isKinematic = true;
                 pickedObject.gameObject.SetActive(false);
             }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PickableObject : MonoBehaviour
+public class Ingredient : MonoBehaviour
 {
-    public PickableObjectData data;
+    public IngredientData data;
     public Rigidbody rb;
 
     public bool throwable = true;

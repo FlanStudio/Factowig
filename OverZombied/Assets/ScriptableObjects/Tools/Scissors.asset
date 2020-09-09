@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   name: Scissors
-  actionPresses: 8
+  actionPressSeconds: 5
