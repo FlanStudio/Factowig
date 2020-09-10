@@ -18,6 +18,8 @@ public class ClientManager : MonoBehaviour
 
     private uint enabledChairs = 0u;
 
+    public float currentMoney = 0f;
+
     private void Awake()
     {
         Instance = this;

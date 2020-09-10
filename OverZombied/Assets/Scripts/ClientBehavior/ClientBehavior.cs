@@ -10,6 +10,8 @@ public class ClientBehavior : MonoBehaviour
     //Only used for tool actions
     public float usefulCounter = 0f;
 
+    public float angryTime = 0f;
+
     public float minTimeToRespawn = 3f;
     [Tooltip("Not inclusive")]
     public float maxTimeToRespawn = 9f;
@@ -18,7 +20,19 @@ public class ClientBehavior : MonoBehaviour
     {
         NewRecipe();
     }
-    
+
+    private void Update()
+    {
+        if(recipe != null)
+        {
+            angryTime += Time.deltaTime;
+            if(angryTime >= recipe.timeLimit)
+            {
+                RecipeFailed();
+            }
+        }
+    }
+
     public void NewRecipe()
     {
         if (ClientManager.Instance == null)
@@ -28,13 +42,23 @@ public class ClientBehavior : MonoBehaviour
         recipe = ClientManager.Instance.availableRecipes[rand];
 
         nextIngredient = 0;
+        angryTime = 0;
 
         Debug.Log("I want " + recipe.name);
     }
 
-    private void Eject()
+    private void RecipeCompleted()
     {
         Debug.Log("Now im going to the space, i have a wonderful hair");
+        ClientManager.Instance.currentMoney += recipe.moneyInflow;
+        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
+        gameObject.SetActive(false);
+    }
+
+    private void RecipeFailed()
+    {
+        Debug.Log("This hair saloon is shit. Im going away.");
+        ClientManager.Instance.currentMoney -= recipe.moneyPenalty;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         gameObject.SetActive(false);
     }
@@ -51,12 +75,12 @@ public class ClientBehavior : MonoBehaviour
                     Debug.Log("Correct, now i want " + recipe.ingredients[nextIngredient]);
                 else
                 {
-                    Eject();
+                    RecipeCompleted();
                 }
             }
             else
             {
-                //ERROR, WRONG INGREDIENT   
+                RecipeFailed();  
             }
         }
     }
@@ -81,11 +105,14 @@ public class ClientBehavior : MonoBehaviour
                     }
                     else
                     {
-                        Eject();
+                        RecipeCompleted();
                     }
                 }
             }
+            else
+            {
+                RecipeFailed();
+            }
         }    
     }
-
 }
