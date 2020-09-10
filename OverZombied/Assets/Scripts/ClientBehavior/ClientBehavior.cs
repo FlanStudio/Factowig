@@ -10,7 +10,16 @@ public class ClientBehavior : MonoBehaviour
     //Only used for tool actions
     public float usefulCounter = 0f;
 
+    public float minTimeToRespawn = 3f;
+    [Tooltip("Not inclusive")]
+    public float maxTimeToRespawn = 9f;
+
     private void Awake()
+    {
+        NewRecipe();
+    }
+    
+    public void NewRecipe()
     {
         if (ClientManager.Instance == null)
             return;
@@ -18,9 +27,18 @@ public class ClientBehavior : MonoBehaviour
         int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
         recipe = ClientManager.Instance.availableRecipes[rand];
 
+        nextIngredient = 0;
+
         Debug.Log("I want " + recipe.name);
     }
-    
+
+    private void Eject()
+    {
+        Debug.Log("Now im going to the space, i have a wonderful hair");
+        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
+        gameObject.SetActive(false);
+    }
+
     public void GiveIngredient(Ingredient ingredient)
     {
         if(nextIngredient < recipe.ingredients.Count)
@@ -32,7 +50,9 @@ public class ClientBehavior : MonoBehaviour
                 if (nextIngredient < recipe.ingredients.Count)
                     Debug.Log("Correct, now i want " + recipe.ingredients[nextIngredient]);
                 else
-                    Debug.Log("Now im going to the space, i have a wonderful hair");
+                {
+                    Eject();
+                }
             }
             else
             {
@@ -61,8 +81,7 @@ public class ClientBehavior : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Now im going to the space, i have a wonderful hair");
-                        gameObject.SetActive(false);
+                        Eject();
                     }
                 }
             }

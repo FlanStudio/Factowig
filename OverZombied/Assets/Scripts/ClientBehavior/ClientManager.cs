@@ -51,4 +51,16 @@ public class ClientManager : MonoBehaviour
             }
         }
     }
+
+    public void ReEnableClientAfterXSeconds(ClientBehavior client, float seconds)
+    {
+        StartCoroutine(ReEnableClientAfterXSecondsCorroutine(client, seconds));
+    }
+
+    private IEnumerator ReEnableClientAfterXSecondsCorroutine(ClientBehavior client, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        client.NewRecipe();
+        client.gameObject.SetActive(true);
+    }
 }
