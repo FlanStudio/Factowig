@@ -144,8 +144,7 @@ public class PickUpController : MonoBehaviour
         {
             if(pickedObject == null)
             {
-                GameObject obj = selector.groundObject;
-                pickedObject = obj.GetComponent<Ingredient>();
+                pickedObject = selector.groundObject;
                 pickedObject.rb.isKinematic = true;
                 pickedObject.gameObject.SetActive(false);
             }

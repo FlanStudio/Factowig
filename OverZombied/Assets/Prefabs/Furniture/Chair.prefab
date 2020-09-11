@@ -367,6 +367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7657867095039682396}
   - component: {fileID: 6738194005779605607}
+  - component: {fileID: 1698837077}
+  - component: {fileID: 1047262773}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -387,7 +389,7 @@ Transform:
   m_Children:
   - {fileID: 5753356525063808266}
   - {fileID: 4625139701203161162}
-  - {fileID: 3566400504800729169}
+  - {fileID: 1877276819185179874}
   - {fileID: 8933580172904274208}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -405,6 +407,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9585557, y: 0.868446, z: 1}
   m_Center: {x: -0.004144907, y: 0.4560235, z: 0}
+--- !u!114 &1698837077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632430270343011677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipe: {fileID: 0}
+  nextIngredient: 0
+  usefulCounter: 0
+  angryTime: 0
+  minTimeToRespawn: 3
+  maxTimeToRespawn: 9
+--- !u!114 &1047262773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632430270343011677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipe: {fileID: 0}
+  nextIngredient: 0
+  usefulCounter: 0
+  angryTime: 0
+  minTimeToRespawn: 3
+  maxTimeToRespawn: 9
 --- !u!1 &6747922401450427870
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7657867095039682396}
     m_Modifications:
+    - target: {fileID: 1226371228535961975, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4213109949445012931, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_Name
       value: Placeable Surface
@@ -543,8 +585,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
---- !u!4 &3566400504800729169 stripped
+--- !u!4 &1877276819185179874 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4213109949445012932, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1226371228535961975, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
   m_PrefabInstance: {fileID: 795342114190697877}
   m_PrefabAsset: {fileID: 0}

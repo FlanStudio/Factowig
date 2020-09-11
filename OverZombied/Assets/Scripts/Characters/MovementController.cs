@@ -13,6 +13,7 @@ public class MovementController : MonoBehaviour
     public float rotationSpeed = 15f;
 
     private Selector selector;
+    private Rigidbody rb;
 
     private int _playerID = -1;
     public int playerID { get { return _playerID; } }
@@ -23,6 +24,7 @@ public class MovementController : MonoBehaviour
     {
         _playerID = InputController.Instance.GetMyPlayerID();
         selector = GetComponent<Selector>();
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -45,41 +47,55 @@ public class MovementController : MonoBehaviour
 
                     break;
                 }
-                
+
             case InputController.ControlsMode.Controller:
                 {
                     Vector2 value = Vector2.zero;
-                    if(InputController.Instance.playerInput[playerID].gamepad != null)
+                    if (InputController.Instance.playerInput[playerID].gamepad != null)
                         value = InputController.Instance.playerInput[playerID].gamepad.leftStick.ReadValue();
 
                     movementNorm = value;
-                    
+
                     break;
                 }
         }
 
-        if(movementNorm.magnitude < idleStickThreshold)
+        if (movementNorm.magnitude < idleStickThreshold)
         {
             movementNorm = Vector2.zero;
         }
 
         #endregion
 
-        #region APPLY MOVEMENT
-        if(move)
-            transform.Translate(new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.deltaTime, Space.World);
-        #endregion
-
         #region LOOK AHEAD
 
-        float diffAngle = Vector3.SignedAngle(transform.forward.normalized, new Vector3(movementNorm.x, 0, movementNorm.y), Vector3.up);
-        transform.Rotate(Vector3.up, diffAngle * rotationSpeed * Time.deltaTime);
+        if (movementNorm != Vector2.zero)
+        {
+            float diffAngle = Vector3.SignedAngle(transform.forward.normalized, new Vector3(movementNorm.x, 0, movementNorm.y), Vector3.up);
+            transform.Rotate(Vector3.up, diffAngle * rotationSpeed * Time.deltaTime);
+        }  
 
         #endregion
 
-        if(movementNorm != Vector2.zero)
+        if (movementNorm != Vector2.zero)
         {
             selector.Select();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        #region APPLY MOVEMENT
+        if (movementNorm == Vector2.zero)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+        else
+        {
+            if (move)
+                rb.MovePosition(rb.position + new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.fixedDeltaTime);
+        }
+        #endregion
     }
 }

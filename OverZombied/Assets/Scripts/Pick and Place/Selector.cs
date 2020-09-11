@@ -11,43 +11,37 @@ public class Selector : MonoBehaviour
     public PlaceableSurface selectedSurface = null;
     public ObjectGenerator selectedGenerator = null;
     public ClientBehavior selectedClient = null;
-    public GameObject groundObject = null;
+    public Ingredient groundObject = null;
 
     public void Select()
     {
         if (selectedSurface != null)
             selectedSurface.Hide();
 
-        RaycastHit hitInfo;
+        selectedGenerator = null;
+        selectedSurface = null;
+        groundObject = null;
+        selectedClient = null;
 
-        int layers = 1 << LayerMask.NameToLayer("ObjectGenerator") | 1 << LayerMask.NameToLayer("PlaceableSurface");
+        //Check for grounded objects
+        RaycastHit hitInfoGrounded;
 
-        if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
+        if (Physics.Raycast(new Vector3(transform.position.x, 0.1f, transform.position.z), transform.forward, out hitInfoGrounded, interactRadius, 1 << LayerMask.NameToLayer("Ingredient") | 1 << LayerMask.NameToLayer("Client")))
         {
-            groundObject = null;
-            selectedClient = null;
-            selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
-            selectedSurface = hitInfo.collider.gameObject.GetComponent<PlaceableSurface>();
-            if (selectedSurface)
-                selectedSurface.Show();
+            groundObject = hitInfoGrounded.collider.gameObject.GetComponent<Ingredient>();
+            if(!groundObject)
+                selectedClient = hitInfoGrounded.collider.gameObject.GetComponent<ClientBehavior>();          
         }
         else
         {
-            selectedGenerator = null;
-            selectedSurface = null;
-
-            //Check for grounded objects
-            RaycastHit hitInfoGrounded;
-
-            if (Physics.Raycast(new Vector3(transform.position.x, 0.1f, transform.position.z), transform.forward, out hitInfoGrounded, interactRadius, 1 << LayerMask.NameToLayer("Ingredient") | 1 << LayerMask.NameToLayer("Client")))
+            RaycastHit hitInfo;
+            int layers = 1 << LayerMask.NameToLayer("ObjectGenerator") | 1 << LayerMask.NameToLayer("PlaceableSurface");
+            if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
             {
-                selectedClient = hitInfoGrounded.collider.gameObject.GetComponent<ClientBehavior>();
-                if(!selectedClient)
-                    groundObject = hitInfoGrounded.collider.gameObject;
-            }
-            else
-            {
-                groundObject = null;
+                selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
+                selectedSurface = hitInfo.collider.gameObject.GetComponent<PlaceableSurface>();
+                if (selectedSurface)
+                    selectedSurface.Show();
             }
         }
     }
