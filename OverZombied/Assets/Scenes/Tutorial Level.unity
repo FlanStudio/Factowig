@@ -851,10 +851,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1615864915}
+  - {fileID: 1627404129}
   - {fileID: 1047262771}
   - {fileID: 1698837075}
-  - {fileID: 1627404129}
-  - {fileID: 1615864915}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1754,6 +1754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair
       objectReference: {fileID: 0}
+    - target: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5
@@ -1784,7 +1788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1805,6 +1809,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1047262770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1047262772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698837077, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+  m_PrefabInstance: {fileID: 1047262770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053592216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,10 +2950,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5298215606874219617, guid: 0d41a478215da554794edabf247cc603, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8152254411438206872, guid: 0d41a478215da554794edabf247cc603, type: 3}
       propertyPath: m_Name
       value: Table_3
@@ -3400,7 +3411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3421,29 +3432,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1615864914}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1615864916 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+--- !u!114 &1615864917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698837077, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1615864914}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1615864917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615864916}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipe: {fileID: 0}
-  nextIngredient: 0
-  usefulCounter: 0
-  angryTime: 0
-  minTimeToRespawn: 3
-  maxTimeToRespawn: 9
 --- !u!1001 &1627404128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3454,6 +3453,10 @@ PrefabInstance:
     - target: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_Name
       value: Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3485,7 +3488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3506,29 +3509,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1627404128}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1627404130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+--- !u!114 &1627404131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698837077, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1627404128}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1627404131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627404130}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipe: {fileID: 0}
-  nextIngredient: 0
-  usefulCounter: 0
-  angryTime: 0
-  minTimeToRespawn: 3
-  maxTimeToRespawn: 9
 --- !u!1 &1683193795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5632430270343011677, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -3709,7 +3704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3730,6 +3725,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7657867095039682396, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
   m_PrefabInstance: {fileID: 1698837074}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1698837076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698837077, guid: 1b4f85d2280b87e4b9559f4a76d5e667, type: 3}
+  m_PrefabInstance: {fileID: 1698837074}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047ba5c0cb09bd14093e73d296125f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1745798617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3942,32 +3948,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startEnabled: 0
-  totalTime: 6
+  totalTime: 15
   activateChairsCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.399
+      value: 0.5
+      inSlope: -0
+      outSlope: 499.99155
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4
+      value: 1
+      inSlope: 499.99155
+      outSlope: 0
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  clients: []
+  clients:
+  - {fileID: 1615864917}
+  - {fileID: 1627404131}
+  - {fileID: 1047262772}
+  - {fileID: 1698837076}
   availableRecipes:
   - {fileID: 11400000, guid: ce424dd444d71524e850c9c7888ccbeb, type: 2}
   - {fileID: 11400000, guid: d192594f795cad14bbeb38535bf83cb9, type: 2}

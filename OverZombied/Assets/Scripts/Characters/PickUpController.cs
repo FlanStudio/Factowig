@@ -125,7 +125,7 @@ public class PickUpController : MonoBehaviour
             {
                 if (pickedObject != null)
                 {
-                    selector.selectedSurface.PlacePickableObject(pickedObject.gameObject);
+                    selector.selectedSurface.PlacePickableObject(pickedObject);
                     pickedObject = null;
                 }
             }
