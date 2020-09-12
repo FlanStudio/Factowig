@@ -13,6 +13,7 @@ public class PickUpController : MonoBehaviour
 
     public Vector3 localThrowDirection = Vector3.forward;
     public float throwStrength = 10f;
+    public float throwHeight = 1f;
 
     public float dropDistance = 1f;
 
@@ -194,7 +195,7 @@ public class PickUpController : MonoBehaviour
         {
             pickedObject.rb.isKinematic = false;
             pickedObject.gameObject.SetActive(true);
-            pickedObject.transform.position = transform.position + new Vector3(0f, 1f, 0f) + transform.forward * dropDistance;
+            pickedObject.transform.position = transform.position + new Vector3(0f, throwHeight, 0f) + transform.forward * dropDistance;
             pickedObject.rb.AddForce(transform.TransformDirection(localThrowDirection).normalized * throwStrength, ForceMode.Impulse);
             pickedObject = null;
             startedThrowing = false;
