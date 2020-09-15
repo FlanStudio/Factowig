@@ -1204,6 +1204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722990307}
   - component: {fileID: 722990306}
+  - component: {fileID: 722990309}
   - component: {fileID: 722990308}
   m_Layer: 0
   m_Name: Sun
@@ -1302,6 +1303,19 @@ MonoBehaviour:
   sun_light: {fileID: 722990307}
   day_time: 10
   rotation_amount: -170
+--- !u!114 &722990309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722990305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
 --- !u!1001 &734805327
 PrefabInstance:
   m_ObjectHideFlags: 0
