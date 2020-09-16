@@ -687,6 +687,7 @@ MonoBehaviour:
   pickedObject: {fileID: 0}
   localThrowDirection: {x: 0, y: 0, z: 1}
   throwStrength: 15
+  throwHeight: 1
   dropDistance: 1
 --- !u!114 &6182180856847681210
 MonoBehaviour:
@@ -702,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawGizmos: 0
   interactRadius: 5
-  height: 0.884
+  height: 0.495
   selectedSurface: {fileID: 0}
   selectedGenerator: {fileID: 0}
   selectedClient: {fileID: 0}
