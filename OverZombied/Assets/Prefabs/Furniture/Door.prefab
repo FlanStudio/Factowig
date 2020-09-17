@@ -91,9 +91,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3397880819491204512, guid: 2d312d08ce910624b959926a208b1860, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35c658f2c2f902a4a91f6cde7898dee7, type: 2}
     - target: {fileID: 6800520699564881601, guid: 2d312d08ce910624b959926a208b1860, type: 3}
       propertyPath: m_Name
       value: Door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989115140138471006, guid: 2d312d08ce910624b959926a208b1860, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d312d08ce910624b959926a208b1860, type: 3}
@@ -161,9 +169,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3397880819491204512, guid: 2d312d08ce910624b959926a208b1860, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35c658f2c2f902a4a91f6cde7898dee7, type: 2}
     - target: {fileID: 6800520699564881601, guid: 2d312d08ce910624b959926a208b1860, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989115140138471006, guid: 2d312d08ce910624b959926a208b1860, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d312d08ce910624b959926a208b1860, type: 3}
