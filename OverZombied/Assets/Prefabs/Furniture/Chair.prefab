@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1683821907}
   - component: {fileID: 1683821909}
   - component: {fileID: 1683821908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ce6d42bf9d863ff49a7a8fc45fd25f66, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 953715289538626029}
   - component: {fileID: 956352230229808523}
   - component: {fileID: 4389704157719356085}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 8933580172904274208}
   - component: {fileID: 7481700748422831852}
   - component: {fileID: 5316778440506071634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 3655190658973394890}
   - component: {fileID: 3786210924488667198}
   - component: {fileID: 8275448961703883866}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4625139701203161162}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 5753356525063808266}
   - component: {fileID: 1814793559251821457}
   - component: {fileID: 8084798176578744546}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,8 +448,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7657867095039682396}
   - component: {fileID: 6738194005779605607}
+  - component: {fileID: 7533564593005260722}
   - component: {fileID: 1698837077}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,6 +488,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9585557, y: 0.868446, z: 1}
   m_Center: {x: -0.004144907, y: 0.4560235, z: 0}
+--- !u!95 &7533564593005260722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632430270343011677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1698837077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +536,7 @@ GameObject:
   - component: {fileID: 7544293011407445612}
   - component: {fileID: 3803801722714310321}
   - component: {fileID: 1377067287536909079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

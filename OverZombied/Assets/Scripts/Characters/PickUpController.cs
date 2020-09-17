@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpController : MonoBehaviour
 {
-    private MovementController movementController;
+    public MovementController movementController;
 
     private Selector selector;
 
@@ -172,7 +172,7 @@ public class PickUpController : MonoBehaviour
         {
             if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
             {
-                selector.selectedClient.UseTool(pickedObject);
+                selector.selectedClient.UseTool(this, pickedObject);
             }
         }
     }
@@ -180,9 +180,11 @@ public class PickUpController : MonoBehaviour
     private void UseKeyPressed()
     {
         if (selector.selectedClient != null)
+        {
+            selector.selectedClient.UseToolStarted(this, pickedObject);            
             return;
-
-        if(pickedObject != null && pickedObject.throwable)
+        }
+        else if(pickedObject != null && pickedObject.throwable)
         {
             startedThrowing = true;
             movementController.move = false;
@@ -191,7 +193,11 @@ public class PickUpController : MonoBehaviour
 
     private void UseKeyReleased()
     {
-        if(startedThrowing && pickedObject != null && pickedObject.throwable)
+        if(selector.selectedClient != null)
+        {
+            selector.selectedClient.UseToolFinished();
+        }
+        else if(startedThrowing && pickedObject != null && pickedObject.throwable)
         {
             pickedObject.rb.isKinematic = false;
             pickedObject.gameObject.SetActive(true);
@@ -200,7 +206,8 @@ public class PickUpController : MonoBehaviour
             pickedObject = null;
             startedThrowing = false;
         }
-
+        
         movementController.move = true;
+        movementController.rotate = true;
     }
 }

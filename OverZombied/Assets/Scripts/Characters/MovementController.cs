@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
     public int playerID { get { return _playerID; } }
 
     public bool move = true;
+    public bool rotate = true;
 
     private void Awake()
     {
@@ -69,7 +70,7 @@ public class MovementController : MonoBehaviour
 
         #region LOOK AHEAD
 
-        if (movementNorm != Vector2.zero)
+        if (rotate && movementNorm != Vector2.zero)
         {
             float diffAngle = Vector3.SignedAngle(transform.forward.normalized, new Vector3(movementNorm.x, 0, movementNorm.y), Vector3.up);
             transform.Rotate(Vector3.up, diffAngle * rotationSpeed * Time.deltaTime);

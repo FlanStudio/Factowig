@@ -16,10 +16,8 @@ public class ClientBehavior : MonoBehaviour
     [Tooltip("Not inclusive")]
     public float maxTimeToRespawn = 9f;
 
-    private void Awake()
-    {
-        NewRecipe();
-    }
+
+    private PickUpController playerStarted;
 
     private void Update()
     {
@@ -44,35 +42,37 @@ public class ClientBehavior : MonoBehaviour
         nextIngredient = 0;
         angryTime = 0;
 
-        Debug.Log("I want " + recipe.name);
+        Debug.Log("I want " + recipe.name + ". " + gameObject.name);
     }
 
     private void RecipeCompleted()
     {
-        Debug.Log("Now im going to the space, i have a wonderful hair");
+        Debug.Log("Now im going to the space, i have a wonderful hair. " + gameObject.name);
         ClientManager.Instance.currentMoney += recipe.moneyInflow;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
-        gameObject.SetActive(false);
+        recipe = null;
+        playerStarted = null;
     }
 
     private void RecipeFailed()
     {
-        Debug.Log("This hair saloon is shit. Im going away.");
+        Debug.Log("This hair saloon is shit. Im going away. " + gameObject.name);
         ClientManager.Instance.currentMoney -= recipe.moneyPenalty;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
-        gameObject.SetActive(false);
+        recipe = null;
+        playerStarted = null;
     }
 
     public void GiveIngredient(Ingredient ingredient)
     {
-        if(nextIngredient < recipe.ingredients.Count)
+        if(recipe != null && nextIngredient < recipe.ingredients.Count)
         {
             if(ingredient.data == recipe.ingredients[nextIngredient])
             {
                 nextIngredient++;
 
                 if (nextIngredient < recipe.ingredients.Count)
-                    Debug.Log("Correct, now i want " + recipe.ingredients[nextIngredient]);
+                    Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
                 else
                 {
                     RecipeCompleted();
@@ -85,9 +85,38 @@ public class ClientBehavior : MonoBehaviour
         }
     }
 
-    public void UseTool(Ingredient tool)
+    public void UseToolStarted(PickUpController player, Ingredient tool)
     {
-        if (nextIngredient < recipe.ingredients.Count)
+        if (recipe == null)
+            return;
+
+        if(tool.data == recipe.ingredients[nextIngredient])
+        {
+            playerStarted = player;
+            player.transform.position = transform.position + transform.forward * player.dropDistance;
+            player.transform.LookAt(transform.position);
+            player.movementController.move = false;
+            player.movementController.rotate = false;
+        }
+        else
+        {
+            RecipeFailed();
+        }    
+    }
+
+    public void UseToolFinished()
+    {
+        if (playerStarted)
+        {
+            playerStarted.movementController.move = true;
+            playerStarted.movementController.rotate = true;
+            playerStarted = null;
+        }      
+    }
+
+    public void UseTool(PickUpController player, Ingredient tool)
+    {
+        if (playerStarted != null && playerStarted == player && recipe != null && nextIngredient < recipe.ingredients.Count)
         {
             if (tool.data == recipe.ingredients[nextIngredient])
             {
@@ -101,7 +130,8 @@ public class ClientBehavior : MonoBehaviour
 
                     if (nextIngredient < recipe.ingredients.Count)
                     {
-                        Debug.Log("I still want " + recipe.ingredients[nextIngredient].name);
+                        Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
+                        UseToolFinished();
                     }
                     else
                     {
@@ -111,6 +141,7 @@ public class ClientBehavior : MonoBehaviour
             }
             else
             {
+                //Now it should never enter here
                 RecipeFailed();
             }
         }    

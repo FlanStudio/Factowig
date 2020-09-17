@@ -28,7 +28,7 @@ public class ClientManager : MonoBehaviour
         {
             for(int i = 0; i < startEnabled; ++i)
             {
-                clients[i].gameObject.SetActive(true);
+                clients[i].NewRecipe();
             }
             enabledChairs = startEnabled;
         }
@@ -46,7 +46,7 @@ public class ClientManager : MonoBehaviour
             {
                 if(!chair.gameObject.activeSelf)
                 {
-                    chair.gameObject.SetActive(true);
+                    chair.NewRecipe();
                     enabledChairs++;
                     break;
                 }
@@ -63,6 +63,5 @@ public class ClientManager : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         client.NewRecipe();
-        client.gameObject.SetActive(true);
     }
 }

@@ -15,3 +15,6 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: 76cddec1012bf58478383166a8faacd1, type: 2}
   - {fileID: 11400000, guid: d7da01e52279d204eb413eea649ff218, type: 2}
+  timeLimit: 60
+  moneyInflow: 20
+  moneyPenalty: 10

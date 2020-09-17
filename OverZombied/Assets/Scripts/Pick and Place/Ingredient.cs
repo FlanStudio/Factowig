@@ -15,11 +15,11 @@ public class Ingredient : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if(LayerMask.LayerToName(other.gameObject.layer) == "PlaceableSurface")
         {
-            PlaceableSurface placeableSurface = other.GetComponent<PlaceableSurface>();
+            PlaceableSurface placeableSurface = other.collider.GetComponentInParent<PlaceableSurface>();
             if(placeableSurface)
             {
                 placeableSurface.PlacePickableObject(this);
