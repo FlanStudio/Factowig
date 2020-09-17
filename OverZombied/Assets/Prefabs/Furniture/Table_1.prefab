@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8759414753040240494}
   - component: {fileID: 6202889197760298797}
   - component: {fileID: 7574480701968754851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Marble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4154999301550119229}
   - component: {fileID: 7799017561607648012}
   - component: {fileID: 5321827652163943418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 269813264445255571}
-  m_Layer: 0
+  - component: {fileID: 18772315}
+  m_Layer: 8
   m_Name: Table_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +210,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18772315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8381216669097887884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59b061cd8953f545a1c5a39db87631e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickableObject: {fileID: 0}
+  marble: {fileID: 1906959034418434354}
+  box: {fileID: 8239148887279787372}
 --- !u!1001 &1453488443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -219,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 1226371228535961968, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_Name
       value: Placeable Surface
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226371228535961968, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226371228535961975, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_LocalPosition.x

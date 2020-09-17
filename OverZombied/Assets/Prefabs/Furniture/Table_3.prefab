@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9006356309562140794}
   - component: {fileID: 6009955614780233785}
   - component: {fileID: 7813540875961438135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Marble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489803475479791751}
-  m_Layer: 0
+  - component: {fileID: 1371889089137208382}
+  m_Layer: 8
   m_Name: Table_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +115,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371889089137208382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152254411438206872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59b061cd8953f545a1c5a39db87631e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickableObject: {fileID: 0}
+  marble: {fileID: 2235000603509044774}
+  box: {fileID: 8585521516972014200}
 --- !u!1 &8585521516972014200
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +142,7 @@ GameObject:
   - component: {fileID: 4385157828330864169}
   - component: {fileID: 7586627142765712408}
   - component: {fileID: 5523768416657087726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,6 +234,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1226371227622287638, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226371228535961968, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226371228535961975, guid: d383d97afd4f17e4d92802e7b83f2421, type: 3}

@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class PlaceableSurface : MonoBehaviour
 {
+    public static float selectedColorMultiplier = 1.8f;
+
     public Ingredient pickableObject;
-    public MeshRenderer mesh;
+    public GameObject marble;
+    public GameObject box;
+
+    private MeshRenderer marbleRenderer;
+    private MeshRenderer boxRenderer;
+
+    private void Awake()
+    {
+        marbleRenderer = marble.GetComponent<MeshRenderer>();
+        boxRenderer = box.GetComponent<MeshRenderer>();
+    }
 
     public void Show()
     {
-        mesh.enabled = true;
+        marbleRenderer.material.color *= selectedColorMultiplier;
+        boxRenderer.material.color *= selectedColorMultiplier;
     }
 
     public void Hide()
     {
-        mesh.enabled = false;
+        marbleRenderer.material.color /= selectedColorMultiplier;
+        boxRenderer.material.color /= selectedColorMultiplier;
     }
 
     public void PlacePickableObject(Ingredient obj)
@@ -22,10 +36,9 @@ public class PlaceableSurface : MonoBehaviour
         pickableObject = obj;
         pickableObject.gameObject.SetActive(true);
 
-        Transform child = transform.GetChild(0);
-        pickableObject.transform.position = child.position;
+        pickableObject.transform.position = marble.transform.position;
         pickableObject.transform.position += new Vector3(0f, pickableObject.GetComponent<Renderer>().bounds.extents.y, 0f);
-        pickableObject.transform.rotation = child.rotation;
+        pickableObject.transform.rotation = marble.transform.rotation;
 
         if(obj.rb)
         {

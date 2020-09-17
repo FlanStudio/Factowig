@@ -703,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawGizmos: 0
   interactRadius: 5
-  height: 0.495
+  height: 0.1
   selectedSurface: {fileID: 0}
   selectedGenerator: {fileID: 0}
   selectedClient: {fileID: 0}

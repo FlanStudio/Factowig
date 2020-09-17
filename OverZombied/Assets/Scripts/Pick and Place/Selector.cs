@@ -39,7 +39,7 @@ public class Selector : MonoBehaviour
             if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
             {
                 selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
-                selectedSurface = hitInfo.collider.gameObject.GetComponent<PlaceableSurface>();
+                selectedSurface = hitInfo.collider.transform.parent.gameObject.GetComponent<PlaceableSurface>();
                 if (selectedSurface)
                     selectedSurface.Show();
             }
