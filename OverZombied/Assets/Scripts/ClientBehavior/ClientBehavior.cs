@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ClientBehavior : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class ClientBehavior : MonoBehaviour
 
     public Canvas canvas;
     public RectTransform foregroundProgressBar;
+    public TextMeshProUGUI percentText;
 
     private void Update()
     {
@@ -48,6 +50,7 @@ public class ClientBehavior : MonoBehaviour
 
         canvas.gameObject.SetActive(true);
         foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
+        percentText.text = "0%";
     }
 
     private void RecipeCompleted()
@@ -129,11 +132,16 @@ public class ClientBehavior : MonoBehaviour
             {
                 usefulCounter += Time.deltaTime;
 
-                foregroundProgressBar.anchoredPosition = new Vector2( 1.3f * (1 - usefulCounter/tool.data.actionPressSeconds), 0f);
+                float percent = usefulCounter / tool.data.actionPressSeconds;
+                foregroundProgressBar.anchoredPosition = new Vector2( 1.3f * (1 - percent), 0f);
+                percentText.text = (percent * 100).ToString("0.00") + "%";
 
                 if (usefulCounter > tool.data.actionPressSeconds)
                 {
                     usefulCounter = 0f;
+                    foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
+                    percentText.text = "0%";
+
                     nextIngredient++;
 
                     Debug.Log("Action completed");
@@ -141,7 +149,6 @@ public class ClientBehavior : MonoBehaviour
                     if (nextIngredient < recipe.ingredients.Count)
                     {
                         Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
-                        foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
                         UseToolFinished();
                     }
                     else
