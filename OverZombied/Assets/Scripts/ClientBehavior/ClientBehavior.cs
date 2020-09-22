@@ -16,8 +16,10 @@ public class ClientBehavior : MonoBehaviour
     [Tooltip("Not inclusive")]
     public float maxTimeToRespawn = 9f;
 
-
     private PickUpController playerStarted;
+
+    public Canvas canvas;
+    public RectTransform foregroundProgressBar;
 
     private void Update()
     {
@@ -43,6 +45,9 @@ public class ClientBehavior : MonoBehaviour
         angryTime = 0;
 
         Debug.Log("I want " + recipe.name + ". " + gameObject.name);
+
+        canvas.gameObject.SetActive(true);
+        foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
     }
 
     private void RecipeCompleted()
@@ -52,6 +57,7 @@ public class ClientBehavior : MonoBehaviour
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
         playerStarted = null;
+        canvas.gameObject.SetActive(false);
     }
 
     private void RecipeFailed()
@@ -61,6 +67,7 @@ public class ClientBehavior : MonoBehaviour
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
         playerStarted = null;
+        canvas.gameObject.SetActive(false);
     }
 
     public void GiveIngredient(Ingredient ingredient)
@@ -121,6 +128,9 @@ public class ClientBehavior : MonoBehaviour
             if (tool.data == recipe.ingredients[nextIngredient])
             {
                 usefulCounter += Time.deltaTime;
+
+                foregroundProgressBar.anchoredPosition = new Vector2( 1.3f * (1 - usefulCounter/tool.data.actionPressSeconds), 0f);
+
                 if (usefulCounter > tool.data.actionPressSeconds)
                 {
                     usefulCounter = 0f;
@@ -131,6 +141,7 @@ public class ClientBehavior : MonoBehaviour
                     if (nextIngredient < recipe.ingredients.Count)
                     {
                         Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
+                        foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
                         UseToolFinished();
                     }
                     else
