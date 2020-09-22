@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class PlaceableSurface : MonoBehaviour
 {
-    public static float selectedColorMultiplier = 1.8f;
-    public static float selectedEmissionColor = 1f;
+    public static float selectedColorMultiplier = 0.5f;
 
     public Ingredient pickableObject;
     public GameObject marble;
@@ -23,19 +22,14 @@ public class PlaceableSurface : MonoBehaviour
 
     public void Show()
     {
-        if(true/*marbleRenderer.material.HasProperty("_EmissionColor")*/)
-        {
-            marbleRenderer.material.SetColor("_BaseColor", Color.red);
-            //boxRenderer.material.SetColor("_EmissionColor", new Color(selectedEmissionColor, selectedEmissionColor, selectedEmissionColor));
-        }
+        marbleRenderer.material.color *= selectedColorMultiplier;
+        boxRenderer.material.color *= selectedColorMultiplier;
     }
 
     public void Hide()
     {
-        //marbleRenderer.material.color /= selectedColorMultiplier;
-        //boxRenderer.material.color /= selectedColorMultiplier;
-        //marbleRenderer.material.SetColor("_EmissionColor", Color.black);
-        //boxRenderer.material.SetColor("_EmissionColor", Color.black);
+        marbleRenderer.material.color /= selectedColorMultiplier;
+        boxRenderer.material.color /= selectedColorMultiplier;
     }
 
     public void PlacePickableObject(Ingredient obj)
@@ -44,12 +38,13 @@ public class PlaceableSurface : MonoBehaviour
         pickableObject.gameObject.SetActive(true);
 
         pickableObject.transform.position = marble.transform.position;
-        pickableObject.transform.position += new Vector3(0f, pickableObject.GetComponent<Renderer>().bounds.extents.y, 0f);
+        pickableObject.transform.position += new Vector3(0f, pickableObject.renderer.bounds.extents.y + 0.04f, 0f);
         pickableObject.transform.rotation = marble.transform.rotation;
 
         if(obj.rb)
         {
             obj.rb.velocity = obj.rb.angularVelocity = Vector3.zero;
+            obj.rb.isKinematic = true;
         }
     }
 }

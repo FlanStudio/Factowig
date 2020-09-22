@@ -7,6 +7,7 @@ public class Ingredient : MonoBehaviour
 {
     public IngredientData data;
     public Rigidbody rb;
+    public new MeshRenderer renderer;
 
     public bool throwable = true;
 
