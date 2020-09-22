@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlaceableSurface : MonoBehaviour
 {
     public static float selectedColorMultiplier = 1.8f;
+    public static float selectedEmissionColor = 1f;
 
     public Ingredient pickableObject;
     public GameObject marble;
@@ -21,14 +23,19 @@ public class PlaceableSurface : MonoBehaviour
 
     public void Show()
     {
-        marbleRenderer.material.color *= selectedColorMultiplier;
-        boxRenderer.material.color *= selectedColorMultiplier;
+        if(true/*marbleRenderer.material.HasProperty("_EmissionColor")*/)
+        {
+            marbleRenderer.material.SetColor("_BaseColor", Color.red);
+            //boxRenderer.material.SetColor("_EmissionColor", new Color(selectedEmissionColor, selectedEmissionColor, selectedEmissionColor));
+        }
     }
 
     public void Hide()
     {
-        marbleRenderer.material.color /= selectedColorMultiplier;
-        boxRenderer.material.color /= selectedColorMultiplier;
+        //marbleRenderer.material.color /= selectedColorMultiplier;
+        //boxRenderer.material.color /= selectedColorMultiplier;
+        //marbleRenderer.material.SetColor("_EmissionColor", Color.black);
+        //boxRenderer.material.SetColor("_EmissionColor", Color.black);
     }
 
     public void PlacePickableObject(Ingredient obj)
