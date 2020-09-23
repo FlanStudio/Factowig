@@ -113,7 +113,7 @@ public class ClientBehavior : MonoBehaviour
 
     public void UseToolStarted(PickUpController player, Ingredient tool)
     {
-        if (recipe == null)
+        if (recipe == null || tool == null)
             return;
 
         if(tool.data == recipe.ingredients[nextIngredient])
