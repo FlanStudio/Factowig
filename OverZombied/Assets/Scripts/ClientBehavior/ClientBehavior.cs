@@ -19,6 +19,8 @@ public class ClientBehavior : MonoBehaviour
 
     private PickUpController playerStarted;
 
+    public Animator animator;
+
     public Canvas canvas;
     public RectTransform foregroundProgressBar;
     public TextMeshProUGUI percentText;
@@ -40,6 +42,8 @@ public class ClientBehavior : MonoBehaviour
         if (ClientManager.Instance == null)
             return;
 
+        animator.SetTrigger("SpawnClient");
+
         int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
         recipe = ClientManager.Instance.availableRecipes[rand];
 
@@ -56,6 +60,9 @@ public class ClientBehavior : MonoBehaviour
     private void RecipeCompleted()
     {
         Debug.Log("Now im going to the space, i have a wonderful hair. " + gameObject.name);
+
+        animator.SetTrigger("ClientLeave");
+
         ClientManager.Instance.currentMoney += recipe.moneyInflow;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
@@ -66,6 +73,9 @@ public class ClientBehavior : MonoBehaviour
     private void RecipeFailed()
     {
         Debug.Log("This hair saloon is shit. Im going away. " + gameObject.name);
+
+        animator.SetTrigger("ClientLeave");
+
         ClientManager.Instance.currentMoney -= recipe.moneyPenalty;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
