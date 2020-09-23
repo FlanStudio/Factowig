@@ -672,6 +672,7 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 15
   move: 1
+  rotate: 1
 --- !u!114 &7653468178768192737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03127c6dc658d9248aeb9f389af1b019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementController: {fileID: 0}
   pickedObject: {fileID: 0}
   localThrowDirection: {x: 0, y: 0, z: 1}
   throwStrength: 15
@@ -701,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7977078640f6aca479be29080a1b967d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawGizmos: 0
-  interactRadius: 5
+  drawGizmos: 1
+  interactRadius: 1
   height: 0.1
   selectedSurface: {fileID: 0}
   selectedGenerator: {fileID: 0}
