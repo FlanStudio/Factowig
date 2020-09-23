@@ -28,7 +28,7 @@ public class ClientManager : MonoBehaviour
         {
             for(int i = 0; i < startEnabled; ++i)
             {
-                clients[i].NewRecipe();
+                StartCoroutine(clients[i].NewRecipe());
             }
             enabledChairs = startEnabled;
         }
@@ -46,7 +46,7 @@ public class ClientManager : MonoBehaviour
             {
                 if(!chair.gameObject.activeSelf)
                 {
-                    chair.NewRecipe();
+                    StartCoroutine(chair.NewRecipe());
                     enabledChairs++;
                     break;
                 }
@@ -62,6 +62,6 @@ public class ClientManager : MonoBehaviour
     private IEnumerator ReEnableClientAfterXSecondsCorroutine(ClientBehavior client, float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        client.NewRecipe();
+        StartCoroutine(client.NewRecipe());
     }
 }

@@ -32,7 +32,7 @@ public class ClientBehavior : MonoBehaviour
             angryTime += Time.deltaTime;
             if(angryTime >= recipe.timeLimit)
             {
-                RecipeFailed();
+                StartCoroutine(RecipeFailed());
             }
         }
     }
@@ -43,8 +43,8 @@ public class ClientBehavior : MonoBehaviour
         {
             animator.SetTrigger("SpawnClient");
 
-
-
+            yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
+          
             int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
             recipe = ClientManager.Instance.availableRecipes[rand];
 
@@ -57,15 +57,15 @@ public class ClientBehavior : MonoBehaviour
             foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
             percentText.text = "0%";
         }
-
-        yield return null;
     }
 
-    private void RecipeCompleted()
+    private IEnumerator RecipeCompleted()
     {
         Debug.Log("Now im going to the space, i have a wonderful hair. " + gameObject.name);
 
         animator.SetTrigger("ClientLeave");
+
+        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
 
         ClientManager.Instance.currentMoney += recipe.moneyInflow;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
@@ -74,11 +74,13 @@ public class ClientBehavior : MonoBehaviour
         canvas.gameObject.SetActive(false);
     }
 
-    private void RecipeFailed()
+    private IEnumerator RecipeFailed()
     {
         Debug.Log("This hair saloon is shit. Im going away. " + gameObject.name);
 
         animator.SetTrigger("ClientLeave");
+
+        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
 
         ClientManager.Instance.currentMoney -= recipe.moneyPenalty;
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
@@ -99,12 +101,12 @@ public class ClientBehavior : MonoBehaviour
                     Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
                 else
                 {
-                    RecipeCompleted();
+                    StartCoroutine(RecipeCompleted());
                 }
             }
             else
             {
-                RecipeFailed();  
+                StartCoroutine(RecipeFailed());  
             }
         }
     }
@@ -124,7 +126,7 @@ public class ClientBehavior : MonoBehaviour
         }
         else
         {
-            RecipeFailed();
+            StartCoroutine(RecipeFailed());
         }    
     }
 
@@ -167,14 +169,14 @@ public class ClientBehavior : MonoBehaviour
                     }
                     else
                     {
-                        RecipeCompleted();
+                        StartCoroutine(RecipeCompleted());
                     }
                 }
             }
             else
             {
                 //Now it should never enter here
-                RecipeFailed();
+                StartCoroutine(RecipeFailed());
             }
         }    
     }
