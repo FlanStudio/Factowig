@@ -606,6 +606,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!65 &1225018514656206180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612498151218221667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.9011793, z: 1}
+  m_Center: {x: 0, y: 0.433928, z: 0}
 --- !u!1 &4659531261259787832
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+--- !u!1 &1612498151218221667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2969767193572777284, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 4659531261024039135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5126015034548754228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}

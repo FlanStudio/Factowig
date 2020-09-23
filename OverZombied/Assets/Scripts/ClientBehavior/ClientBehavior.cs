@@ -37,24 +37,28 @@ public class ClientBehavior : MonoBehaviour
         }
     }
 
-    public void NewRecipe()
+    public IEnumerator NewRecipe()
     {
-        if (ClientManager.Instance == null)
-            return;
+        if (ClientManager.Instance != null)
+        {
+            animator.SetTrigger("SpawnClient");
 
-        animator.SetTrigger("SpawnClient");
 
-        int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
-        recipe = ClientManager.Instance.availableRecipes[rand];
 
-        nextIngredient = 0;
-        angryTime = 0;
+            int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
+            recipe = ClientManager.Instance.availableRecipes[rand];
 
-        Debug.Log("I want " + recipe.name + ". " + gameObject.name);
+            nextIngredient = 0;
+            angryTime = 0;
 
-        canvas.gameObject.SetActive(true);
-        foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
-        percentText.text = "0%";
+            Debug.Log("I want " + recipe.name + ". " + gameObject.name);
+
+            canvas.gameObject.SetActive(true);
+            foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
+            percentText.text = "0%";
+        }
+
+        yield return null;
     }
 
     private void RecipeCompleted()
