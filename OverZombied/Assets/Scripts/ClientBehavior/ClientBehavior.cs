@@ -65,13 +65,13 @@ public class ClientBehavior : MonoBehaviour
 
         animator.SetTrigger("ClientLeave");
 
-        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
-
         ClientManager.Instance.currentMoney += recipe.moneyInflow;
-        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
         playerStarted = null;
         canvas.gameObject.SetActive(false);
+
+        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
+        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
     }
 
     private IEnumerator RecipeFailed()
@@ -80,13 +80,13 @@ public class ClientBehavior : MonoBehaviour
 
         animator.SetTrigger("ClientLeave");
 
-        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
-
         ClientManager.Instance.currentMoney -= recipe.moneyPenalty;
-        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
         recipe = null;
         playerStarted = null;
         canvas.gameObject.SetActive(false);
+
+        yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
+        ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
     }
 
     public void GiveIngredient(Ingredient ingredient)
