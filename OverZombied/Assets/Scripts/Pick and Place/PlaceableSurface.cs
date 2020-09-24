@@ -37,9 +37,9 @@ public class PlaceableSurface : MonoBehaviour
         pickableObject = obj;
         pickableObject.gameObject.SetActive(true);
 
+        pickableObject.transform.rotation = marble.transform.rotation;
         pickableObject.transform.position = marble.transform.position;
         pickableObject.transform.position += new Vector3(0f, pickableObject.renderer.bounds.extents.y + 0.04f, 0f);
-        pickableObject.transform.rotation = marble.transform.rotation;
 
         if(obj.rb)
         {
