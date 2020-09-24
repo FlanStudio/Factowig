@@ -23,7 +23,8 @@ public class Ingredient : MonoBehaviour
             PlaceableSurface placeableSurface = other.collider.GetComponentInParent<PlaceableSurface>();
             if(placeableSurface)
             {
-                placeableSurface.PlacePickableObject(this);
+                if(!placeableSurface.pickableObject)
+                    placeableSurface.PlacePickableObject(this);
             }
         }
     }
