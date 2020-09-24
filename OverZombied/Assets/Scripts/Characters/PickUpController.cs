@@ -156,7 +156,7 @@ public class PickUpController : MonoBehaviour
             if(pickedObject != null)
             {
                 //Drop on the floor
-                pickedObject.transform.position = transform.position + transform.forward * dropDistance + new Vector3(0f, pickedObject.GetComponent<Renderer>().bounds.extents.y, 0f); ;
+                pickedObject.transform.position = transform.position + transform.forward * dropDistance + new Vector3(0f, pickedObject.renderer.bounds.extents.y, 0f); ;
                 pickedObject.gameObject.SetActive(true);
                 pickedObject.rb.isKinematic = false;
                 pickedObject = null;

@@ -15,15 +15,13 @@ public class MovementController : MonoBehaviour
     private Selector selector;
     private Rigidbody rb;
 
-    private int _playerID = -1;
-    public int playerID { get { return _playerID; } }
+    public int playerID = -1;
 
     public bool move = true;
     public bool rotate = true;
 
     private void Awake()
     {
-        _playerID = InputController.Instance.GetMyPlayerID();
         selector = GetComponent<Selector>();
         rb = GetComponent<Rigidbody>();
     }

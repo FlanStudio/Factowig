@@ -6,7 +6,7 @@ public class Selector : MonoBehaviour
 {
     public bool drawGizmos = false;
     public float interactRadius = 5f;
-    public float height = 1.5f;
+    public float height = 0.01f;
 
     public PlaceableSurface selectedSurface = null;
     public ObjectGenerator selectedGenerator = null;
@@ -26,28 +26,32 @@ public class Selector : MonoBehaviour
         groundObject = null;
         selectedClient = null;
 
-        //Check for grounded objects
-        RaycastHit hitInfoGrounded;
+        RaycastHit hitInfo;
 
-        if (Physics.Raycast(new Vector3(transform.position.x, 0.1f, transform.position.z), transform.forward, out hitInfoGrounded, interactRadius, 1 << LayerMask.NameToLayer("Ingredient") | 1 << LayerMask.NameToLayer("Client")))
+        int layers = 1 << LayerMask.NameToLayer("Ingredient") | 1 << LayerMask.NameToLayer("Client") | 1 << LayerMask.NameToLayer("ObjectGenerator") | 1 << LayerMask.NameToLayer("PlaceableSurface");
+
+        if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
         {
-            groundObject = hitInfoGrounded.collider.gameObject.GetComponent<Ingredient>();
+            groundObject = hitInfo.collider.gameObject.GetComponent<Ingredient>();
             if(!groundObject)
             {
-                selectedClient = hitInfoGrounded.collider.gameObject.GetComponent<ClientBehavior>();
-                selectedClient.SelectMeshes();
-            }
-        }
-        else
-        {
-            RaycastHit hitInfo;
-            int layers = 1 << LayerMask.NameToLayer("ObjectGenerator") | 1 << LayerMask.NameToLayer("PlaceableSurface");
-            if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
-            {
-                selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
-                selectedSurface = hitInfo.collider.transform.parent.gameObject.GetComponent<PlaceableSurface>();
-                if (selectedSurface)
-                    selectedSurface.Show();
+                selectedClient = hitInfo.collider.gameObject.GetComponent<ClientBehavior>();
+                
+                if(selectedClient)
+                {
+                    selectedClient.SelectMeshes();
+                }
+                else
+                {
+                    selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
+
+                    if(!selectedGenerator)
+                    {
+                        selectedSurface = hitInfo.collider.transform.parent.gameObject.GetComponent<PlaceableSurface>();
+                        if (selectedSurface)
+                            selectedSurface.Show();
+                    }
+                }        
             }
         }
     }

@@ -9,7 +9,6 @@ public class InputController : MonoBehaviour
 
     public class PlayerInput
     {
-        public bool assigned = false;
         public Gamepad gamepad = null;
         public Keyboard keyboard = null;
     }
@@ -25,26 +24,19 @@ public class InputController : MonoBehaviour
         controlsMode[0] = ControlsMode.KeyboardMouse;
 
         for (int i = 0; i < 4; ++i)
-        {
+        {        
             if (i < Gamepad.all.Count)
             {
                 playerInput[i].gamepad = Gamepad.all[i];
                 controlsMode[i] = ControlsMode.Controller;
             }
-        }        
-    }
-
-    public int GetMyPlayerID()
-    {
-        for(int i = 0; i < 4; ++i)
-        {
-            if(playerInput[i].assigned == false)
-            {
-                playerInput[i].assigned = true;
-                return i;
-            }
         }
 
-        return -1;
+        //Hardcoding
+        playerInput[0].keyboard = Keyboard.current;
+        controlsMode[0] = ControlsMode.KeyboardMouse;
+
+        controlsMode[1] = ControlsMode.Controller;
+        playerInput[1].gamepad = Gamepad.all[0];
     }
 }
