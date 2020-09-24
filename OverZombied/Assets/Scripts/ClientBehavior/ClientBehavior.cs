@@ -25,6 +25,9 @@ public class ClientBehavior : MonoBehaviour
     public RectTransform foregroundProgressBar;
     public TextMeshProUGUI percentText;
 
+    [SerializeField]
+    private List<MeshRenderer> clientMeshes;
+
     private void Update()
     {
         if(recipe != null)
@@ -179,5 +182,21 @@ public class ClientBehavior : MonoBehaviour
                 StartCoroutine(RecipeFailed());
             }
         }    
+    }
+
+    public void SelectMeshes()
+    {
+        foreach(MeshRenderer meshRenderer in clientMeshes)
+        {
+            meshRenderer.material.color *= PlaceableSurface.selectedColorMultiplier;
+        }
+    }
+
+    public void UnSelectMeshes()
+    {
+        foreach (MeshRenderer meshRenderer in clientMeshes)
+        {
+            meshRenderer.material.color /= PlaceableSurface.selectedColorMultiplier;
+        }
     }
 }

@@ -61663,8 +61663,84 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[0]
+      value: 
+      objectReference: {fileID: 4659531261447594218}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[1]
+      value: 
+      objectReference: {fileID: 4659531261447594217}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[2]
+      value: 
+      objectReference: {fileID: 4659531261447594216}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[3]
+      value: 
+      objectReference: {fileID: 4659531261447594215}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[4]
+      value: 
+      objectReference: {fileID: 4659531261447594214}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[5]
+      value: 
+      objectReference: {fileID: 4659531261447594213}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[6]
+      value: 
+      objectReference: {fileID: 4659531261447594212}
+    - target: {fileID: 7589004490759257693, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: clientMeshes.Array.data[7]
+      value: 
+      objectReference: {fileID: 4659531261447594211}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+--- !u!23 &4659531261447594211 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5744184587472350798, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594212 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6648541333904307500, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594213 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7092038907490261324, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594214 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6901406166196721920, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594215 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7023012588899988795, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594216 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7427165934994153651, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594217 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6986724014278167969, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4659531261447594218 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5261449331049126403, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+  m_PrefabInstance: {fileID: 4659531261447594210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4926649058440654451
 PrefabInstance:
   m_ObjectHideFlags: 0

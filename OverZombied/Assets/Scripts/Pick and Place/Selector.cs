@@ -18,6 +18,9 @@ public class Selector : MonoBehaviour
         if (selectedSurface != null)
             selectedSurface.Hide();
 
+        if (selectedClient != null)
+            selectedClient.UnSelectMeshes();
+
         selectedGenerator = null;
         selectedSurface = null;
         groundObject = null;
@@ -30,7 +33,10 @@ public class Selector : MonoBehaviour
         {
             groundObject = hitInfoGrounded.collider.gameObject.GetComponent<Ingredient>();
             if(!groundObject)
-                selectedClient = hitInfoGrounded.collider.gameObject.GetComponent<ClientBehavior>();          
+            {
+                selectedClient = hitInfoGrounded.collider.gameObject.GetComponent<ClientBehavior>();
+                selectedClient.SelectMeshes();
+            }
         }
         else
         {
