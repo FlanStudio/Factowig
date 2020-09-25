@@ -28,7 +28,8 @@ public class ClientManager : MonoBehaviour
         {
             for(int i = 0; i < startEnabled; ++i)
             {
-                StartCoroutine(clients[i].NewRecipe());
+                clients[i].activated = true;
+                StartCoroutine(clients[i].NewRecipe());              
             }
             enabledChairs = startEnabled;
         }
@@ -44,11 +45,16 @@ public class ClientManager : MonoBehaviour
         {
             foreach(ClientBehavior chair in clients)
             {
-                if(!chair.gameObject.activeSelf)
+                if(!chair.activated)
                 {
                     StartCoroutine(chair.NewRecipe());
                     enabledChairs++;
-                    break;
+                    chair.activated = true;
+
+                    if (amountChairs <= enabledChairs)
+                    {
+                        break;
+                    }
                 }
             }
         }

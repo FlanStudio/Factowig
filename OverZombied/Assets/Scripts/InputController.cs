@@ -33,10 +33,10 @@ public class InputController : MonoBehaviour
         }
 
         //Hardcoding
-        playerInput[0].keyboard = Keyboard.current;
-        controlsMode[0] = ControlsMode.KeyboardMouse;
+        //playerInput[0].keyboard = Keyboard.current;
+        //controlsMode[0] = ControlsMode.KeyboardMouse;
 
-        controlsMode[1] = ControlsMode.Controller;
-        playerInput[1].gamepad = Gamepad.all[0];
+        //controlsMode[1] = ControlsMode.Controller;
+        //playerInput[1].gamepad = Gamepad.all[0];
     }
 }

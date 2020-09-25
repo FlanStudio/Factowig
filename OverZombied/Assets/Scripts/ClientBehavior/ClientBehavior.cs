@@ -30,6 +30,9 @@ public class ClientBehavior : MonoBehaviour
 
     private bool startCounting = false;
 
+    [HideInInspector]
+    public bool activated = false;
+
     private void Update()
     {
         if(recipe != null && startCounting)
@@ -44,6 +47,11 @@ public class ClientBehavior : MonoBehaviour
 
     private void SetUpHairs()
     {
+        for (int i = 0; i < 4; ++i)
+        {
+                clientMeshes[i].gameObject.SetActive(false);
+        }
+
         switch (recipe.type)
         {
             case Recipe.RecipeType.CUT_COMB:
@@ -61,8 +69,6 @@ public class ClientBehavior : MonoBehaviour
                     {
                         if (i == active)
                             clientMeshes[i].gameObject.SetActive(true);
-                        else
-                            clientMeshes[i].gameObject.SetActive(false);
                     }
                     break;
                 }
@@ -79,8 +85,6 @@ public class ClientBehavior : MonoBehaviour
                     {
                         if (i == active)
                             clientMeshes[i].gameObject.SetActive(true);
-                        else
-                            clientMeshes[i].gameObject.SetActive(false);
                     }
                     break;
                 }
@@ -97,8 +101,6 @@ public class ClientBehavior : MonoBehaviour
                     {
                         if (i == active)
                             clientMeshes[i].gameObject.SetActive(true);
-                        else
-                            clientMeshes[i].gameObject.SetActive(false);
                     }
                     break;
                 }
@@ -109,8 +111,6 @@ public class ClientBehavior : MonoBehaviour
     {
         if (ClientManager.Instance != null)
         {
-            animator.SetTrigger("SpawnClient");
-
             int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
             recipe = ClientManager.Instance.availableRecipes[rand];
 
@@ -120,16 +120,21 @@ public class ClientBehavior : MonoBehaviour
 
             SetUpHairs();
 
+            animator.SetTrigger("SpawnClient");
+
             yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
 
-            startCounting = true;
-
             Debug.Log("I want " + recipe.name + ". " + gameObject.name);
+
+            startCounting = true;
 
             canvas.gameObject.SetActive(true);
             foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
             percentText.text = "0%";
+
+            yield return null;
         }
+
     }
 
     private IEnumerator RecipeCompleted()
@@ -238,8 +243,6 @@ public class ClientBehavior : MonoBehaviour
                     nextIngredient++;
 
                     SetUpHairs();
-
-                    Debug.Log("Action completed");
 
                     if (nextIngredient < recipe.ingredients.Count)
                     {
