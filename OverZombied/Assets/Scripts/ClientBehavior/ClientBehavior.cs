@@ -71,9 +71,9 @@ public class ClientBehavior : MonoBehaviour
                     int active = -1;
 
                     if (nextIngredient == 0)
-                        active = 2;
+                        active = 0;
                     else
-                        active = 3;
+                        active = 1;
 
                     for (int i = 0; i < 4; ++i)
                     {
@@ -89,9 +89,9 @@ public class ClientBehavior : MonoBehaviour
                     int active = -1;
 
                     if (nextIngredient == 0)
-                        active = 1;
+                        active = 0;
                     else
-                        active = 3;
+                        active = 2;
 
                     for (int i = 0; i < 4; ++i)
                     {
