@@ -673,3 +673,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickableObject: {fileID: 0}
   tableMesh: {fileID: 7182293057023794005}
+  meshRenderer: {fileID: 0}

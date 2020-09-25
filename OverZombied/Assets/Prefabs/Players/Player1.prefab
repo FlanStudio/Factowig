@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7977078640f6aca479be29080a1b967d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawGizmos: 1
+  drawGizmos: 0
   interactRadius: 1
   height: 0.01
   selectedSurface: {fileID: 0}
