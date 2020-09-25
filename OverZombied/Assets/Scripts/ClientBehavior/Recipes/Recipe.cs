@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Recipe", menuName = "FlanStudio/Recipe", order = 2)]
 public class Recipe : ScriptableObject
 {
+    public enum RecipeType { CUT_COMB, CUT, COMB }
+
+    public RecipeType type = RecipeType.CUT_COMB;
     public List<IngredientData> ingredients;
     public float timeLimit = 20f;
     public float moneyInflow = 20f;

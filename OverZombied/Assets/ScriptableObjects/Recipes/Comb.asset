@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd6f5e9496dd8742a254bf86bc175bb, type: 3}
   m_Name: Comb
   m_EditorClassIdentifier: 
+  type: 2
   ingredients:
   - {fileID: 11400000, guid: d7da01e52279d204eb413eea649ff218, type: 2}
   timeLimit: 60

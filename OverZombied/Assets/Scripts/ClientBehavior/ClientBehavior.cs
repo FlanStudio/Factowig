@@ -28,9 +28,11 @@ public class ClientBehavior : MonoBehaviour
     [SerializeField]
     private List<MeshRenderer> clientMeshes;
 
+    private bool startCounting = false;
+
     private void Update()
     {
-        if(recipe != null)
+        if(recipe != null && startCounting)
         {
             angryTime += Time.deltaTime;
             if(angryTime >= recipe.timeLimit)
@@ -40,20 +42,87 @@ public class ClientBehavior : MonoBehaviour
         }
     }
 
+    private void SetUpHairs()
+    {
+        switch (recipe.type)
+        {
+            case Recipe.RecipeType.CUT_COMB:
+                {
+                    int active = -1;
+
+                    if (nextIngredient == 0)
+                        active = 0;
+                    else if (nextIngredient == 1)
+                        active = 1;
+                    else
+                        active = 3;
+
+                    for (int i = 0; i < 4; ++i)
+                    {
+                        if (i == active)
+                            clientMeshes[i].gameObject.SetActive(true);
+                        else
+                            clientMeshes[i].gameObject.SetActive(false);
+                    }
+                    break;
+                }
+            case Recipe.RecipeType.CUT:
+                {
+                    int active = -1;
+
+                    if (nextIngredient == 0)
+                        active = 2;
+                    else
+                        active = 3;
+
+                    for (int i = 0; i < 4; ++i)
+                    {
+                        if (i == active)
+                            clientMeshes[i].gameObject.SetActive(true);
+                        else
+                            clientMeshes[i].gameObject.SetActive(false);
+                    }
+                    break;
+                }
+            case Recipe.RecipeType.COMB:
+                {
+                    int active = -1;
+
+                    if (nextIngredient == 0)
+                        active = 1;
+                    else
+                        active = 3;
+
+                    for (int i = 0; i < 4; ++i)
+                    {
+                        if (i == active)
+                            clientMeshes[i].gameObject.SetActive(true);
+                        else
+                            clientMeshes[i].gameObject.SetActive(false);
+                    }
+                    break;
+                }
+        }
+    }
+
     public IEnumerator NewRecipe()
     {
         if (ClientManager.Instance != null)
         {
             animator.SetTrigger("SpawnClient");
 
-            yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
-          
             int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
             recipe = ClientManager.Instance.availableRecipes[rand];
 
             nextIngredient = 0;
             angryTime = 0;
             usefulCounter = 0f;
+
+            SetUpHairs();
+
+            yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
+
+            startCounting = true;
 
             Debug.Log("I want " + recipe.name + ". " + gameObject.name);
 
@@ -74,6 +143,8 @@ public class ClientBehavior : MonoBehaviour
         playerStarted = null;
         canvas.gameObject.SetActive(false);
 
+        startCounting = false;
+
         yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
     }
@@ -88,6 +159,8 @@ public class ClientBehavior : MonoBehaviour
         recipe = null;
         playerStarted = null;
         canvas.gameObject.SetActive(false);
+
+        startCounting = false;
 
         yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("OnlyChair"); });
         ClientManager.Instance.ReEnableClientAfterXSeconds(this, UnityEngine.Random.Range(minTimeToRespawn, maxTimeToRespawn));
@@ -163,6 +236,8 @@ public class ClientBehavior : MonoBehaviour
                     percentText.text = "0%";
 
                     nextIngredient++;
+
+                    SetUpHairs();
 
                     Debug.Log("Action completed");
 

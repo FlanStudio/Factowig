@@ -44413,6 +44413,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1142191650}
+    - target: {fileID: 2623862934478440271, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4659531261259787832, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
       propertyPath: m_Name
       value: Client (6)
@@ -44459,6 +44463,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4659531261259787833, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785299523801336928, guid: 34fed24d5cdaec6488d4bf111f06e25f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
