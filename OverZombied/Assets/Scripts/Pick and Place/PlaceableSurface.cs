@@ -8,28 +8,26 @@ public class PlaceableSurface : MonoBehaviour
     public static float selectedColorMultiplier = 0.5f;
 
     public Ingredient pickableObject;
-    public GameObject marble;
-    public GameObject box;
+    public GameObject tableMesh;
 
-    private MeshRenderer marbleRenderer;
-    private MeshRenderer boxRenderer;
+    [HideInInspector]
+    public MeshRenderer meshRenderer;
 
     private void Awake()
     {
-        marbleRenderer = marble.GetComponent<MeshRenderer>();
-        boxRenderer = box.GetComponent<MeshRenderer>();
+        meshRenderer = tableMesh.GetComponent<MeshRenderer>();
     }
 
     public void Show()
     {
-        marbleRenderer.material.color *= selectedColorMultiplier;
-        boxRenderer.material.color *= selectedColorMultiplier;
+        foreach(Material material in meshRenderer.materials)        
+            material.color *= selectedColorMultiplier;   
     }
 
     public void Hide()
     {
-        marbleRenderer.material.color /= selectedColorMultiplier;
-        boxRenderer.material.color /= selectedColorMultiplier;
+        foreach (Material material in meshRenderer.materials)
+            material.color /= selectedColorMultiplier;
     }
 
     public void PlacePickableObject(Ingredient obj)
@@ -37,9 +35,9 @@ public class PlaceableSurface : MonoBehaviour
         pickableObject = obj;
         pickableObject.gameObject.SetActive(true);
 
-        pickableObject.transform.rotation = marble.transform.rotation;
-        pickableObject.transform.position = marble.transform.position;
-        pickableObject.transform.position += new Vector3(0f, pickableObject.renderer.bounds.extents.y + 0.04f, 0f);
+        pickableObject.transform.rotation = transform.rotation;
+        pickableObject.transform.position = transform.position;
+        pickableObject.transform.position += new Vector3(0f, meshRenderer.bounds.size.y, 0f);
 
         if(obj.rb)
         {

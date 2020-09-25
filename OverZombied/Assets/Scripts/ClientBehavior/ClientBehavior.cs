@@ -53,6 +53,7 @@ public class ClientBehavior : MonoBehaviour
 
             nextIngredient = 0;
             angryTime = 0;
+            usefulCounter = 0f;
 
             Debug.Log("I want " + recipe.name + ". " + gameObject.name);
 

@@ -47,7 +47,7 @@ public class Selector : MonoBehaviour
 
                     if(!selectedGenerator)
                     {
-                        selectedSurface = hitInfo.collider.transform.parent.gameObject.GetComponent<PlaceableSurface>();
+                        selectedSurface = hitInfo.collider.GetComponentInParent<PlaceableSurface>();
                         if (selectedSurface)
                             selectedSurface.Show();
                     }
