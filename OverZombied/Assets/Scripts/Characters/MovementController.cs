@@ -85,7 +85,7 @@ public class MovementController : MonoBehaviour
     private void FixedUpdate()
     {
         #region APPLY MOVEMENT
-        if (movementNorm == Vector2.zero)
+        if (movementNorm == Vector2.zero || !move)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
