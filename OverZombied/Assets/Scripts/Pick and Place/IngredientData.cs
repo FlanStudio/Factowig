@@ -9,6 +9,8 @@ public class IngredientData : ScriptableObject
     public TYPE type = TYPE.TOOL;
     public new string name = "Default";
 
+    public Sprite sprite;
+
     [Header("Only for tools")]
-    public float actionPressSeconds = 5f;
+    public float actionPressSeconds = 0f;
 }

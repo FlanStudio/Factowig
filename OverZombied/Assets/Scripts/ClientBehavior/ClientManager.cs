@@ -20,6 +20,8 @@ public class ClientManager : MonoBehaviour
 
     public float currentMoney = 0f;
 
+    public Sprite tickImage;
+
     private void Awake()
     {
         Instance = this;

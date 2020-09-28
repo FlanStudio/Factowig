@@ -62043,6 +62043,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d192594f795cad14bbeb38535bf83cb9, type: 2}
   - {fileID: 11400000, guid: 89a1674d433944f46a0232faa667d210, type: 2}
   currentMoney: 0
+  tickImage: {fileID: 21300000, guid: 8eda75f20035d2941b15d5201c7b3330, type: 3}
 --- !u!114 &1877794730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73280,30 +73281,6 @@ PrefabInstance:
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Name
       value: Client (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8099017249208378282, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8099017249698672769, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Camera

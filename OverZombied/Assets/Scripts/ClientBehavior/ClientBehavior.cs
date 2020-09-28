@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ClientBehavior : MonoBehaviour
 {
-    public Recipe recipe = null;
-    public int nextIngredient = 0;
+    private Recipe recipe = null;
+    private int nextIngredient = 0;
 
     //Only used for tool actions
-    public float usefulCounter = 0f;
+    private float currentRecipeTime = 0f;
+    private float totalRecipeTime = 0f;
+    private float currentIngredientGoal = 0f;
 
-    public float angryTime = 0f;
+    private float angryTime = 0f;
 
     public float minTimeToRespawn = 3f;
     [Tooltip("Not inclusive")]
@@ -22,8 +25,8 @@ public class ClientBehavior : MonoBehaviour
     public Animator animator;
 
     public Canvas canvas;
-    public RectTransform foregroundProgressBar;
-    public TextMeshProUGUI percentText;
+    public RectTransform progressBar;
+    public List<Image> ingredientBars;
 
     [SerializeField]
     private List<MeshRenderer> clientMeshes;
@@ -116,7 +119,14 @@ public class ClientBehavior : MonoBehaviour
 
             nextIngredient = 0;
             angryTime = 0;
-            usefulCounter = 0f;
+            currentRecipeTime = 0f;
+            currentIngredientGoal = recipe.ingredients[0].actionPressSeconds;
+            totalRecipeTime = 0f;
+
+            foreach (IngredientData ingredient in recipe.ingredients)
+            {
+                totalRecipeTime += ingredient.actionPressSeconds;
+            }
 
             SetUpHairs();
 
@@ -128,13 +138,30 @@ public class ClientBehavior : MonoBehaviour
 
             startCounting = true;
 
+            while(ingredientBars.Count != recipe.ingredients.Count)
+            {
+                if(ingredientBars.Count < recipe.ingredients.Count)
+                {
+                    Image ingredientBar = Instantiate(ingredientBars[0].gameObject, ingredientBars[0].transform.parent).GetComponent<Image>();
+                    ingredientBars.Add(ingredientBar);
+                }
+                else
+                {
+                    Destroy(ingredientBars[ingredientBars.Count - 1]);
+                    ingredientBars.RemoveAt(ingredientBars.Count - 1);
+                }
+            }
+
+            for(int i = 0; i < ingredientBars.Count; ++i)
+            {
+                ingredientBars[i].sprite = recipe.ingredients[i].sprite;
+            }
+
             canvas.gameObject.SetActive(true);
-            foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
-            percentText.text = "0%";
+            progressBar.anchoredPosition = new Vector2(-1.3f, 0f);
 
             yield return null;
         }
-
     }
 
     private IEnumerator RecipeCompleted()
@@ -228,31 +255,25 @@ public class ClientBehavior : MonoBehaviour
         {
             if (tool.data == recipe.ingredients[nextIngredient])
             {
-                usefulCounter += Time.deltaTime;
+                currentRecipeTime += Time.deltaTime;
+           
+                float percent = currentRecipeTime / totalRecipeTime;
+                progressBar.anchoredPosition = new Vector2( -1.3f * (1 - percent), 0f);
 
-                float percent = usefulCounter / tool.data.actionPressSeconds;
-                foregroundProgressBar.anchoredPosition = new Vector2( 1.3f * (1 - percent), 0f);
-                percentText.text = (percent * 100).ToString("0.00") + "%";
-
-                if (usefulCounter > tool.data.actionPressSeconds)
+                if(currentRecipeTime > currentIngredientGoal)
                 {
-                    usefulCounter = 0f;
-                    foregroundProgressBar.anchoredPosition = new Vector2(1.3f, 0f);
-                    percentText.text = "0%";
-
+                    ingredientBars[nextIngredient].sprite = ClientManager.Instance.tickImage;
                     nextIngredient++;
-
                     SetUpHairs();
+                    UseToolFinished();
 
-                    if (nextIngredient < recipe.ingredients.Count)
-                    {
-                        Debug.Log("I still want " + recipe.ingredients[nextIngredient].name + ". " + gameObject.name);
-                        UseToolFinished();
-                    }
-                    else
-                    {
-                        StartCoroutine(RecipeCompleted());
-                    }
+                    if(nextIngredient < recipe.ingredients.Count)
+                        currentIngredientGoal += recipe.ingredients[nextIngredient].actionPressSeconds;
+                }
+
+                if (currentRecipeTime > totalRecipeTime)
+                {
+                    StartCoroutine(RecipeCompleted());                   
                 }
             }
             else
