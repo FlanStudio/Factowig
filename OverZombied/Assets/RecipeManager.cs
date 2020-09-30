@@ -14,6 +14,7 @@ public class RecipeManager : MonoBehaviour
     private List<RecipeUI> recipeBoxes = null;
 
     private int activeBoxes = 0;
+    private bool spawnNewRecipes = true;
 
     [Header("Game Config")]
     [SerializeField]
@@ -25,7 +26,7 @@ public class RecipeManager : MonoBehaviour
     {
         float value = activateCurve.Evaluate(Time.time / levelDurationSeconds);
 
-        while(activeBoxes < (int)value)
+        while(spawnNewRecipes && activeBoxes < (int)value)
         {
             foreach(RecipeUI recipeBox in recipeBoxes)
             {
@@ -50,7 +51,10 @@ public class RecipeManager : MonoBehaviour
     {
         recipeUI.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(delay);
+        float time = Time.time;
+
+        yield return new WaitUntil(() => { if (spawnNewRecipes && Time.time >= time + delay) return true; else return false;  });
+
         for (int i = 0; i < recipeUI.transform.parent.childCount; ++i)
         {
             Transform child = recipeUI.transform.parent.GetChild(i);
