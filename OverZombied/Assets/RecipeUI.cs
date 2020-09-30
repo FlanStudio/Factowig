@@ -13,6 +13,11 @@ public class RecipeUI : MonoBehaviour
     [HideInInspector]
     public bool activated = false;
 
+    private void OnEnable()
+    {
+        
+    }
+
     public void SetRecipe(Recipe recipe)
     {
         if(!scissors || !comb)

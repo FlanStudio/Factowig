@@ -29,7 +29,7 @@ public class ClientBehavior : MonoBehaviour
     public List<Image> ingredientBars;
 
     [SerializeField]
-    private List<MeshRenderer> clientMeshes;
+    private List<MeshRenderer> clientMeshes = null;
 
     private bool startCounting = false;
 

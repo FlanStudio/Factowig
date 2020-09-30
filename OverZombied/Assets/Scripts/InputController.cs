@@ -19,7 +19,7 @@ public class InputController : MonoBehaviour
     public PlayerInput[] playerInput = new PlayerInput[4] {new PlayerInput(), new PlayerInput(), new PlayerInput(), new PlayerInput()};
 
     [SerializeField]
-    private MovementController[] movementControllers;
+    private MovementController[] movementControllers = null;
 
     private void Awake()
     {

@@ -10,7 +10,7 @@ public class ObjectGenerator : MonoBehaviour
     private int itemsSpawned = 0;
 
     [SerializeField]
-    private GameObject prefab;
+    private GameObject prefab = null;
 
     public GameObject GetObject()
     {
