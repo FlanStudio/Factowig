@@ -10,6 +10,9 @@ public class RecipeUI : MonoBehaviour
     private Image scissors;
     private Image comb;
 
+    [HideInInspector]
+    public bool activated = false;
+
     public void SetRecipe(Recipe recipe)
     {
         if(!scissors || !comb)

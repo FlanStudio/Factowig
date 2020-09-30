@@ -13,15 +13,31 @@ public class RecipeManager : MonoBehaviour
     [SerializeField]
     private List<RecipeUI> recipeBoxes;
 
-    [Header("Game Config")]
-    public int startRecipes = 2;
-    public float recipeRespawnTime = 5f;
+    private int activeBoxes = 0;
 
-    private void Awake()
+    [Header("Game Config")]
+    [SerializeField]
+    private AnimationCurve activateCurve;
+    public float recipeRespawnTime = 5f;
+    public float levelDurationSeconds = 120f;
+
+    private void Update()
     {
-        for(int i = 0; i < startRecipes; ++i)
+        float value = activateCurve.Evaluate(Time.time / levelDurationSeconds);
+
+        while(activeBoxes < (int)value)
         {
-            recipeBoxes[i].SetRecipe(availableRecipes[Random.Range(0, availableRecipes.Count)]);
+            foreach(RecipeUI recipeBox in recipeBoxes)
+            {
+                if(!recipeBox.activated)
+                {
+                    recipeBox.activated = true;
+                    recipeBox.gameObject.SetActive(true);
+                    recipeBox.SetRecipe(availableRecipes[Random.Range(0, availableRecipes.Count)]);
+                    activeBoxes++;
+                    break;
+                }
+            }
         }
     }
 }
