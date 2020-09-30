@@ -19,7 +19,7 @@ public class Sun_Movement : MonoBehaviour
     private float rotation_per_second = 0.0f;
     //private float initial_x_rotation_pos = 0.0f;
     private Quaternion final_rotation;
-    private Light light;
+    private new Light light;
 
     private void Awake()
     {

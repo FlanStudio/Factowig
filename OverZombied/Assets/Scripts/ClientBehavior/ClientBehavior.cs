@@ -112,56 +112,58 @@ public class ClientBehavior : MonoBehaviour
 
     public IEnumerator NewRecipe()
     {
-        if (ClientManager.Instance != null)
-        {
-            int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
-            recipe = ClientManager.Instance.availableRecipes[rand];
+        //if (ClientManager.Instance != null)
+        //{
+        //    int rand = UnityEngine.Random.Range(0, ClientManager.Instance.availableRecipes.Count);
+        //    recipe = ClientManager.Instance.availableRecipes[rand];
 
-            nextIngredient = 0;
-            angryTime = 0;
-            currentRecipeTime = 0f;
-            currentIngredientGoal = recipe.ingredients[0].actionPressSeconds;
-            totalRecipeTime = 0f;
+        //    nextIngredient = 0;
+        //    angryTime = 0;
+        //    currentRecipeTime = 0f;
+        //    currentIngredientGoal = recipe.ingredients[0].actionPressSeconds;
+        //    totalRecipeTime = 0f;
 
-            foreach (IngredientData ingredient in recipe.ingredients)
-            {
-                totalRecipeTime += ingredient.actionPressSeconds;
-            }
+        //    foreach (IngredientData ingredient in recipe.ingredients)
+        //    {
+        //        totalRecipeTime += ingredient.actionPressSeconds;
+        //    }
 
-            SetUpHairs();
+        //    SetUpHairs();
 
-            animator.SetTrigger("SpawnClient");
+        //    animator.SetTrigger("SpawnClient");
 
-            yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
+        //    yield return new WaitUntil(() => { return animator.GetCurrentAnimatorStateInfo(0).IsName("ClientChair"); });
 
-            Debug.Log("I want " + recipe.name + ". " + gameObject.name);
+        //    Debug.Log("I want " + recipe.name + ". " + gameObject.name);
 
-            startCounting = true;
+        //    startCounting = true;
 
-            while(ingredientBars.Count != recipe.ingredients.Count)
-            {
-                if(ingredientBars.Count < recipe.ingredients.Count)
-                {
-                    Image ingredientBar = Instantiate(ingredientBars[0].gameObject, ingredientBars[0].transform.parent).GetComponent<Image>();
-                    ingredientBars.Add(ingredientBar);
-                }
-                else
-                {
-                    Destroy(ingredientBars[ingredientBars.Count - 1]);
-                    ingredientBars.RemoveAt(ingredientBars.Count - 1);
-                }
-            }
+        //    while(ingredientBars.Count != recipe.ingredients.Count)
+        //    {
+        //        if(ingredientBars.Count < recipe.ingredients.Count)
+        //        {
+        //            Image ingredientBar = Instantiate(ingredientBars[0].gameObject, ingredientBars[0].transform.parent).GetComponent<Image>();
+        //            ingredientBars.Add(ingredientBar);
+        //        }
+        //        else
+        //        {
+        //            Destroy(ingredientBars[ingredientBars.Count - 1]);
+        //            ingredientBars.RemoveAt(ingredientBars.Count - 1);
+        //        }
+        //    }
 
-            for(int i = 0; i < ingredientBars.Count; ++i)
-            {
-                ingredientBars[i].sprite = recipe.ingredients[i].sprite;
-            }
+        //    for(int i = 0; i < ingredientBars.Count; ++i)
+        //    {
+        //        ingredientBars[i].sprite = recipe.ingredients[i].sprite;
+        //    }
 
-            canvas.gameObject.SetActive(true);
-            progressBar.anchoredPosition = new Vector2(-1.3f, 0f);
+        //    canvas.gameObject.SetActive(true);
+        //    progressBar.anchoredPosition = new Vector2(-1.3f, 0f);
 
-            yield return null;
-        }
+        //    yield return null;
+        //}
+
+        yield return null;
     }
 
     private IEnumerator RecipeCompleted()

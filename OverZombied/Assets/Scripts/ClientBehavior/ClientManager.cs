@@ -14,7 +14,6 @@ public class ClientManager : MonoBehaviour
     [SerializeField]
     private List<ClientBehavior> clients = new List<ClientBehavior>();
 
-    public List<Recipe> availableRecipes = new List<Recipe>();
 
     private uint enabledChairs = 0u;
 
