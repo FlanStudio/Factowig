@@ -8,7 +8,7 @@ public class RecipeManager : MonoBehaviour
     public static RecipeManager Instance;
 
     [SerializeField]
-    private List<Recipe> availableRecipes = null;
+    public List<Recipe> availableRecipes = null;
 
     [SerializeField]
     private List<RecipeUI> recipeBoxes = null;
@@ -21,6 +21,11 @@ public class RecipeManager : MonoBehaviour
     private AnimationCurve activateCurve = null;
     public float recipeRespawnTime = 5f;
     public float levelDurationSeconds = 120f;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {
@@ -45,6 +50,19 @@ public class RecipeManager : MonoBehaviour
     public void RecipeDelivered(RecipeUI recipeUI)
     {
         StartCoroutine(ReEnableRecipe(recipeUI, recipeRespawnTime));
+    }
+
+    public RecipeUI GetRecipeUI(Recipe recipe)
+    {
+        foreach(RecipeUI recipeUI in recipeBoxes)
+        {
+            if(recipeUI.recipe.SameRecipeAs(recipe))
+            {
+                return recipeUI;
+            }
+        }
+
+        return null;
     }
 
     private IEnumerator ReEnableRecipe(RecipeUI recipeUI, float delay)

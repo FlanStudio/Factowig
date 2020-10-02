@@ -111,6 +111,15 @@ public class PickUpController : MonoBehaviour
             }
         }
 
+        else if(selector.selectedDeliverer != null)
+        {            
+            if (pickedObject != null)
+            {
+                if (selector.selectedDeliverer.Deliver(pickedObject))
+                    pickedObject = null;
+            }        
+        }
+
         else if(selector.selectedSurface != null)
         {
             if (selector.selectedSurface.pickableObject != null)

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class RecipeUI : MonoBehaviour
 {
-    private Recipe recipe;
+    [HideInInspector]
+    public Recipe recipe { get; private set; }
 
     private Image scissors;
     private Image comb;
