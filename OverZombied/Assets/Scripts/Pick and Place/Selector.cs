@@ -7,11 +7,14 @@ public class Selector : MonoBehaviour
     public bool drawGizmos = false;
     public float interactRadius = 5f;
     public float height = 0.01f;
+    public LayerMask layers;
 
+    [Header("Selected stuff")]
     public PlaceableSurface selectedSurface = null;
     public ObjectGenerator selectedGenerator = null;
     public ClientBehavior selectedClient = null;
     public Ingredient groundObject = null;
+    public RecipeDeliverer selectedDeliverer = null;
 
     public void Select()
     {
@@ -25,10 +28,9 @@ public class Selector : MonoBehaviour
         selectedSurface = null;
         groundObject = null;
         selectedClient = null;
+        selectedDeliverer = null;
 
         RaycastHit hitInfo;
-
-        int layers = 1 << LayerMask.NameToLayer("Ingredient") | 1 << LayerMask.NameToLayer("Client") | 1 << LayerMask.NameToLayer("ObjectGenerator") | 1 << LayerMask.NameToLayer("PlaceableSurface");
 
         if (Physics.Raycast(new Vector3(transform.position.x, height, transform.position.z), transform.forward, out hitInfo, interactRadius, layers))
         {
@@ -47,9 +49,14 @@ public class Selector : MonoBehaviour
 
                     if(!selectedGenerator)
                     {
-                        selectedSurface = hitInfo.collider.GetComponentInParent<PlaceableSurface>();
-                        if (selectedSurface)
-                            selectedSurface.Show();
+                        selectedDeliverer = hitInfo.collider.GetComponentInParent<RecipeDeliverer>();
+
+                        if(!selectedDeliverer)
+                        {
+                            selectedSurface = hitInfo.collider.GetComponentInParent<PlaceableSurface>();
+                            if (selectedSurface)
+                                selectedSurface.Show();
+                        }                    
                     }
                 }        
             }

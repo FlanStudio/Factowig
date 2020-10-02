@@ -76918,6 +76918,9 @@ MonoBehaviour:
   drawGizmos: 0
   interactRadius: 1
   height: 0.01
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
   selectedSurface: {fileID: 0}
   selectedGenerator: {fileID: 0}
   selectedClient: {fileID: 0}
@@ -76982,6 +76985,9 @@ MonoBehaviour:
   drawGizmos: 0
   interactRadius: 1
   height: 0.01
+  layers:
+    serializedVersion: 2
+    m_Bits: 12032
   selectedSurface: {fileID: 0}
   selectedGenerator: {fileID: 0}
   selectedClient: {fileID: 0}
