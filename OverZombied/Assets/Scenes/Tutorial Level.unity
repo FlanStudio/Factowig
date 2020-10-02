@@ -5207,7 +5207,7 @@ RectTransform:
   m_Children:
   - {fileID: 364801941}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5243,8 +5243,9 @@ Transform:
   m_Children:
   - {fileID: 1683193796}
   - {fileID: 1338292721}
+  - {fileID: 501608005}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &130284589
 Mesh:
@@ -13569,7 +13570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &446079514
 Mesh:
@@ -16034,7 +16035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 501608005}
   m_Layer: 0
-  m_Name: Clients
+  m_Name: Chairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16063,8 +16064,8 @@ Transform:
   - {fileID: 691627405}
   - {fileID: 1974504607}
   - {fileID: 1577608941}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 125851828}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &515547453
 Mesh:
@@ -31416,7 +31417,7 @@ Transform:
   - {fileID: 1575616345}
   - {fileID: 1904283159}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &888047175
 Mesh:
@@ -40299,7 +40300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 63, y: 0, z: 0}
 --- !u!114 &1142191652
 MonoBehaviour:
@@ -56543,7 +56544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Name
-      value: Client (2)
+      value: Chair (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_IsActive
@@ -66556,7 +66557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1877794732
 MonoBehaviour:
@@ -70408,7 +70409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Name
-      value: Client (10)
+      value: Chair (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_IsActive
@@ -74606,7 +74607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088239437501304645, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9088239437501304645, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -77429,7 +77430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6911204722803492401, guid: 977915514931be349987f848fa085245, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6911204722803492401, guid: 977915514931be349987f848fa085245, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78039,7 +78040,7 @@ Transform:
   m_LocalScale: {x: 0.83937633, y: 0.8393761, z: 0.83937633}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &3024296475487493823 stripped
 MonoBehaviour:
@@ -78386,7 +78387,7 @@ Transform:
   m_Children:
   - {fileID: 6530914072868006064}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3464719727759254232
 Transform:
@@ -78455,7 +78456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3516334640214920899, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Name
-      value: Client (1)
+      value: Chair (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3516334641856351527, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Controller
@@ -78538,7 +78539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2670192871576113914, guid: 62d5197958a79c54c9da98915b071050, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2670192871576113914, guid: 62d5197958a79c54c9da98915b071050, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78741,7 +78742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1834721397441504943, guid: 5871fcade05215e44a7e49524c10775d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1834721397441504943, guid: 5871fcade05215e44a7e49524c10775d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78845,7 +78846,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
