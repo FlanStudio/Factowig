@@ -18,3 +18,4 @@ MonoBehaviour:
   timeLimit: 60
   moneyInflow: 20
   moneyPenalty: 10
+  finalHairState: {fileID: 11400000, guid: a36e35e1d0ff0b5448bc5b0027d82422, type: 2}
