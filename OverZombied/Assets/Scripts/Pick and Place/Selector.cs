@@ -10,11 +10,12 @@ public class Selector : MonoBehaviour
     public LayerMask layers;
 
     [Header("Selected stuff")]
-    public PlaceableSurface selectedSurface = null;
-    public ObjectGenerator selectedGenerator = null;
-    public ClientBehavior selectedClient = null;
-    public Ingredient groundObject = null;
-    public RecipeDeliverer selectedDeliverer = null;
+    public PlaceableSurface     selectedSurface        =   null;
+    public ObjectGenerator      selectedGenerator      =   null;
+    public ClientBehavior       selectedClient         =   null;
+    public Ingredient           groundObject           =   null;
+    public RecipeDeliverer      selectedDeliverer      =   null;
+    public WigDispenser         selectedWigDispenser   =   null;
 
     public void Select()
     {
@@ -45,19 +46,24 @@ public class Selector : MonoBehaviour
                 }
                 else
                 {
-                    selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
+                    selectedWigDispenser = hitInfo.collider.gameObject.GetComponent<WigDispenser>();
 
-                    if(!selectedGenerator)
+                    if(!selectedWigDispenser)
                     {
-                        selectedDeliverer = hitInfo.collider.GetComponentInParent<RecipeDeliverer>();
+                        selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
 
-                        if(!selectedDeliverer)
+                        if (!selectedGenerator)
                         {
-                            selectedSurface = hitInfo.collider.GetComponentInParent<PlaceableSurface>();
-                            if (selectedSurface)
-                                selectedSurface.Show();
-                        }                    
-                    }
+                            selectedDeliverer = hitInfo.collider.GetComponentInParent<RecipeDeliverer>();
+
+                            if (!selectedDeliverer)
+                            {
+                                selectedSurface = hitInfo.collider.GetComponentInParent<PlaceableSurface>();
+                                if (selectedSurface)
+                                    selectedSurface.Show();
+                            }
+                        }
+                    }               
                 }        
             }
         }

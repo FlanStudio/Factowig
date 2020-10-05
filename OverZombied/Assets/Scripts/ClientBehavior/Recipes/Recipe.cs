@@ -15,44 +15,44 @@ public class Recipe : ScriptableObject
 
     public IngredientData finalHairState;
 
-    public bool SameRecipeAs(Recipe recipe)
-    {
-        if (ingredients.Count == recipe.ingredients.Count)
-        {
-            List<IngredientData> myIngredients = new List<IngredientData>();
-            foreach(IngredientData ingredient in ingredients)
-            {
-                myIngredients.Add(ingredient);
-            }
+    //public bool SameRecipeAs(Recipe recipe)
+    //{
+    //    if (ingredients.Count == recipe.ingredients.Count)
+    //    {
+    //        List<IngredientData> myIngredients = new List<IngredientData>();
+    //        foreach(IngredientData ingredient in ingredients)
+    //        {
+    //            myIngredients.Add(ingredient);
+    //        }
 
-            List<IngredientData> otherIngredients = new List<IngredientData>();
-            foreach (IngredientData ingredient in recipe.ingredients)
-            {
-                otherIngredients.Add(ingredient);
-            }
+    //        List<IngredientData> otherIngredients = new List<IngredientData>();
+    //        foreach (IngredientData ingredient in recipe.ingredients)
+    //        {
+    //            otherIngredients.Add(ingredient);
+    //        }
 
-            while(myIngredients.Count > 0 && otherIngredients.Count > 0)
-            {
-                bool found = false;
-                foreach(IngredientData ingredient in myIngredients)
-                {
-                    if(ingredient == otherIngredients[0])
-                    {
-                        found = true;
-                        myIngredients.Remove(ingredient);
-                        otherIngredients.RemoveAt(0);
-                        continue;
-                    }
-                }
+    //        while(myIngredients.Count > 0 && otherIngredients.Count > 0)
+    //        {
+    //            bool found = false;
+    //            foreach(IngredientData ingredient in myIngredients)
+    //            {
+    //                if(ingredient == otherIngredients[0])
+    //                {
+    //                    found = true;
+    //                    myIngredients.Remove(ingredient);
+    //                    otherIngredients.RemoveAt(0);
+    //                    continue;
+    //                }
+    //            }
 
-                if (found == false)
-                    return false;
-            }
+    //            if (found == false)
+    //                return false;
+    //        }
 
-            return true;
+    //        return true;
 
-        }
-        else
-            return false;
-    }
+    //    }
+    //    else
+    //        return false;
+    //}
 }

@@ -52,17 +52,39 @@ public class RecipeManager : MonoBehaviour
         StartCoroutine(ReEnableRecipe(recipeUI, recipeRespawnTime));
     }
 
-    public RecipeUI GetRecipeUI(Recipe recipe)
+    public RecipeUI GetRecipeUI(Ingredient ingredient, out int index)
     {
-        foreach(RecipeUI recipeUI in recipeBoxes)
+        for(int i = 0; i < recipeBoxes.Count; ++i)
         {
-            if(recipeUI.recipe.SameRecipeAs(recipe))
+            RecipeUI recipeUI = recipeBoxes[i];
+            if (!recipeUI.gameObject.activeSelf)
+                break;
+            
+            if(recipeUI.recipe.finalHairState == ingredient.data)
             {
+                index = i;
                 return recipeUI;
             }
         }
 
+        index = -1;
         return null;
+    }
+
+    public bool IsValidRecipe(Ingredient ingredient)
+    {
+        bool valid = false;
+
+        foreach (Recipe recipe in availableRecipes)
+        {
+            if (recipe.finalHairState == ingredient.data)
+            {
+                valid = true;
+                break;
+            }
+        }
+
+        return valid;
     }
 
     private IEnumerator ReEnableRecipe(RecipeUI recipeUI, float delay)

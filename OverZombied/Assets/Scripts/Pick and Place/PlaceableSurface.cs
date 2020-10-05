@@ -37,7 +37,7 @@ public class PlaceableSurface : MonoBehaviour
 
         pickableObject.transform.rotation = transform.rotation;
         pickableObject.transform.position = transform.position;
-        pickableObject.transform.position += new Vector3(0f, meshRenderer.bounds.size.y, 0f);
+        pickableObject.transform.position += new Vector3(0f, meshRenderer.bounds.size.y + pickableObject.renderer.bounds.extents.y, 0f);
 
         if(obj.rb)
         {

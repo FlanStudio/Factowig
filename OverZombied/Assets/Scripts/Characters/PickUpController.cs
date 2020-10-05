@@ -141,6 +141,15 @@ public class PickUpController : MonoBehaviour
             }
         }
 
+        else if(selector.selectedWigDispenser != null)
+        {
+            if(pickedObject == null)
+            {
+                GameObject obj = selector.selectedWigDispenser.GetObject();
+                pickedObject = obj.GetComponent<Ingredient>();
+            }
+        }
+
         else if(selector.selectedGenerator != null)
         {
             if(pickedObject == null)

@@ -6,11 +6,27 @@ public class RecipeDeliverer : MonoBehaviour
 {
     public bool Deliver(Ingredient ingredient)
     {
-        RecipeManager.Instance.GetRecipeUI(RecipeManager.Instance.availableRecipes[0]);
+        if (!RecipeManager.Instance.IsValidRecipe(ingredient))
+            return false;
 
+        int index;
+        RecipeUI recipeUI = RecipeManager.Instance.GetRecipeUI(ingredient, out index);
+        if(!recipeUI)
+        {
+            //Delivery failed
+        }
+        else if(index == 0)
+        {
+            //More points?
+            RecipeManager.Instance.RecipeDelivered(recipeUI);
+        }
+        else
+        {
+            //Normal points
+        }
 
-        //Destroy(ingredient.gameObject);
+        Destroy(ingredient.gameObject);
 
-        return false;
+        return true;
     }
 }
