@@ -119,6 +119,7 @@ PlayerSettings:
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
+  vulkanEnableLateAcquireNextImage: 0
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -580,7 +581,19 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: PROBUILDER_EXPERIMENTAL_FEATURES
+    4: PROBUILDER_EXPERIMENTAL_FEATURES
+    7: PROBUILDER_EXPERIMENTAL_FEATURES
+    13: PROBUILDER_EXPERIMENTAL_FEATURES
+    14: PROBUILDER_EXPERIMENTAL_FEATURES
+    19: PROBUILDER_EXPERIMENTAL_FEATURES
+    21: PROBUILDER_EXPERIMENTAL_FEATURES
+    25: PROBUILDER_EXPERIMENTAL_FEATURES
+    27: PROBUILDER_EXPERIMENTAL_FEATURES
+    28: PROBUILDER_EXPERIMENTAL_FEATURES
+    29: PROBUILDER_EXPERIMENTAL_FEATURES
+    30: PROBUILDER_EXPERIMENTAL_FEATURES
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
