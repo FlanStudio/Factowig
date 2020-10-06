@@ -285,20 +285,4 @@ public class ClientBehavior : MonoBehaviour
             }
         }    
     }
-
-    public void SelectMeshes()
-    {
-        foreach(MeshRenderer meshRenderer in clientMeshes)
-        {
-            meshRenderer.material.color *= PlaceableSurface.selectedColorMultiplier;
-        }
-    }
-
-    public void UnSelectMeshes()
-    {
-        foreach (MeshRenderer meshRenderer in clientMeshes)
-        {
-            meshRenderer.material.color /= PlaceableSurface.selectedColorMultiplier;
-        }
-    }
 }

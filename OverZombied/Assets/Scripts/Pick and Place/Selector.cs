@@ -12,7 +12,7 @@ public class Selector : MonoBehaviour
     [Header("Selected stuff")]
     public PlaceableSurface     selectedSurface        =   null;
     public ObjectGenerator      selectedGenerator      =   null;
-    public ClientBehavior       selectedClient         =   null;
+    public Chair                selectedChair          =   null;
     public Ingredient           groundObject           =   null;
     public RecipeDeliverer      selectedDeliverer      =   null;
     public WigDispenser         selectedWigDispenser   =   null;
@@ -22,13 +22,13 @@ public class Selector : MonoBehaviour
         if (selectedSurface != null)
             selectedSurface.Hide();
 
-        if (selectedClient != null)
-            selectedClient.UnSelectMeshes();
+        if (selectedChair != null)
+            selectedChair.UnSelectMeshes();
 
         selectedGenerator = null;
         selectedSurface = null;
         groundObject = null;
-        selectedClient = null;
+        selectedChair = null;
         selectedDeliverer = null;
 
         RaycastHit hitInfo;
@@ -38,11 +38,11 @@ public class Selector : MonoBehaviour
             groundObject = hitInfo.collider.gameObject.GetComponent<Ingredient>();
             if(!groundObject)
             {
-                selectedClient = hitInfo.collider.gameObject.GetComponent<ClientBehavior>();
+                selectedChair = hitInfo.collider.gameObject.GetComponent<Chair>();
                 
-                if(selectedClient)
+                if(selectedChair)
                 {
-                    selectedClient.SelectMeshes();
+                    selectedChair.SelectMeshes();
                 }
                 else
                 {

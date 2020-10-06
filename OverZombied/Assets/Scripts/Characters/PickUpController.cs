@@ -102,13 +102,13 @@ public class PickUpController : MonoBehaviour
     {
         selector.Select();
 
-        if(selector.selectedClient != null)
+        if(selector.selectedChair != null)
         {
-            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.RESOURCE)
-            {
-                selector.selectedClient.GiveIngredient(pickedObject);
-                pickedObject = null;
-            }
+            //if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.RESOURCE)
+            //{
+            //    selector.selectedClient.GiveIngredient(pickedObject);
+            //    pickedObject = null;
+            //}
         }
 
         else if(selector.selectedDeliverer != null)
@@ -186,20 +186,20 @@ public class PickUpController : MonoBehaviour
     {
         selector.Select();
 
-        if (selector.selectedClient != null)
-        {
-            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
-            {
-                selector.selectedClient.UseTool(this, pickedObject);
-            }
-        }
+        //if (selector.selectedChair != null)
+        //{
+        //    if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
+        //    {
+        //        selector.selectedChair.UseTool(this, pickedObject);
+        //    }
+        //}
     }
 
     private void UseKeyPressed()
     {
-        if (selector.selectedClient != null)
+        if (selector.selectedChair != null)
         {
-            selector.selectedClient.UseToolStarted(this, pickedObject);            
+            //selector.selectedChair.UseToolStarted(this, pickedObject);            
             return;
         }
         else if(pickedObject != null && pickedObject.throwable)
@@ -211,9 +211,9 @@ public class PickUpController : MonoBehaviour
 
     private void UseKeyReleased()
     {
-        if(selector.selectedClient != null)
+        if(selector.selectedChair != null)
         {
-            selector.selectedClient.UseToolFinished();
+            //selector.selectedChair.UseToolFinished();
         }
         else if(startedThrowing && pickedObject != null && pickedObject.throwable)
         {

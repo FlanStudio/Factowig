@@ -16,7 +16,7 @@ TagManager:
   - PlaceableSurface
   - ObjectGenerator
   - Ingredient
-  - Client
+  - Chair
   - Wall
   - RecipeDeliverer
   - WigDispenser
