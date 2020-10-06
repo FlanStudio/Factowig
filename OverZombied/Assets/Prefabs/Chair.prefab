@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4487815409477352463}
   - component: {fileID: 2018794934}
   m_Layer: 11
-  m_Name: Client
+  m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,10 +61,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af25a98829cd32c4a8e02876f44a768b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3516334641856351527}
   normalHair: {fileID: 3179858378985887191}
   cutHair: {fileID: 1691072342923116616}
   combedHair: {fileID: 1193639987101511002}
   cutcombedHair: {fileID: 4134604682426891000}
+  chairMeshes:
+  - {fileID: 5136157843281949587}
+  - {fileID: 5737909607732326095}
+  - {fileID: 6175726803287321480}
+  - {fileID: 8025415078699835979}
+  - {fileID: 63897308826150}
 --- !u!95 &3516334641856351527
 Animator:
   serializedVersion: 3
@@ -75,7 +82,7 @@ Animator:
   m_GameObject: {fileID: 4327376949555604853}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d19a4f62990a992458f3d0b02321d32e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 029d860ee3ac5a54d92f441e8c1a599c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -959,6 +966,16 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3bf2939f35923ae4f95763f4d15f77f0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+--- !u!23 &5737909607732326095 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9182173175794581227, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 3516334640316321828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5136157843281949587 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -609169157008874569, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 3516334640316321828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4327376949555604853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
@@ -982,6 +999,21 @@ MeshRenderer:
 --- !u!23 &4134604682426891000 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 697379221140155100, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 3516334640316321828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &63897308826150 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5706978112037611006, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 3516334640316321828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8025415078699835979 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2329337615141883281, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
+  m_PrefabInstance: {fileID: 3516334640316321828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6175726803287321480 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7311613198786378668, guid: 11bfaef33b421004abbe397d19c165e6, type: 3}
   m_PrefabInstance: {fileID: 3516334640316321828}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3982939935845513167 stripped
