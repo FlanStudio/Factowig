@@ -198,13 +198,13 @@ public class PickUpController : MonoBehaviour
     {
         selector.Select();
 
-        //if (selector.selectedChair != null)
-        //{
-        //    if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
-        //    {
-        //        selector.selectedChair.UseTool(this, pickedObject);
-        //    }
-        //}
+        if (selector.selectedChair != null)
+        {
+            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
+            {
+                //selector.selectedChair.UseTool(this, pickedObject);
+            }
+        }
     }
 
     private void UseKeyPressed()

@@ -11,6 +11,7 @@ public class IngredientData : ScriptableObject
 
     public Sprite sprite;
 
-    [Header("Only for tools")]
     public float actionPressSeconds = 0f;
+
+    public int durability = 1;
 }
