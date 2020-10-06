@@ -104,6 +104,18 @@ public class PickUpController : MonoBehaviour
 
         if(selector.selectedChair != null)
         {
+            if(pickedObject != null)
+            {
+                if(pickedObject.data.name == "Normal Hair" || pickedObject.data.name == "Cut Hair")
+                {
+                    selector.selectedChair.PlaceWig(pickedObject);
+                    pickedObject = null;
+                }
+            }
+            else
+            {
+                pickedObject = selector.selectedChair.RemoveWig();
+            }
             //if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.RESOURCE)
             //{
             //    selector.selectedClient.GiveIngredient(pickedObject);

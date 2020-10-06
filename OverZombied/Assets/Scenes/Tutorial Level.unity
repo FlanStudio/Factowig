@@ -16860,7 +16860,7 @@ PrefabInstance:
     - target: {fileID: 3516334641856351527, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d19a4f62990a992458f3d0b02321d32e, type: 2}
+      objectReference: {fileID: 9100000, guid: 029d860ee3ac5a54d92f441e8c1a599c, type: 2}
     - target: {fileID: 8099017249698672769, guid: 8ecbb5ef0bfca5249830c17e7c638cde, type: 3}
       propertyPath: m_Camera
       value: 
