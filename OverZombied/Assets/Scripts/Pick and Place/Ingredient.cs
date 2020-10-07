@@ -17,7 +17,7 @@ public class Ingredient : MonoBehaviour
 
     public bool HasValidNextStepWith(Ingredient other)
     {
-        return RecipeManager.Instance.AnyRecipeHasConsecutive(data, other.data);
+        return other ? RecipeManager.Instance.AnyRecipeHasConsecutive(data, other.data) : false;
     }
 
     private void OnCollisionEnter(Collision other)

@@ -113,7 +113,8 @@ public class PickUpController : MonoBehaviour
             }
             else
             {
-                pickedObject = selector.selectedChair.RemoveWig();
+                Ingredient ret = selector.selectedChair.RemoveWig();
+                if (ret) pickedObject = ret;
             }
         }
 
@@ -194,11 +195,8 @@ public class PickUpController : MonoBehaviour
 
         if (selector.selectedChair != null)
         {
-            if (pickedObject != null)
-            {
-                if (selector.selectedChair.ApplyIngredient(pickedObject))
-                    pickedObject = null;
-            }
+            if (selector.selectedChair.ApplyIngredient(pickedObject))
+                pickedObject = null;
         }
     }
 

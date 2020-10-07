@@ -13,6 +13,9 @@ public class RecipeManager : MonoBehaviour
     [SerializeField]
     private List<RecipeUI> recipeBoxes = null;
 
+    [Space]
+    public Sprite tickSprite = null;
+
     private int activeBoxes = 0;
     private bool spawnNewRecipes = true;
 
@@ -117,6 +120,20 @@ public class RecipeManager : MonoBehaviour
         }
 
         return valid;
+    }
+
+    public IngredientData GetResultingIngredient(IngredientData a, IngredientData b)
+    {
+        foreach(Recipe recipe in availableRecipes)
+        {
+            for(int i = 0; i < recipe.ingredients.Count - 2; ++i)
+            {
+                if (recipe.ingredients[i] == a && recipe.ingredients[i + 1] == b)
+                    return recipe.ingredients[i + 2];
+            }
+        }
+
+        return null;
     }
 
     private IEnumerator ReEnableRecipe(RecipeUI recipeUI, float delay)

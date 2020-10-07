@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Chair : MonoBehaviour
 {
@@ -10,12 +11,20 @@ public class Chair : MonoBehaviour
     public MeshRenderer[] chairMeshes;
 
     private Ingredient wig;
+    private Ingredient ingredient;
+
     private bool actionStarted = false;
     private float actionCounter = 0f;
+    private bool actionFinished = false;
 
     [SerializeField]
     private Canvas canvas;
+    
+    [SerializeField]
+    private Image iconIngredient;
 
+    [SerializeField]
+    private RectTransform progressBar;
 
     public bool PlaceWig(Ingredient wig)
     {
@@ -32,10 +41,17 @@ public class Chair : MonoBehaviour
 
     public Ingredient RemoveWig()
     {
+        if (actionStarted)
+            return null;
+
+        actionFinished = false;
+
         foreach (MeshRenderer renderer in hairMeshes)
             renderer.gameObject.SetActive(false);
         
         animator.SetBool("Wig", false);
+
+        canvas.gameObject.SetActive(false);
 
         Ingredient ret = wig;
         wig = null;
@@ -62,22 +78,37 @@ public class Chair : MonoBehaviour
 
     public bool ApplyIngredient(Ingredient ingredient)
     {
-        if (!wig || actionStarted || !wig.HasValidNextStepWith(ingredient))
+        if (!wig || actionFinished || (!ingredient && !actionStarted) || (ingredient && !wig.HasValidNextStepWith(ingredient)))
             return false;
+     
+        if(!actionStarted)
+        {
+            actionStarted = true;
+            iconIngredient.sprite = ingredient.data.sprite;
+            canvas.gameObject.SetActive(true);
+            this.ingredient = ingredient;
 
-        actionStarted = true;
+            return true;
+        }
+
         actionCounter += Time.deltaTime;
+        progressBar.anchoredPosition = new Vector2((1 - (actionCounter / this.ingredient.data.actionPressSeconds)) * -1.3f, progressBar.anchoredPosition.y);
 
-        canvas.gameObject.SetActive(true);
-
-        if(actionCounter >= ingredient.data.actionPressSeconds)
+        if(actionCounter >= this.ingredient.data.actionPressSeconds)
         {
             actionStarted = false;
             actionCounter = 0f;
+            actionFinished = true;
 
-            Destroy(ingredient.gameObject);
+            iconIngredient.sprite = RecipeManager.Instance.tickSprite;
 
-            return true;
+            IngredientData newIngredientData = RecipeManager.Instance.GetResultingIngredient(wig.data, this.ingredient.data);
+            
+            hairMeshes[wig.data.wigIndex].gameObject.SetActive(false);
+            wig.data = newIngredientData;
+            hairMeshes[wig.data.wigIndex].gameObject.SetActive(true);
+
+            Destroy(this.ingredient.gameObject);
         }
 
         return false;
