@@ -25,6 +25,9 @@ public class Selector : MonoBehaviour
         if (selectedChair != null)
             selectedChair.UnSelectMeshes();
 
+        if (selectedGenerator != null)
+            selectedGenerator.DeSelected();
+
         selectedGenerator = null;
         selectedSurface = null;
         groundObject = null;
@@ -51,8 +54,9 @@ public class Selector : MonoBehaviour
                     if(!selectedWigDispenser)
                     {
                         selectedGenerator = hitInfo.collider.gameObject.GetComponent<ObjectGenerator>();
-
-                        if (!selectedGenerator)
+                        if (selectedGenerator)
+                            selectedGenerator.Selected();
+                        else
                         {
                             selectedDeliverer = hitInfo.collider.GetComponentInParent<RecipeDeliverer>();
 

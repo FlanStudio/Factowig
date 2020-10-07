@@ -12,6 +12,25 @@ public class ObjectGenerator : MonoBehaviour
     [SerializeField]
     private GameObject prefab = null;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    public void Selected()
+    {
+        if(animator)    
+            animator.SetBool("selected", true);       
+    }
+
+    public void DeSelected()
+    {
+        if(animator)
+            animator.SetBool("selected", false);
+    }
+
     public GameObject GetObject()
     {
         itemsSpawned++;
