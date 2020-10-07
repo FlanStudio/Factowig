@@ -60,7 +60,7 @@ public class RecipeManager : MonoBehaviour
             if (!recipeUI.gameObject.activeSelf)
                 break;
             
-            if(recipeUI.recipe.finalHairState == ingredient.data)
+            if(recipeUI.recipe.ingredients[recipeUI.recipe.ingredients.Count - 1] == ingredient.data)
             {
                 index = i;
                 return recipeUI;
@@ -71,13 +71,29 @@ public class RecipeManager : MonoBehaviour
         return null;
     }
 
-    public bool IsValidRecipe(Ingredient ingredient)
+    public bool HasMoreSteps(Ingredient ingredient)
+    {
+        foreach (Recipe recipe in availableRecipes)
+        {
+            for(int i = 0; i < recipe.ingredients.Count; ++i)
+            {
+                if(ingredient.data == recipe.ingredients[i] && i+1 < recipe.ingredients.Count)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool IsFinalIngredient(Ingredient ingredient)
     {
         bool valid = false;
 
         foreach (Recipe recipe in availableRecipes)
         {
-            if (recipe.finalHairState == ingredient.data)
+            if (recipe.ingredients[recipe.ingredients.Count - 1] == ingredient.data)
             {
                 valid = true;
                 break;

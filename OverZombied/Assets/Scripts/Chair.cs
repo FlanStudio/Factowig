@@ -6,37 +6,28 @@ public class Chair : MonoBehaviour
 {
     public Animator animator;
 
-    public MeshRenderer normalHair;
-    public MeshRenderer cutHair;
-    public MeshRenderer combedHair;
-    public MeshRenderer cutcombedHair;
-
+    public MeshRenderer[] hairMeshes;
     public MeshRenderer[] chairMeshes;
 
     private Ingredient wig;
 
-    public void PlaceWig(Ingredient wig)
+    public bool PlaceWig(Ingredient wig)
     {
-        switch(wig.data.name)
-        {
-            case "Normal Hair":
-                normalHair.gameObject.SetActive(true);
-                break;
-            case "Cut Hair":
-                cutHair.gameObject.SetActive(true);
-                break;
-        }
+        if (!RecipeManager.Instance.HasMoreSteps(wig))
+            return false;
 
+        hairMeshes[wig.data.wigIndex].gameObject.SetActive(true);
+      
         animator.SetBool("Wig", true);
         this.wig = wig;
+
+        return true;
     }
 
     public Ingredient RemoveWig()
     {
-        normalHair.gameObject.SetActive(false);
-        cutHair.gameObject.SetActive(false);
-        combedHair.gameObject.SetActive(false);
-        cutcombedHair.gameObject.SetActive(false);
+        foreach (MeshRenderer renderer in hairMeshes)
+            renderer.gameObject.SetActive(false);
         
         animator.SetBool("Wig", false);
 
@@ -46,28 +37,20 @@ public class Chair : MonoBehaviour
     }
 
     public void SelectMeshes()
-    {
-        normalHair.material.color *= PlaceableSurface.selectedColorMultiplier;
-        cutHair.material.color *= PlaceableSurface.selectedColorMultiplier;
-        combedHair.material.color *= PlaceableSurface.selectedColorMultiplier;
-        cutcombedHair.material.color *= PlaceableSurface.selectedColorMultiplier;   
+    {  
+        foreach (MeshRenderer meshRenderer in hairMeshes)          
+            meshRenderer.material.color *= PlaceableSurface.selectedColorMultiplier;
 
-        foreach(MeshRenderer renderer in chairMeshes)
-        {
+        foreach (MeshRenderer renderer in chairMeshes)      
             renderer.material.color *= PlaceableSurface.selectedColorMultiplier;
-        }
     }
 
     public void UnSelectMeshes()
     {
-        normalHair.material.color /= PlaceableSurface.selectedColorMultiplier;
-        cutHair.material.color /= PlaceableSurface.selectedColorMultiplier;
-        combedHair.material.color /= PlaceableSurface.selectedColorMultiplier;
-        cutcombedHair.material.color /= PlaceableSurface.selectedColorMultiplier;
+        foreach(MeshRenderer meshRenderer in hairMeshes)          
+            meshRenderer.material.color /= PlaceableSurface.selectedColorMultiplier;          
 
         foreach (MeshRenderer renderer in chairMeshes)
-        {
             renderer.material.color /= PlaceableSurface.selectedColorMultiplier;
-        }
     }
 }

@@ -9,8 +9,6 @@ public class Ingredient : MonoBehaviour
     public Rigidbody rb;
     public new MeshRenderer renderer;
 
-    public bool throwable = true;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();

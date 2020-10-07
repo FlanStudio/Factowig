@@ -106,11 +106,8 @@ public class PickUpController : MonoBehaviour
         {
             if(pickedObject != null)
             {
-                if(pickedObject.data.name == "Normal Hair" || pickedObject.data.name == "Cut Hair")
-                {
-                    selector.selectedChair.PlaceWig(pickedObject);
-                    pickedObject = null;
-                }
+                if(pickedObject.data.isWig && selector.selectedChair.PlaceWig(pickedObject))
+                    pickedObject = null;               
             }
             else
             {
@@ -214,7 +211,7 @@ public class PickUpController : MonoBehaviour
             //selector.selectedChair.UseToolStarted(this, pickedObject);            
             return;
         }
-        else if(pickedObject != null && pickedObject.throwable)
+        else if(pickedObject != null && pickedObject.data.throwable)
         {
             startedThrowing = true;
             movementController.move = false;
@@ -227,7 +224,7 @@ public class PickUpController : MonoBehaviour
         {
             //selector.selectedChair.UseToolFinished();
         }
-        else if(startedThrowing && pickedObject != null && pickedObject.throwable)
+        else if(startedThrowing && pickedObject != null && pickedObject.data.throwable)
         {
             pickedObject.rb.isKinematic = false;
             pickedObject.gameObject.SetActive(true);

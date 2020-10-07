@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9954c2955378e434ab043a3cb65f4faf, type: 3}
   m_Name: Cut Hair
   m_EditorClassIdentifier: 
+  isWig: 1
+  wigIndex: 1
+  throwable: 0
   type: 1
   name: Cut Hair
   sprite: {fileID: 0}
   actionPressSeconds: -1
+  durability: 1

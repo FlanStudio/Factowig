@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   ingredients:
+  - {fileID: 11400000, guid: ef291ec0b462c984e8a626762c3596ad, type: 2}
   - {fileID: 11400000, guid: d7da01e52279d204eb413eea649ff218, type: 2}
+  - {fileID: 11400000, guid: a8961f2581f4ea4449e51de714f9d62d, type: 2}
   timeLimit: 60
   moneyInflow: 20
   moneyPenalty: 10

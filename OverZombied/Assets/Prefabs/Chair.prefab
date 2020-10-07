@@ -62,10 +62,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3516334641856351527}
-  normalHair: {fileID: 3179858378985887191}
-  cutHair: {fileID: 1691072342923116616}
-  combedHair: {fileID: 1193639987101511002}
-  cutcombedHair: {fileID: 4134604682426891000}
+  hairMeshes:
+  - {fileID: 3179858378985887191}
+  - {fileID: 1691072342923116616}
+  - {fileID: 1193639987101511002}
+  - {fileID: 4134604682426891000}
   chairMeshes:
   - {fileID: 5136157843281949587}
   - {fileID: 5737909607732326095}

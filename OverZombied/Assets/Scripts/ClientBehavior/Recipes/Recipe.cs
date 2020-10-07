@@ -13,8 +13,6 @@ public class Recipe : ScriptableObject
     public float moneyInflow = 20f;
     public float moneyPenalty = 10f;
 
-    public IngredientData finalHairState;
-
     //public bool SameRecipeAs(Recipe recipe)
     //{
     //    if (ingredients.Count == recipe.ingredients.Count)
