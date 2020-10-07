@@ -128,3 +128,4 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: ef291ec0b462c984e8a626762c3596ad, type: 2}
   rb: {fileID: 1026102672}
   renderer: {fileID: 2040762792772619750}
+  collider: {fileID: 2040762792772619751}

@@ -44,5 +44,10 @@ public class PlaceableSurface : MonoBehaviour
             obj.rb.velocity = obj.rb.angularVelocity = Vector3.zero;
             obj.rb.isKinematic = true;
         }
+
+        if(obj.collider)
+        {
+            obj.collider.enabled = false;
+        }
     }
 }

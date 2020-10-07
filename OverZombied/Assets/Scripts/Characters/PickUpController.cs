@@ -213,6 +213,7 @@ public class PickUpController : MonoBehaviour
         {
             startedThrowing = true;
             movementController.move = false;
+            pickedObject.collider.enabled = true;
         }    
     }
 

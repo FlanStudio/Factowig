@@ -13,6 +13,10 @@ public class Chair : MonoBehaviour
     private bool actionStarted = false;
     private float actionCounter = 0f;
 
+    [SerializeField]
+    private Canvas canvas;
+
+
     public bool PlaceWig(Ingredient wig)
     {
         if (!RecipeManager.Instance.HasMoreSteps(wig.data))
@@ -58,11 +62,24 @@ public class Chair : MonoBehaviour
 
     public bool ApplyIngredient(Ingredient ingredient)
     {
-        if (!wig || !wig.HasValidNextStepWith(ingredient))
+        if (!wig || actionStarted || !wig.HasValidNextStepWith(ingredient))
             return false;
 
-        Destroy(ingredient.gameObject);
+        actionStarted = true;
+        actionCounter += Time.deltaTime;
 
-        return true;
+        canvas.gameObject.SetActive(true);
+
+        if(actionCounter >= ingredient.data.actionPressSeconds)
+        {
+            actionStarted = false;
+            actionCounter = 0f;
+
+            Destroy(ingredient.gameObject);
+
+            return true;
+        }
+
+        return false;
     }
 }

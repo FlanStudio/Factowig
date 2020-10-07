@@ -48,7 +48,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 3
 --- !u!65 &1834721397441504942
 BoxCollider:
@@ -78,7 +78,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 76cddec1012bf58478383166a8faacd1, type: 2}
   rb: {fileID: 1834721397441504939}
   renderer: {fileID: 7747414707086418320}
-  throwable: 1
+  collider: {fileID: 1834721397441504942}
 --- !u!1 &2145014891723947112
 GameObject:
   m_ObjectHideFlags: 0

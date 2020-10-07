@@ -126,8 +126,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.006, y: 0.006, z: 0.006}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.18683834, y: 0.017492592, z: 0.90898204}
+  m_Center: {x: 0.006366864, y: 0.031834006, z: 0.0039931536}
 --- !u!54 &4274590027553518574
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 3
 --- !u!114 &4274590027553518575
 MonoBehaviour:
@@ -159,4 +159,4 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: d7da01e52279d204eb413eea649ff218, type: 2}
   rb: {fileID: 4274590027553518574}
   renderer: {fileID: 7506214198493723681}
-  throwable: 1
+  collider: {fileID: 4274590027553518563}
