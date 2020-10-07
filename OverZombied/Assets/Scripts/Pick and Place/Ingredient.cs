@@ -14,6 +14,11 @@ public class Ingredient : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public bool HasValidNextStepWith(Ingredient other)
+    {
+        return RecipeManager.Instance.AnyRecipeHasConsecutive(data, other.data);
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if(LayerMask.LayerToName(other.gameObject.layer) == "PlaceableSurface")

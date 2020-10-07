@@ -17,6 +17,8 @@ public class PickUpController : MonoBehaviour
 
     public float dropDistance = 1f;
 
+    public GameObject hand = null;
+
     private bool startedThrowing = false;
 
     private void Awake()
@@ -113,11 +115,6 @@ public class PickUpController : MonoBehaviour
             {
                 pickedObject = selector.selectedChair.RemoveWig();
             }
-            //if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.RESOURCE)
-            //{
-            //    selector.selectedClient.GiveIngredient(pickedObject);
-            //    pickedObject = null;
-            //}
         }
 
         else if(selector.selectedDeliverer != null)
@@ -197,9 +194,10 @@ public class PickUpController : MonoBehaviour
 
         if (selector.selectedChair != null)
         {
-            if (pickedObject != null && pickedObject.data.type == IngredientData.TYPE.TOOL)
+            if (pickedObject != null)
             {
-                //selector.selectedChair.UseTool(this, pickedObject);
+                if (selector.selectedChair.ApplyIngredient(pickedObject))
+                    pickedObject = null;
             }
         }
     }

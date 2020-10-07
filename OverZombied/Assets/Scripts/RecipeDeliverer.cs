@@ -6,7 +6,7 @@ public class RecipeDeliverer : MonoBehaviour
 {
     public bool Deliver(Ingredient ingredient)
     {
-        if (!RecipeManager.Instance.IsFinalIngredient(ingredient))
+        if (!RecipeManager.Instance.IsFinalIngredient(ingredient.data))
             return false;
 
         int index;

@@ -14452,6 +14452,7 @@ MonoBehaviour:
   throwStrength: 15
   throwHeight: 1
   dropDistance: 1
+  hand: {fileID: 2123293024}
 --- !u!114 &439068053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52808,6 +52809,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504641203}
   m_CullTransparentMesh: 0
+--- !u!1 &1507166921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5334089663092536136, guid: 3f8cfaed0e5926a43ae6617632436082, type: 3}
+  m_PrefabInstance: {fileID: 239017901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1508871649
 Mesh:
   m_ObjectHideFlags: 0
@@ -75823,6 +75829,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2123293024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5334089663092536136, guid: 3f8cfaed0e5926a43ae6617632436082, type: 3}
+  m_PrefabInstance: {fileID: 1044432497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2124185944
 Mesh:
   m_ObjectHideFlags: 0
@@ -78468,6 +78479,7 @@ MonoBehaviour:
   throwStrength: 15
   throwHeight: 1
   dropDistance: 1
+  hand: {fileID: 1507166921}
 --- !u!114 &4301894424637999759
 MonoBehaviour:
   m_ObjectHideFlags: 0

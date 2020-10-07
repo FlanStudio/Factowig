@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1026102672}
   - component: {fileID: 1026102671}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,4 +128,3 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: ef291ec0b462c984e8a626762c3596ad, type: 2}
   rb: {fileID: 1026102672}
   renderer: {fileID: 2040762792772619750}
-  throwable: 0

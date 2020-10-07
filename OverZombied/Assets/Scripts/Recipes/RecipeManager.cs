@@ -71,13 +71,13 @@ public class RecipeManager : MonoBehaviour
         return null;
     }
 
-    public bool HasMoreSteps(Ingredient ingredient)
+    public bool HasMoreSteps(IngredientData ingredient)
     {
         foreach (Recipe recipe in availableRecipes)
         {
             for(int i = 0; i < recipe.ingredients.Count; ++i)
             {
-                if(ingredient.data == recipe.ingredients[i] && i+1 < recipe.ingredients.Count)
+                if(ingredient == recipe.ingredients[i] && i+1 < recipe.ingredients.Count)
                 {
                     return true;
                 }
@@ -87,13 +87,29 @@ public class RecipeManager : MonoBehaviour
         return false;
     }
 
-    public bool IsFinalIngredient(Ingredient ingredient)
+    public bool AnyRecipeHasConsecutive(IngredientData a, IngredientData b)
+    {
+        foreach (Recipe recipe in availableRecipes)
+        {
+            for (int i = 0; i < recipe.ingredients.Count - 1; ++i)
+            {
+                if (recipe.ingredients[i] == a && recipe.ingredients[i + 1] == b)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool IsFinalIngredient(IngredientData ingredient)
     {
         bool valid = false;
 
         foreach (Recipe recipe in availableRecipes)
         {
-            if (recipe.ingredients[recipe.ingredients.Count - 1] == ingredient.data)
+            if (recipe.ingredients[recipe.ingredients.Count - 1] == ingredient)
             {
                 valid = true;
                 break;
