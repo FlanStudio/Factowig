@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Chair : MonoBehaviour
 {
-    public Animator animator;
-
+    public GameObject head;
     public MeshRenderer[] hairMeshes;
     public MeshRenderer[] chairMeshes;
 
@@ -31,9 +30,9 @@ public class Chair : MonoBehaviour
         if (!RecipeManager.Instance.HasMoreSteps(wig.data))
             return false;
 
+        head.SetActive(true);
         hairMeshes[wig.data.wigIndex].gameObject.SetActive(true);
       
-        animator.SetBool("Wig", true);
         this.wig = wig;
 
         return true;
@@ -48,9 +47,8 @@ public class Chair : MonoBehaviour
 
         foreach (MeshRenderer renderer in hairMeshes)
             renderer.gameObject.SetActive(false);
-        
-        animator.SetBool("Wig", false);
 
+        head.SetActive(false);
         canvas.gameObject.SetActive(false);
 
         Ingredient ret = wig;
