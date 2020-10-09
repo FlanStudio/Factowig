@@ -20597,7 +20597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &590721467
 Mesh:
@@ -27443,7 +27443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39816,6 +39816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trap
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63fb42c99e13edf49942566c088513c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63fb42c99e13edf49942566c088513c8, type: 3}
 --- !u!43 &1057404321
@@ -44846,7 +44850,7 @@ GameObject:
   - component: {fileID: 1259293522}
   - component: {fileID: 1259293523}
   m_Layer: 14
-  m_Name: TEMP Wig dispenser
+  m_Name: WigDispenser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44867,7 +44871,7 @@ Transform:
   - {fileID: 1261318957}
   - {fileID: 1705093366}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1259293522
 MonoBehaviour:
@@ -46458,7 +46462,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324287114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5fc28ad3790346f4086235361008d8a7, type: 2}
   m_CullingMode: 0
@@ -78177,11 +78181,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3205656539336933101, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
       propertyPath: m_Name
-      value: Client_Prefab
+      value: Wig_Bust
       objectReference: {fileID: 0}
     - target: {fileID: 3205656539336933102, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.416
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 3205656539336933102, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -78189,7 +78193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205656539336933102, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.966
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3205656539336933102, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -79014,7 +79018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4628407290585149072, guid: 490d209c1826d774aa0dbc6b3cbbc743, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4628407290585149072, guid: 490d209c1826d774aa0dbc6b3cbbc743, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -79186,7 +79190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2907216656668329354, guid: 45bdd4ba11fdda145bdf95097f380775, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2907216656668329354, guid: 45bdd4ba11fdda145bdf95097f380775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
