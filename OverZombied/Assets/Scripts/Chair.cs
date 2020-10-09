@@ -18,13 +18,13 @@ public class Chair : MonoBehaviour
     private bool actionFinished = false;
 
     [SerializeField]
-    private Canvas canvas;
+    private Canvas canvas = null;
     
     [SerializeField]
-    private Image iconIngredient;
+    private Image iconIngredient = null;
 
     [SerializeField]
-    private RectTransform progressBar;
+    private RectTransform progressBar = null;
 
     public bool PlaceWig(Ingredient wig)
     {
@@ -109,6 +109,7 @@ public class Chair : MonoBehaviour
             hairMeshes[wig.data.wigIndex].gameObject.SetActive(true);
 
             Destroy(this.ingredient.gameObject);
+            this.ingredient = null;
         }
 
         return false;

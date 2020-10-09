@@ -12,12 +12,7 @@ public class ObjectGenerator : MonoBehaviour
     [SerializeField]
     private GameObject prefab = null;
 
-    private Animator animator;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
+    public Animator animator = null;
 
     public void Selected()
     {
