@@ -178,7 +178,7 @@ public class PickUpController : MonoBehaviour
 
         else
         {
-            if(pickedObject != null)
+            if(pickedObject != null && pickedObject.data.throwable)
             {
                 //Drop on the floor
                 pickedObject.transform.position = transform.position + transform.forward * dropDistance + new Vector3(0f, pickedObject.renderer.bounds.extents.y, 0f); ;
