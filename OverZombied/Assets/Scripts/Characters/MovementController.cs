@@ -90,7 +90,7 @@ public class MovementController : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
-        if (move)
+        if (move && movementNorm != Vector2.zero)
             rb.MovePosition(rb.position + new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.fixedDeltaTime);
 
         #endregion
