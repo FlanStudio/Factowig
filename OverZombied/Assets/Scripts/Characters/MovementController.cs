@@ -86,16 +86,13 @@ public class MovementController : MonoBehaviour
     private void FixedUpdate()
     {
         #region APPLY MOVEMENT
-        if (movementNorm == Vector2.zero || !move)
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
-        else
-        {
-            if (move)
-                rb.MovePosition(rb.position + new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.fixedDeltaTime);
-        }
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        if (move)
+            rb.MovePosition(rb.position + new Vector3(movementNorm.x, 0, movementNorm.y) * speed * Time.fixedDeltaTime);
+
         #endregion
     }
 }
