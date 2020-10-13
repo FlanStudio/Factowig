@@ -54,6 +54,8 @@ public class RecipeDeliverer : MonoBehaviour
             //TODO: BONUS
         }
 
+        WigDispenser.Instance.itemsSpawned -= 1;
+
         #region ADD TO BELT
         ingredient.transform.rotation = transform.rotation;
         ingredient.transform.position = new Vector3(8.5f, beltRenderer.bounds.size.y + ingredient.renderer.bounds.extents.y, ingredient.transform.position.z);

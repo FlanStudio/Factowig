@@ -22,10 +22,10 @@ public class WigDispenser : MonoBehaviour
 
     public GameObject GetObject()
     {
-        itemsSpawned++;
-
-        if (amountItems != -1 && itemsSpawned > amountItems)
+        if (amountItems != -1 && itemsSpawned + 1 > amountItems)
             return null;
+
+        itemsSpawned++;
 
         GameObject obj = Instantiate(wigPrefab);
         obj.SetActive(false);

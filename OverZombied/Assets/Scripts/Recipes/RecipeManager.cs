@@ -107,6 +107,8 @@ public class RecipeManager : MonoBehaviour
 
     public bool IsFinalIngredient(IngredientData ingredient)
     {
+        return ingredient.isWig;
+
         bool valid = false;
 
         foreach (Recipe recipe in availableRecipes)
