@@ -29,7 +29,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3205656539336933102}
   m_Layer: 0
-  m_Name: Client_Prefab
+  m_Name: WigBust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3205656539336933101}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 4.416, y: 0.464, z: 3.966}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3167858880031918924}
@@ -59,15 +59,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.050688
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 0.781
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.39358
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -103,15 +103,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.28749114
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.28749114
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.28749114
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2323686817433861214, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
       propertyPath: m_Materials.Array.data[0]
