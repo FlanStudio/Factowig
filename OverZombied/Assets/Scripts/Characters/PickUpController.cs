@@ -196,8 +196,20 @@ public class PickUpController : MonoBehaviour
 
         if (selector.selectedChair != null)
         {
-            if (selector.selectedChair.ApplyIngredient(pickedObject))
+            bool stayHere;
+            if (selector.selectedChair.ApplyIngredient(pickedObject, out stayHere))
                 pickedObject = null;
+
+            if(stayHere)
+            {
+                movementController.move = movementController.rotate = false;
+                transform.position = selector.selectedChair.transform.position + selector.selectedChair.transform.forward * dropDistance;
+                transform.LookAt(selector.selectedChair.transform.position);
+            }
+            else
+            {
+                movementController.move = movementController.rotate = true;
+            }
         }
     }
 

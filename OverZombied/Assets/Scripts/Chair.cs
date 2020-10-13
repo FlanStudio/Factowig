@@ -71,10 +71,13 @@ public class Chair : MonoBehaviour
             renderer.material.color /= PlaceableSurface.selectedColorMultiplier;
     }
 
-    public bool ApplyIngredient(Ingredient ingredient)
+    public bool ApplyIngredient(Ingredient ingredient, out bool stayHere)
     {
         if (!wig || (!ingredient && !actionStarted) || (ingredient && !wig.HasValidNextStepWith(ingredient)))
+        {
+            stayHere = false;
             return false;
+        }
      
         if(!actionStarted)
         {
@@ -82,6 +85,8 @@ public class Chair : MonoBehaviour
             iconIngredient.sprite = ingredient.data.sprite;
             canvas.gameObject.SetActive(true);
             this.ingredient = ingredient;
+
+            stayHere = true;
 
             return true;
         }
@@ -108,6 +113,8 @@ public class Chair : MonoBehaviour
             Destroy(this.ingredient.gameObject);
             this.ingredient = null;
         }
+
+        stayHere = true;
 
         return false;
     }
