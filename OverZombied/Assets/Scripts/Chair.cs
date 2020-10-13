@@ -14,7 +14,6 @@ public class Chair : MonoBehaviour
 
     private bool actionStarted = false;
     private float actionCounter = 0f;
-    private bool actionFinished = false;
 
     [SerializeField]
     private Canvas canvas = null;
@@ -42,8 +41,6 @@ public class Chair : MonoBehaviour
     {
         if (actionStarted)
             return null;
-
-        actionFinished = false;
 
         foreach (MeshRenderer renderer in hairMeshes)
             renderer.gameObject.SetActive(false);
@@ -76,7 +73,7 @@ public class Chair : MonoBehaviour
 
     public bool ApplyIngredient(Ingredient ingredient)
     {
-        if (!wig || actionFinished || (!ingredient && !actionStarted) || (ingredient && !wig.HasValidNextStepWith(ingredient)))
+        if (!wig || (!ingredient && !actionStarted) || (ingredient && !wig.HasValidNextStepWith(ingredient)))
             return false;
      
         if(!actionStarted)
@@ -96,15 +93,17 @@ public class Chair : MonoBehaviour
         {
             actionStarted = false;
             actionCounter = 0f;
-            actionFinished = true;
 
             iconIngredient.sprite = RecipeManager.Instance.tickSprite;
 
             IngredientData newIngredientData = RecipeManager.Instance.GetResultingIngredient(wig.data, this.ingredient.data);
-            
+            HairReferencer refer = wig.GetComponent<HairReferencer>();
+
             hairMeshes[wig.data.wigIndex].gameObject.SetActive(false);
+            refer.hairs[wig.data.wigIndex].gameObject.SetActive(false);
             wig.data = newIngredientData;
             hairMeshes[wig.data.wigIndex].gameObject.SetActive(true);
+            refer.hairs[wig.data.wigIndex].gameObject.SetActive(true);
 
             Destroy(this.ingredient.gameObject);
             this.ingredient = null;
