@@ -44,17 +44,14 @@ public class RecipeDeliverer : MonoBehaviour
         RecipeUI recipeUI = RecipeManager.Instance.GetRecipeUI(ingredient, out index);
         if(!recipeUI)
         {
-            //Delivery failed
-        }
-        else if(index == 0)
-        {
-            //More points?
-            RecipeManager.Instance.RecipeDelivered(recipeUI);
-        }
+            GameManager.Instance.currentMoney -= GameManager.Instance.moneyPenaltyOnFail;
+        }      
         else
         {
-            //Normal points
             RecipeManager.Instance.RecipeDelivered(recipeUI);
+            GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow;
+
+            //TODO: BONUS
         }
 
         #region ADD TO BELT

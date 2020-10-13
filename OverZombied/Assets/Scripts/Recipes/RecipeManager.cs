@@ -23,7 +23,6 @@ public class RecipeManager : MonoBehaviour
     [SerializeField]
     private AnimationCurve activateCurve = null;
     public float recipeRespawnTime = 5f;
-    public float levelDurationSeconds = 120f;
 
     private void Awake()
     {
@@ -32,7 +31,7 @@ public class RecipeManager : MonoBehaviour
 
     private void Update()
     {
-        float value = activateCurve.Evaluate(Time.time / levelDurationSeconds);
+        float value = activateCurve.Evaluate(Time.time / GameManager.Instance.levelDurationSeconds);
 
         while(spawnNewRecipes && activeBoxes < (int)value)
         {
