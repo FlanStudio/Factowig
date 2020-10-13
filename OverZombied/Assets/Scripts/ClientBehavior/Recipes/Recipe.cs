@@ -11,7 +11,6 @@ public class Recipe : ScriptableObject
     public List<IngredientData> ingredients;
     public float timeLimit = 20f;
     public float moneyInflow = 20f;
-    public float moneyPenalty = 10f;
 
     //public bool SameRecipeAs(Recipe recipe)
     //{

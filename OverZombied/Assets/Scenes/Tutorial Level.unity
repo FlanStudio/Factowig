@@ -65826,8 +65826,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1877794731}
   - component: {fileID: 1877794730}
-  - component: {fileID: 1877794729}
   - component: {fileID: 1877794732}
+  - component: {fileID: 1877794729}
   m_Layer: 0
   m_Name: Masters
   m_TagString: Untagged
@@ -65842,50 +65842,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877794728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef26a6d01dfa594593910bda792018a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f817a86fa8680843ac11658857c0a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startEnabled: 2
-  totalTime: 180
-  activateChairsCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.30974424
-      value: 0.26085654
-      inSlope: 1.739921
-      outSlope: 1.8684574
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.123020604
-      outWeight: 0.081739165
-    - serializedVersion: 3
-      time: 0.8
-      value: 1
-      inSlope: 1.4394729
-      outSlope: 1.5319932
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.10534147
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  clients:
-  - {fileID: 0}
-  currentMoney: 0
-  tickImage: {fileID: 21300000, guid: 8eda75f20035d2941b15d5201c7b3330, type: 3}
 --- !u!114 &1877794730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65965,6 +65926,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   recipeRespawnTime: 5
   levelDurationSeconds: 120
+  moneyPenaltyOnFail: 10
 --- !u!43 &1879959205
 Mesh:
   m_ObjectHideFlags: 0
