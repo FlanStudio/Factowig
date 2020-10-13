@@ -4,6 +4,37 @@ using UnityEngine;
 
 public class RecipeDeliverer : MonoBehaviour
 {
+    public static RecipeDeliverer Instance;
+
+    private List<Ingredient> translatedIngredients = new List<Ingredient>();
+
+    public float beltSpeed = 5f;
+
+    [SerializeField]
+    private MeshRenderer beltRenderer;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void Update()
+    {
+        for(int i = 0; i < translatedIngredients.Count; ++i)
+        {
+            Ingredient ingredient = translatedIngredients[i];
+
+            ingredient.transform.Translate(Vector3.forward * beltSpeed * Time.deltaTime);
+
+            if(ingredient.transform.position.x > 16)
+            {
+                translatedIngredients.Remove(ingredient);
+                Destroy(ingredient.gameObject);
+                i--;
+            }
+        }
+    }
+
     public bool Deliver(Ingredient ingredient)
     {
         if (!RecipeManager.Instance.IsFinalIngredient(ingredient.data))
@@ -25,7 +56,17 @@ public class RecipeDeliverer : MonoBehaviour
             //Normal points
         }
 
-        Destroy(ingredient.gameObject);
+        ingredient.transform.position = new Vector3(8.5f, beltRenderer.bounds.size.y + ingredient.renderer.bounds.extents.y, ingredient.transform.position.z);
+        ingredient.transform.rotation = transform.rotation;
+        ingredient.gameObject.SetActive(true);
+
+        if (ingredient.rb)
+        {
+            ingredient.rb.velocity = ingredient.rb.angularVelocity = Vector3.zero;
+            ingredient.rb.isKinematic = true;
+        }
+
+        translatedIngredients.Add(ingredient);
 
         return true;
     }

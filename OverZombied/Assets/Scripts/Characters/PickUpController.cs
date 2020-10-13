@@ -122,6 +122,7 @@ public class PickUpController : MonoBehaviour
         {            
             if (pickedObject != null)
             {
+                pickedObject.transform.position = transform.position;
                 if (selector.selectedDeliverer.Deliver(pickedObject))
                     pickedObject = null;
             }        

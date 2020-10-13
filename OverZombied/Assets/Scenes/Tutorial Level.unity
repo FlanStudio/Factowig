@@ -27896,9 +27896,29 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4209329389563969781, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -2793727289926329592, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
       propertyPath: m_Name
       value: belt
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507767883509144192, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755252816846053860, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7046644522681670263, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -43202,6 +43222,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -4209329389563969781, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
   m_PrefabInstance: {fileID: 765161084}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1138870848 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7046644522681670263, guid: 31e872422afecf74aa909ccbe3492fe3, type: 3}
+  m_PrefabInstance: {fileID: 765161084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1138870850
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48901,7 +48926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414547768}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69136,7 +69161,7 @@ GameObject:
   - component: {fileID: 1947007929}
   - component: {fileID: 1947007928}
   - component: {fileID: 1947007927}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RecipeDeliverer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69155,6 +69180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c61a4edd9cfd744a47b72c8fea9f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beltSpeed: 5
+  beltRenderer: {fileID: 1138870848}
 --- !u!65 &1947007928
 BoxCollider:
   m_ObjectHideFlags: 0
