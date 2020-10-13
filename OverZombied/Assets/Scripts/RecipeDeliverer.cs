@@ -54,10 +54,12 @@ public class RecipeDeliverer : MonoBehaviour
         else
         {
             //Normal points
+            RecipeManager.Instance.RecipeDelivered(recipeUI);
         }
 
-        ingredient.transform.position = new Vector3(8.5f, beltRenderer.bounds.size.y + ingredient.renderer.bounds.extents.y, ingredient.transform.position.z);
+        #region ADD TO BELT
         ingredient.transform.rotation = transform.rotation;
+        ingredient.transform.position = new Vector3(8.5f, beltRenderer.bounds.size.y + ingredient.renderer.bounds.extents.y, ingredient.transform.position.z);
         ingredient.gameObject.SetActive(true);
 
         if (ingredient.rb)
@@ -67,6 +69,7 @@ public class RecipeDeliverer : MonoBehaviour
         }
 
         translatedIngredients.Add(ingredient);
+        #endregion
 
         return true;
     }
