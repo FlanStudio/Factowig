@@ -67,6 +67,9 @@ public class RecipeDeliverer : MonoBehaviour
             ingredient.rb.isKinematic = true;
         }
 
+        if (ingredient.collider)
+            ingredient.collider.enabled = false;
+
         translatedIngredients.Add(ingredient);
         #endregion
 
