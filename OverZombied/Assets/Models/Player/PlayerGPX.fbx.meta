@@ -88,8 +88,8 @@ ModelImporter:
       name: running
       takeName: Take 001
       internalID: 0
-      firstFrame: 39
-      lastFrame: 161
+      firstFrame: 40
+      lastFrame: 73
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -146,8 +146,8 @@ ModelImporter:
       name: idle
       takeName: Take 001
       internalID: 0
-      firstFrame: 210
-      lastFrame: 291
+      firstFrame: 73
+      lastFrame: 101
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
