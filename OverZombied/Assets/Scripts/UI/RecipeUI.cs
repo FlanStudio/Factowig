@@ -14,6 +14,16 @@ public class RecipeUI : MonoBehaviour
     [HideInInspector]
     public bool activated = false;
 
+    public float counter { get; private set; } = 0f;
+
+    private void Update()
+    {
+        if (recipe)
+            counter += Time.deltaTime;
+        else
+            counter = 0f;
+    }
+
     public void EnableChildsOnRecipe()
     {
         if(recipe != null)
@@ -39,6 +49,8 @@ public class RecipeUI : MonoBehaviour
     public void SetRecipe(Recipe recipe)
     {
         this.recipe = recipe;
+
+        counter = 0f;
 
         if (!scissors || !comb)
         {

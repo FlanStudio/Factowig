@@ -49,9 +49,7 @@ public class RecipeDeliverer : MonoBehaviour
         else
         {
             RecipeManager.Instance.RecipeDelivered(recipeUI);
-            GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow;
-
-            //TODO: BONUS
+            GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow + recipeUI.recipe.moneyBonus * (1 - Mathf.Clamp(recipeUI.counter / recipeUI.recipe.timeLimit, 0f, 1f));
         }
 
         WigDispenser.Instance.itemsSpawned -= 1;

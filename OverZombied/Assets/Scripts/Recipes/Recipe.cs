@@ -10,7 +10,8 @@ public class Recipe : ScriptableObject
     public RecipeType type = RecipeType.CUT_COMB;
     public List<IngredientData> ingredients;
     public float timeLimit = 20f;
-    public float moneyInflow = 20f;
+    public float moneyInflow = 10f;
+    public float moneyBonus = 20f;
 
     //public bool SameRecipeAs(Recipe recipe)
     //{
