@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,8 @@ public class MovementController : MonoBehaviour
 
     public bool move = true;
     public bool rotate = true;
+
+    public Animator playerAnimator;
 
     private void Awake()
     {
@@ -63,6 +66,11 @@ public class MovementController : MonoBehaviour
         if (movementNorm.magnitude < idleStickThreshold)
         {
             movementNorm = Vector2.zero;
+            playerAnimator.SetFloat("speed", 0f);
+        }
+        else
+        {
+            playerAnimator.SetFloat("speed", 0.2f);
         }
 
         #endregion

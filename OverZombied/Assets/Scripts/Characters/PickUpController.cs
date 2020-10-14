@@ -164,6 +164,7 @@ public class PickUpController : MonoBehaviour
             {
                 GameObject obj = selector.selectedGenerator.GetObject();
                 pickedObject = obj.GetComponent<Ingredient>();
+                movementController.playerAnimator.SetTrigger("Pick or Place");
             }
         }
 
