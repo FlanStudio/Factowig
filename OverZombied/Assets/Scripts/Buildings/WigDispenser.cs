@@ -24,11 +24,15 @@ public class WigDispenser : MonoBehaviour
     public GameObject[] bustHeadHairs;
     public GameObject bustParent;
 
+    private Rigidbody bustRb;
+
     private bool hairReady = true;
 
     private void Awake()
     {
         Instance = this;
+
+        bustRb = bustParent.GetComponent<Rigidbody>();
     }
 
     public GameObject GetObject()
@@ -58,20 +62,24 @@ public class WigDispenser : MonoBehaviour
 
     private IEnumerator NewWigCoroutine()
     {
-        trapAnimator.SetTrigger("Down");
-
-        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("Up")) return true; else return false; });
-        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) return true; else return false; });
         yield return new WaitUntil(() => { if (amountItems != -1 && itemsSpawned + 1 > amountItems) return false; else return true; });
 
-        bustAnimator.SetTrigger("Down");
+        trapAnimator.SetTrigger("Down");
+
+        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("opened") && bustRb.velocity == Vector3.zero) return true; else return false; });
+
+        //bustAnimator.SetTrigger("Down");   
+        //bustParent.transform.localPosition = Vector3.zero;
+        //yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = bustAnimator.GetCurrentAnimatorStateInfo(0); if ((stateInfo.normalizedTime - Mathf.Floor(stateInfo.normalizedTime)) >= 0.95f) return true; else return false; });
+        
         for (int i = 0; i < 2; ++i)
         {
             bustHeadHairs[i].SetActive(true);
         }
-        bustParent.transform.localPosition = Vector3.zero;
 
-        yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = bustAnimator.GetCurrentAnimatorStateInfo(0); if ((stateInfo.normalizedTime - Mathf.Floor(stateInfo.normalizedTime)) >= 0.95f) return true; else return false; });
+        trapAnimator.SetTrigger("Up");
+
+        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("Closed")) return true; else return false; });
 
         hairReady = true;
     }
