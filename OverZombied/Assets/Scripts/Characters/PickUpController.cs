@@ -36,7 +36,7 @@ public class PickUpController : MonoBehaviour
                 {
                     if(InputController.Instance.playerInput[movementController.playerID].keyboard.eKey.wasPressedThisFrame)
                     {
-                        ActionKeyPressed();
+                        StartCoroutine(ActionKeyPressed());
                     }
 
                     break;
@@ -48,7 +48,7 @@ public class PickUpController : MonoBehaviour
 
                     if(InputController.Instance.playerInput[movementController.playerID].gamepad.buttonSouth.wasPressedThisFrame)
                     {
-                        ActionKeyPressed();
+                        StartCoroutine(ActionKeyPressed());
                     }
 
                     break;
@@ -100,7 +100,7 @@ public class PickUpController : MonoBehaviour
         #endregion
     }
 
-    private void ActionKeyPressed()
+    private IEnumerator ActionKeyPressed()
     {
         selector.Select();
 
@@ -122,6 +122,7 @@ public class PickUpController : MonoBehaviour
         {            
             if (pickedObject != null)
             {
+                pickedObject.transform.SetParent(null);
                 pickedObject.transform.position = transform.position;
                 if (selector.selectedDeliverer.Deliver(pickedObject))
                     pickedObject = null;
@@ -137,6 +138,15 @@ public class PickUpController : MonoBehaviour
                     pickedObject = selector.selectedSurface.pickableObject.GetComponent<Ingredient>();
                     selector.selectedSurface.pickableObject = null;
                     pickedObject.gameObject.SetActive(false);
+
+                    if (pickedObject)
+                    {
+                        pickedObject.transform.SetParent(hand.transform);
+                        pickedObject.transform.localPosition = Vector3.zero;
+                        pickedObject.transform.localRotation = Quaternion.identity;
+                        pickedObject.rb.isKinematic = true;
+                        pickedObject.collider.enabled = false;
+                    }
                 }
             }
             else
@@ -165,6 +175,22 @@ public class PickUpController : MonoBehaviour
                 GameObject obj = selector.selectedGenerator.GetObject();
                 pickedObject = obj.GetComponent<Ingredient>();
                 movementController.playerAnimator.SetTrigger("Pick or Place");
+
+                yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = movementController.playerAnimator.GetCurrentAnimatorStateInfo(0); if (stateInfo.IsName("Pick or Place") && stateInfo.normalizedTime >= 0.5f ) return true; else return false; });
+
+                if(pickedObject)
+                {
+                    pickedObject.transform.SetParent(hand.transform);
+                    pickedObject.transform.localPosition = Vector3.zero;
+                    pickedObject.transform.localRotation = Quaternion.identity;
+                    pickedObject.rb.isKinematic = true;
+                    pickedObject.collider.enabled = false;
+                    pickedObject.gameObject.SetActive(true);
+                }
+
+                yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = movementController.playerAnimator.GetCurrentAnimatorStateInfo(0); if ((stateInfo.IsName("idle") || stateInfo.IsName("running"))) return true; else return false; });
+
+                pickedObject.gameObject.SetActive(false);
             }
         }
 
@@ -183,12 +209,17 @@ public class PickUpController : MonoBehaviour
             if(pickedObject != null && pickedObject.data.throwable)
             {
                 //Drop on the floor
+                pickedObject.transform.SetParent(null);
+                pickedObject.transform.rotation = transform.rotation;
                 pickedObject.transform.position = transform.position + transform.forward * dropDistance + new Vector3(0f, pickedObject.renderer.bounds.extents.y, 0f); ;
-                pickedObject.gameObject.SetActive(true);
                 pickedObject.rb.isKinematic = false;
+                pickedObject.collider.enabled = true;
+                pickedObject.gameObject.SetActive(true);
                 pickedObject = null;
             }
         }
+
+        yield return null;
     }
 
     private void UseKeyRepeated()
@@ -236,13 +267,15 @@ public class PickUpController : MonoBehaviour
     {
         if(selector.selectedChair != null)
         {
-            //selector.selectedChair.UseToolFinished();
+            movementController.playerAnimator.SetBool("working", false);
         }
         else if(startedThrowing && pickedObject != null && pickedObject.data.throwable)
         {
+            pickedObject.transform.SetParent(null);
             pickedObject.rb.isKinematic = false;
-            pickedObject.gameObject.SetActive(true);
+            pickedObject.transform.rotation = transform.rotation;
             pickedObject.transform.position = transform.position + new Vector3(0f, throwHeight, 0f) + transform.forward * dropDistance;
+            pickedObject.gameObject.SetActive(true);
             pickedObject.rb.AddForce(transform.TransformDirection(localThrowDirection).normalized * throwStrength, ForceMode.Impulse);
             pickedObject = null;
             startedThrowing = false;

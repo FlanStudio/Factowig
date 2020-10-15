@@ -39,6 +39,8 @@ public class PlaceableSurface : MonoBehaviour
         pickableObject.transform.position = transform.position;
         pickableObject.transform.position += new Vector3(0f, meshRenderer.bounds.size.y + pickableObject.renderer.bounds.extents.y, 0f);
 
+        pickableObject.transform.SetParent(null);
+
         if(obj.rb)
         {
             obj.rb.velocity = obj.rb.angularVelocity = Vector3.zero;

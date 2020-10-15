@@ -86,6 +86,8 @@ public class Chair : MonoBehaviour
             canvas.gameObject.SetActive(true);
             this.ingredient = ingredient;
 
+            ingredient.gameObject.SetActive(true);
+
             stayHere = true;
 
             return true;
