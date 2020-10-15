@@ -190,7 +190,8 @@ public class PickUpController : MonoBehaviour
 
                 yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = movementController.playerAnimator.GetCurrentAnimatorStateInfo(0); if ((stateInfo.IsName("idle") || stateInfo.IsName("running"))) return true; else return false; });
 
-                pickedObject.gameObject.SetActive(false);
+                if(pickedObject)
+                    pickedObject.gameObject.SetActive(false);
             }
         }
 
@@ -199,8 +200,14 @@ public class PickUpController : MonoBehaviour
             if(pickedObject == null)
             {
                 pickedObject = selector.groundObject;
+                pickedObject.transform.SetParent(hand.transform);
+
+                pickedObject.transform.localPosition = Vector3.zero;
+                pickedObject.transform.localRotation = Quaternion.identity;
                 pickedObject.rb.isKinematic = true;
-                pickedObject.gameObject.SetActive(false);
+                pickedObject.collider.enabled = false;
+
+                pickedObject.gameObject.SetActive(false);            
             }
         }
 
