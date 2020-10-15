@@ -206,10 +206,13 @@ public class PickUpController : MonoBehaviour
                 movementController.move = movementController.rotate = false;
                 transform.position = selector.selectedChair.transform.position + selector.selectedChair.transform.forward * dropDistance;
                 transform.LookAt(selector.selectedChair.transform.position);
+
+                movementController.playerAnimator.SetBool("working", true);
             }
             else
             {
                 movementController.move = movementController.rotate = true;
+                movementController.playerAnimator.SetBool("working", false);
             }
         }
     }

@@ -83,6 +83,4 @@ public class WigDispenser : MonoBehaviour
 
         hairReady = true;
     }
-
-    //TODO: SINCRONIZE ANIMATIONS, ETC
 }
