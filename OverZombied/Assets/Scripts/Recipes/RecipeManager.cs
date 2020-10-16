@@ -31,6 +31,8 @@ public class RecipeManager : MonoBehaviour
 
     private void Update()
     {
+        return;
+
         float value = activateCurve.Evaluate(Time.time / GameManager.Instance.levelDurationSeconds);
 
         while(spawnNewRecipes && activeBoxes < (int)value)

@@ -32,42 +32,42 @@ public class ScreenScaleChecker : MonoBehaviour
 
     private void CheckCanvasScale()
     {
-        bool[] lastStates = new bool[transform.childCount];
-        for (int i = 0; i < transform.childCount; ++i)
-        {
-            Transform child = transform.GetChild(i);
-            lastStates[i] = child.gameObject.activeSelf;
-            child.gameObject.SetActive(true);
+        //bool[] lastStates = new bool[transform.childCount];
+        //for (int i = 0; i < transform.childCount; ++i)
+        //{
+        //    Transform child = transform.GetChild(i);
+        //    lastStates[i] = child.gameObject.activeSelf;
+        //    child.gameObject.SetActive(true);
 
-            for (int j = 0; j < child.childCount; ++j)
-            {
-                child.GetChild(j).gameObject.SetActive(true);
-            }
-        }
+        //    for (int j = 0; j < child.childCount; ++j)
+        //    {
+        //        child.GetChild(j).gameObject.SetActive(true);
+        //    }
+        //}
 
-        layoutGroup.childControlWidth = true;
-        layoutGroup.childControlHeight = true;
-        layoutGroup.childForceExpandWidth = true;
-        layoutGroup.childForceExpandHeight = true;
+        //layoutGroup.childControlWidth = true;
+        //layoutGroup.childControlHeight = true;
+        //layoutGroup.childForceExpandWidth = true;
+        //layoutGroup.childForceExpandHeight = true;
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
 
-        for (int i = 0; i < transform.childCount; ++i)
-        {
-            Transform child = transform.GetChild(i);
-            child.gameObject.SetActive(lastStates[i]);
-        }
+        //for (int i = 0; i < transform.childCount; ++i)
+        //{
+        //    Transform child = transform.GetChild(i);
+        //    child.gameObject.SetActive(lastStates[i]);
+        //}
 
-        layoutGroup.childControlWidth = false;
-        layoutGroup.childControlHeight = false;
-        layoutGroup.childForceExpandWidth = false;
-        layoutGroup.childForceExpandHeight = false;
+        //layoutGroup.childControlWidth = false;
+        //layoutGroup.childControlHeight = false;
+        //layoutGroup.childForceExpandWidth = false;
+        //layoutGroup.childForceExpandHeight = false;
 
-        for (int i = 0; i < transform.childCount; ++i)
-        {
-            Transform child = transform.GetChild(i);
-            RecipeUI recipe = child.GetComponent<RecipeUI>();
-            recipe.EnableChildsOnRecipe();
-        }
+        //for (int i = 0; i < transform.childCount; ++i)
+        //{
+        //    Transform child = transform.GetChild(i);
+        //    RecipeUI recipe = child.GetComponent<RecipeUI>();
+        //    recipe.EnableChildsOnRecipe();
+        //}
     }
 }
