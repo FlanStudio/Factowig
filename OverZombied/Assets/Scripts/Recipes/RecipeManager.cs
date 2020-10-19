@@ -11,7 +11,7 @@ public class RecipeManager : MonoBehaviour
     public List<Recipe> availableRecipes = null;
 
     [SerializeField]
-    private List<RecipeUI> recipeBoxes = null;
+    public List<RecipeUI> recipeBoxes = null;
 
     [Space]
     public Sprite tickSprite = null;
@@ -46,6 +46,8 @@ public class RecipeManager : MonoBehaviour
                     break;
                 }
             }
+
+            LayoutRebuilder.ForceRebuildLayoutImmediate(recipeBoxes[0].transform.parent.GetComponent<RectTransform>());
         }
     }
 

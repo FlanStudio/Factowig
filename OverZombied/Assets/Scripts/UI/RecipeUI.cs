@@ -11,6 +11,10 @@ public class RecipeUI : MonoBehaviour
     public Image scissors;
     public Image comb;
 
+    public RectTransform thisTransform;
+    public RectTransform progressBar;
+    private Image progressBarImage;
+
     [HideInInspector]
     public bool activated = false;
 
@@ -19,7 +23,10 @@ public class RecipeUI : MonoBehaviour
     private void Update()
     {
         if (recipe)
+        {
             counter += Time.deltaTime;
+            RepositionProgressBar();
+        }
         else
             counter = 0f;
     }
@@ -61,5 +68,26 @@ public class RecipeUI : MonoBehaviour
         EnableChildsOnRecipe();
 
         gameObject.SetActive(true);
+    }
+
+    public void RepositionProgressBar()
+    {
+        if(!progressBarImage)
+            progressBarImage = progressBar.GetComponent<Image>();
+
+        float percent = recipe ? Mathf.Clamp(counter / recipe.timeLimit, 0, 1) : 0;
+        if(percent < 0.5)
+        {
+            progressBarImage.color = Color.green;
+        }
+        else if(percent >= 0.5)
+        {
+            if (percent > 0.75)         
+                progressBarImage.color = Color.red;       
+            else
+                progressBarImage.color = Color.yellow;
+        }
+
+        progressBar.anchoredPosition = new Vector2(0 - thisTransform.rect.width * (percent), progressBar.anchoredPosition.y);
     }
 }
