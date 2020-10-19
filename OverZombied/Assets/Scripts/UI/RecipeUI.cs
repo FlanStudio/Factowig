@@ -8,8 +8,8 @@ public class RecipeUI : MonoBehaviour
     [HideInInspector]
     public Recipe recipe { get; private set; }
 
-    private Image scissors;
-    private Image comb;
+    public Image scissors;
+    public Image comb;
 
     [HideInInspector]
     public bool activated = false;

@@ -279,6 +279,7 @@ public class PickUpController : MonoBehaviour
         else if(startedThrowing && pickedObject != null && pickedObject.data.throwable)
         {
             pickedObject.transform.SetParent(null);
+            pickedObject.collider.enabled = true;
             pickedObject.rb.isKinematic = false;
             pickedObject.transform.rotation = transform.rotation;
             pickedObject.transform.position = transform.position + new Vector3(0f, throwHeight, 0f) + transform.forward * dropDistance;
