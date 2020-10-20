@@ -2422,11 +2422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2988702425799259181, guid: a4ed2224f03551e42b478d8ae5b14da0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.075407
+      value: 24.075378
       objectReference: {fileID: 0}
     - target: {fileID: 2988702425799259181, guid: a4ed2224f03551e42b478d8ae5b14da0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29.64523
+      value: -29.645233
       objectReference: {fileID: 0}
     - target: {fileID: 2988702425799259181, guid: a4ed2224f03551e42b478d8ae5b14da0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -63628,137 +63628,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
-  m_SelectedEdges:
-  - a: 0
-    b: 1
-  - a: 2
-    b: 0
-  - a: 1
-    b: 3
-  - a: 3
-    b: 2
-  - a: 4
-    b: 5
-  - a: 6
-    b: 4
-  - a: 5
-    b: 7
-  - a: 7
-    b: 6
-  - a: 8
-    b: 9
-  - a: 10
-    b: 8
-  - a: 9
-    b: 11
-  - a: 11
-    b: 10
-  - a: 12
-    b: 13
-  - a: 14
-    b: 12
-  - a: 13
-    b: 15
-  - a: 15
-    b: 14
-  - a: 16
-    b: 17
-  - a: 18
-    b: 16
-  - a: 17
-    b: 19
-  - a: 19
-    b: 18
-  - a: 20
-    b: 21
-  - a: 22
-    b: 20
-  - a: 21
-    b: 23
-  - a: 23
-    b: 22
-  - a: 24
-    b: 25
-  - a: 26
-    b: 24
-  - a: 25
-    b: 27
-  - a: 27
-    b: 26
-  - a: 28
-    b: 29
-  - a: 30
-    b: 28
-  - a: 29
-    b: 31
-  - a: 31
-    b: 30
-  - a: 32
-    b: 33
-  - a: 34
-    b: 32
-  - a: 33
-    b: 35
-  - a: 35
-    b: 34
-  - a: 36
-    b: 37
-  - a: 38
-    b: 36
-  - a: 37
-    b: 39
-  - a: 39
-    b: 38
-  - a: 40
-    b: 41
-  - a: 42
-    b: 40
-  - a: 41
-    b: 43
-  - a: 43
-    b: 42
-  - a: 44
-    b: 45
-  - a: 46
-    b: 44
-  - a: 45
-    b: 47
-  - a: 47
-    b: 46
-  - a: 48
-    b: 49
-  - a: 50
-    b: 48
-  - a: 49
-    b: 51
-  - a: 51
-    b: 50
-  - a: 52
-    b: 53
-  - a: 54
-    b: 52
-  - a: 53
-    b: 55
-  - a: 55
-    b: 54
-  - a: 56
-    b: 57
-  - a: 58
-    b: 56
-  - a: 57
-    b: 59
-  - a: 59
-    b: 58
-  - a: 60
-    b: 61
-  - a: 62
-    b: 60
-  - a: 61
-    b: 63
-  - a: 63
-    b: 62
-  m_SelectedVertices: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1704920825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -81674,6 +81546,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1573016549, guid: 977915514931be349987f848fa085245, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1142191650}
+    - target: {fileID: 2030057876, guid: 977915514931be349987f848fa085245, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1142191651}
     - target: {fileID: 2049752629110816617, guid: 977915514931be349987f848fa085245, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.66
@@ -82989,6 +82869,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 147617119, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1142191650}
+    - target: {fileID: 255527555, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1142191651}
+    - target: {fileID: 255527556, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 255527556, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4058362377667751325, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
       propertyPath: m_Name
       value: Player1

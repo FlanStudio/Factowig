@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUpController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PickUpController : MonoBehaviour
     public float dropDistance = 1f;
 
     public GameObject hand = null;
+    public Image pickedIcon = null;
 
     private bool startedThrowing = false;
 
@@ -96,6 +98,22 @@ public class PickUpController : MonoBehaviour
 
                     break;
                 }
+        }
+        #endregion
+
+        #region UPDATE YOUR HOLDED ITEM SPRITE
+        if (pickedObject != null)
+        {
+            if (pickedIcon.sprite != pickedObject.data.sprite)
+            {
+                pickedIcon.enabled = true;
+                pickedIcon.sprite = pickedObject.data.sprite;
+            }
+        }
+        else
+        {
+            pickedIcon.enabled = false;
+            pickedIcon.sprite = null;
         }
         #endregion
     }
