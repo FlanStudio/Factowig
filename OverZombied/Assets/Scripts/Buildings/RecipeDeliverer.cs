@@ -71,6 +71,8 @@ public class RecipeDeliverer : MonoBehaviour
         translatedIngredients.Add(ingredient);
         #endregion
 
+        ScoreUI.Instance.RepositionProgressBar();
+
         return true;
     }
 }

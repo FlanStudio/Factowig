@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class ScreenScaleChecker : MonoBehaviour
 {
     private Vector2 lastResolution;
-    private RectTransform rectTransform;
+    public RectTransform recipesRectTransform;
 
     private void Awake()
     {
         lastResolution = new Vector2(Screen.width, Screen.height);
-        rectTransform = GetComponent<RectTransform>();   
     }
 
     private void Start()
@@ -32,11 +31,13 @@ public class ScreenScaleChecker : MonoBehaviour
 
     private void CheckCanvasScale()
     {
-        LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(recipesRectTransform);
 
         foreach(RecipeUI recipeUI in RecipeManager.Instance.recipeBoxes)
         {
             recipeUI.RepositionProgressBar();
         }
+
+        ScoreUI.Instance.RepositionProgressBar();
     }
 }

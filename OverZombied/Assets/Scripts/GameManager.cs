@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public float currentMoney = 0f;
     public float moneyPenaltyOnFail = 10f;
 
+    public float finalMoneyGoal = 100f;
+
     private void Awake()
     {
         Instance = this;
