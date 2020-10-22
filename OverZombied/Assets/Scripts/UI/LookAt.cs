@@ -9,12 +9,12 @@ public class LookAt : MonoBehaviour
 
     private void Awake()
     {
-        targetPosition = target.position;
-        targetPosition.x = transform.position.x;
+        targetPosition = target.position;        
     }
 
     private void Update()
     {
+        targetPosition.x = transform.position.x;
         transform.rotation = Quaternion.LookRotation((transform.position - targetPosition).normalized);
     }
 }

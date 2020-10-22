@@ -19,6 +19,7 @@ public class PickUpController : MonoBehaviour
     public float dropDistance = 1f;
 
     public GameObject hand = null;
+    public Image sandwich = null;
     public Image pickedIcon = null;
 
     private bool startedThrowing = false;
@@ -106,12 +107,14 @@ public class PickUpController : MonoBehaviour
         {
             if (pickedIcon.sprite != pickedObject.data.sprite)
             {
+                sandwich.enabled = true;
                 pickedIcon.enabled = true;
                 pickedIcon.sprite = pickedObject.data.sprite;
             }
         }
         else
         {
+            sandwich.enabled = false;
             pickedIcon.enabled = false;
             pickedIcon.sprite = null;
         }

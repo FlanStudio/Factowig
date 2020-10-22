@@ -17111,6 +17111,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &465702068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1573016545, guid: 977915514931be349987f848fa085245, type: 3}
+  m_PrefabInstance: {fileID: 2049752628945558271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &465702069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465702068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dc0e2a7fbdc6e4b9879d89a80619ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1142191651}
 --- !u!43 &465767580
 Mesh:
   m_ObjectHideFlags: 0
@@ -82672,10 +82690,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1142191650}
-    - target: {fileID: 2030057876, guid: 977915514931be349987f848fa085245, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1142191651}
     - target: {fileID: 2049752629110816617, guid: 977915514931be349987f848fa085245, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.66
@@ -82720,12 +82734,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2049752629110816619, guid: 977915514931be349987f848fa085245, type: 3}
+      propertyPath: sandwich
+      value: 
+      objectReference: {fileID: 2049752628945558273}
+    - target: {fileID: 2049752629110816619, guid: 977915514931be349987f848fa085245, type: 3}
+      propertyPath: pickedIcon
+      value: 
+      objectReference: {fileID: 2049752628945558272}
     - target: {fileID: 2049752629110816623, guid: 977915514931be349987f848fa085245, type: 3}
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977915514931be349987f848fa085245, type: 3}
+--- !u!114 &2049752628945558272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5723249217593911226, guid: 977915514931be349987f848fa085245, type: 3}
+  m_PrefabInstance: {fileID: 2049752628945558271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2049752628945558273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 113125196775043645, guid: 977915514931be349987f848fa085245, type: 3}
+  m_PrefabInstance: {fileID: 2049752628945558271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138580957450239708
 GameObject:
   m_ObjectHideFlags: 0
@@ -83995,22 +84039,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1142191650}
-    - target: {fileID: 255527555, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1142191651}
-    - target: {fileID: 255527556, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 255527556, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4058362377667751325, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 5761364320781722998, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1142191651}
     - target: {fileID: 6948598078681646161, guid: feb06cba7c054f743a0efd369a6a7391, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.635
