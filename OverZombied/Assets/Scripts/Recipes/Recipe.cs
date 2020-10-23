@@ -12,6 +12,7 @@ public class Recipe : ScriptableObject
     public float timeLimit = 20f;
     public float moneyInflow = 10f;
     public float moneyBonus = 20f;
+    public Sprite UISprite = null;
 
     //public bool SameRecipeAs(Recipe recipe)
     //{

@@ -8,17 +8,21 @@ public class RecipeUI : MonoBehaviour
     [HideInInspector]
     public Recipe recipe { get; private set; }
 
-    public Image scissors;
-    public Image comb;
-
-    public RectTransform thisTransform;
+    public RectTransform maskTransform;
     public RectTransform progressBar;
+
+    private Image cardImage;
     private Image progressBarImage;
 
     [HideInInspector]
     public bool activated = false;
 
     public float counter { get; private set; } = 0f;
+
+    private void Awake()
+    {
+        cardImage = GetComponent<Image>();
+    }
 
     private void Update()
     {
@@ -31,41 +35,13 @@ public class RecipeUI : MonoBehaviour
             counter = 0f;
     }
 
-    public void EnableChildsOnRecipe()
-    {
-        if(recipe != null)
-        {
-            scissors.gameObject.SetActive(false);
-            comb.gameObject.SetActive(false);
-
-            foreach (IngredientData ingredient in recipe.ingredients)
-            {
-                switch (ingredient.name)
-                {
-                    case "Scissors":
-                        scissors.gameObject.SetActive(true);
-                        break;
-                    case "Comb":
-                        comb.gameObject.SetActive(true);
-                        break;
-                }
-            }
-        }
-    }
-
     public void SetRecipe(Recipe recipe)
     {
         this.recipe = recipe;
 
         counter = 0f;
 
-        if (!scissors || !comb)
-        {
-            scissors = transform.GetChild(0).GetComponent<Image>();
-            comb = transform.GetChild(1).GetComponent<Image>();
-        }
-
-        EnableChildsOnRecipe();
+        cardImage.sprite = recipe.UISprite;
 
         gameObject.SetActive(true);
     }
@@ -78,7 +54,7 @@ public class RecipeUI : MonoBehaviour
         float percent = recipe ? Mathf.Clamp(counter / recipe.timeLimit, 0, 1) : 0;
         if(percent < 0.5)
         {
-            progressBarImage.color = Color.green;
+            progressBarImage.color = new Color(0.6f, 0.7607844f, 0.1058824f);
         }
         else if(percent >= 0.5)
         {
@@ -88,6 +64,6 @@ public class RecipeUI : MonoBehaviour
                 progressBarImage.color = Color.yellow;
         }
 
-        progressBar.anchoredPosition = new Vector2(0 - thisTransform.rect.width * (percent), progressBar.anchoredPosition.y);
+        progressBar.anchoredPosition = new Vector2(0 - maskTransform.rect.width * (percent), progressBar.anchoredPosition.y);
     }
 }

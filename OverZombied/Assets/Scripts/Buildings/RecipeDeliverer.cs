@@ -11,7 +11,7 @@ public class RecipeDeliverer : MonoBehaviour
     public float beltSpeed = 5f;
 
     [SerializeField]
-    private MeshRenderer beltRenderer;
+    private MeshRenderer beltRenderer = null;
 
     private void Awake()
     {
