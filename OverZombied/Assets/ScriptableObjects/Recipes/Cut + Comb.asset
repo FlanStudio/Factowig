@@ -21,5 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80aab53aeca7b6e46855d8b4cac9447a, type: 2}
   timeLimit: 60
   moneyInflow: 20
-  moneyPenalty: 10
-  finalHairState: {fileID: 11400000, guid: 80aab53aeca7b6e46855d8b4cac9447a, type: 2}
+  moneyBonus: 20
+  UISprite: {fileID: 8006588756517026825, guid: cec38680c9902bb40b2489457739737f, type: 3}

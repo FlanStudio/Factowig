@@ -111,18 +111,18 @@ public class RecipeManager : MonoBehaviour
     {
         return ingredient.isWig;
 
-        bool valid = false;
+        //bool valid = false;
 
-        foreach (Recipe recipe in availableRecipes)
-        {
-            if (recipe.ingredients[recipe.ingredients.Count - 1] == ingredient)
-            {
-                valid = true;
-                break;
-            }
-        }
+        //foreach (Recipe recipe in availableRecipes)
+        //{
+        //    if (recipe.ingredients[recipe.ingredients.Count - 1] == ingredient)
+        //    {
+        //        valid = true;
+        //        break;
+        //    }
+        //}
 
-        return valid;
+        //return valid;
     }
 
     public IngredientData GetResultingIngredient(IngredientData a, IngredientData b)

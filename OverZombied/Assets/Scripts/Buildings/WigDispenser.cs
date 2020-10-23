@@ -16,7 +16,7 @@ public class WigDispenser : MonoBehaviour
     private GameObject wigPrefab = null;
 
     [SerializeField]
-    private Animator trapAnimator;
+    private Animator trapAnimator = null;
 
     [SerializeField]
     private Animator bustAnimator;

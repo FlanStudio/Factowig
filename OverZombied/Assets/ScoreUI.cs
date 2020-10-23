@@ -9,22 +9,22 @@ public class ScoreUI : MonoBehaviour
     public static ScoreUI Instance;
 
     [SerializeField]
-    private Image[] stars;
+    private Image[] stars = null;
 
     [SerializeField]
     private float[] percents = new float[3] {0.5f, 0.75f, 1f};
 
     [SerializeField]
-    private Image progressBarImage;
-    private RectTransform progressBar;
+    private Image progressBarImage = null;
+    private RectTransform progressBar = null;
 
     [SerializeField]
-    private TextMeshProUGUI scoreText;
+    private TextMeshProUGUI scoreText = null;
 
     [SerializeField]
-    private Sprite starGreen;
+    private Sprite starGreen = null;
 
-    private RectTransform thisTransform;
+    private RectTransform thisTransform = null;
 
     private void Awake()
     {
