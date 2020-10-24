@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: b893b67d48cdd2344bd7288aa1348f97
+guid: af00fa35634c8df40ad6206b9941b640
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6200102729641620244
-    second: CombedHair Recipe
+      213: -621912705579063039
+    second: timer-02_0
   - first:
-      213: 4669243585482447109
-    second: CutHair Recipe
+      213: -2017615352595892019
+    second: timer-02_1
   - first:
-      213: 8085621639936611841
-    second: CutCombedHair Recipe
-  - first:
-      213: 9012954193848736288
-    second: Outline
-  - first:
-      213: 232853369935600592
-    second: WhiteBarNoOutline
+      213: -1764904799406827402
+    second: Timer
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,12 +41,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,106 +98,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CombedHair Recipe
+      name: timer-02_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 380
-        width: 781
-        height: 1179
+        x: 270
+        y: 1431
+        width: 2228
+        height: 136
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413f73345903b0650800000000000000
-      internalID: 6200102729641620244
+      spriteID: 10968a670b58e57f0800000000000000
+      internalID: -621912705579063039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutHair Recipe
+      name: timer-02_1
       rect:
         serializedVersion: 2
-        x: 883
-        y: 380
-        width: 781
-        height: 1179
+        x: 270
+        y: 1269
+        width: 2227
+        height: 131
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 509d3726d4c7cc040800000000000000
-      internalID: 4669243585482447109
+      spriteID: dc8b52fc68dfff3e0800000000000000
+      internalID: -2017615352595892019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutCombedHair Recipe
+      name: Timer
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 380
-        width: 780
-        height: 1179
+        x: 47
+        y: 42
+        width: 2577
+        height: 1183
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10612a4ca06e53070800000000000000
-      internalID: 8085621639936611841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Outline
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 231
-        width: 669
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02a983d2612741d70800000000000000
-      internalID: 9012954193848736288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WhiteBarNoOutline
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 114
-        width: 663
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0db93cff7e24b3300800000000000000
-      internalID: 232853369935600592
+      spriteID: 67859f09f6cc187e0800000000000000
+      internalID: -1764904799406827402
       vertices: []
       indices: 
       edges: []
@@ -211,7 +163,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e6fde53cae0329e4f8f285bbaa77b66d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
