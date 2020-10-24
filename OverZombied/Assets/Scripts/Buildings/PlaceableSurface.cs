@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlaceableSurface : MonoBehaviour
 {
@@ -21,7 +18,7 @@ public class PlaceableSurface : MonoBehaviour
     public void Show()
     {
         foreach(Material material in meshRenderer.materials)        
-            material.color *= selectedColorMultiplier;   
+            material.color *= selectedColorMultiplier;
     }
 
     public void Hide()

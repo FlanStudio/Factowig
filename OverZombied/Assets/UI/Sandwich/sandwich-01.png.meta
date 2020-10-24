@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8672273644379427620
-    second: sandwich-01_0
+    second: CutHair Sandwich
   - first:
       213: 7000715514317182685
-    second: sandwich-01_1
+    second: CutCombedHair Sandwich
   - first:
       213: 376608205487885149
-    second: sandwich-01_2
+    second: Scissors Sandwich
   - first:
       213: -3553607150265737530
-    second: sandwich-01_3
+    second: CombedHair Sandwich
   - first:
       213: 6735991404948984397
-    second: sandwich-01_4
+    second: NormalHair Sandwich
   - first:
       213: -956871704223669456
-    second: sandwich-01_5
+    second: Comb Sandwich
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +105,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CutHair Sandwich
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423d7309eea1a5870800000000000000
+      internalID: 8672273644379427620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutCombedHair Sandwich
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 812
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6117c3ba9872160800000000000000
+      internalID: 7000715514317182685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scissors Sandwich
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 812
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b4a93ea2bf93500800000000000000
+      internalID: 376608205487885149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombedHair Sandwich
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce5f19ef1d0faec0800000000000000
+      internalID: -3553607150265737530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalHair Sandwich
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 0
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4291167e7c0b7d50800000000000000
+      internalID: 6735991404948984397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comb Sandwich
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 0
+        width: 813
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0332026314288b2f0800000000000000
+      internalID: -956871704223669456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

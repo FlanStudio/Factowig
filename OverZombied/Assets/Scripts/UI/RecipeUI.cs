@@ -42,8 +42,9 @@ public class RecipeUI : MonoBehaviour
         counter = 0f;
 
         cardImage.sprite = recipe.UISprite;
-
         gameObject.SetActive(true);
+
+        //LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.GetComponent<RectTransform>());
     }
 
     public void RepositionProgressBar()
@@ -54,7 +55,7 @@ public class RecipeUI : MonoBehaviour
         float percent = recipe ? Mathf.Clamp(counter / recipe.timeLimit, 0, 1) : 0;
         if(percent < 0.5)
         {
-            progressBarImage.color = new Color(0.6f, 0.7607844f, 0.1058824f);
+            progressBarImage.color = Color.green /*new Color(0.6f, 0.7607844f, 0.1058824f)*/;
         }
         else if(percent >= 0.5)
         {
