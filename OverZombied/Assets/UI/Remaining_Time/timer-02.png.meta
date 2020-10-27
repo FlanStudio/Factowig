@@ -4,12 +4,21 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -621912705579063039
-    second: timer-02_0
+    second: Timer white
   - first:
       213: -2017615352595892019
-    second: timer-02_1
+    second: Timer Fill
   - first:
       213: -1764904799406827402
+    second: Timer
+  - first:
+      213: -5968332786945869331
+    second: Timer white
+  - first:
+      213: 7149349903215456887
+    second: Timer Fill
+  - first:
+      213: 2446345292006971441
     second: Timer
   externalObjects: {}
   serializedVersion: 11
@@ -98,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: timer-02_0
+      name: Timer white
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1431
-        width: 2228
-        height: 136
+        x: 1127
+        y: 5970
+        width: 9280
+        height: 560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10968a670b58e57f0800000000000000
-      internalID: -621912705579063039
+      spriteID: de936cca3f83c2da0800000000000000
+      internalID: -5968332786945869331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: timer-02_1
+      name: Timer Fill
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1269
-        width: 2227
-        height: 131
+        x: 1127
+        y: 5286
+        width: 9280
+        height: 547
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc8b52fc68dfff3e0800000000000000
-      internalID: -2017615352595892019
+      spriteID: 772712cabd7973360800000000000000
+      internalID: 7149349903215456887
       vertices: []
       indices: 
       edges: []
@@ -143,10 +152,10 @@ TextureImporter:
       name: Timer
       rect:
         serializedVersion: 2
-        x: 47
-        y: 42
-        width: 2577
-        height: 1183
+        x: 195
+        y: 182
+        width: 10733
+        height: 4922
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67859f09f6cc187e0800000000000000
-      internalID: -1764904799406827402
+      spriteID: 1385600f41a23f120800000000000000
+      internalID: 2446345292006971441
       vertices: []
       indices: 
       edges: []

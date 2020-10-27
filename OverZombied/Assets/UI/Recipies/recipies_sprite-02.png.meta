@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 232853369935600592
     second: WhiteBarNoOutline
+  - first:
+      213: -3913812600408005812
+    second: RecipeCard Comb
+  - first:
+      213: -950165592386891353
+    second: RecipeCard Cut
+  - first:
+      213: -8945848158964920328
+    second: RecipeCard CutComb
+  - first:
+      213: 2030870767370477172
+    second: Recipe Outline
+  - first:
+      213: -7307814428951487886
+    second: Recipe Fill
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CombedHair Recipe
+      name: RecipeCard Comb
       rect:
         serializedVersion: 2
-        x: 70
-        y: 380
-        width: 781
-        height: 1179
+        x: 290
+        y: 1580
+        width: 3255
+        height: 4918
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413f73345903b0650800000000000000
-      internalID: 6200102729641620244
+      spriteID: c43ab3b1d285fa9c0800000000000000
+      internalID: -3913812600408005812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutHair Recipe
+      name: RecipeCard Cut
       rect:
         serializedVersion: 2
-        x: 883
-        y: 380
-        width: 781
-        height: 1179
+        x: 3677
+        y: 1580
+        width: 3256
+        height: 4918
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 509d3726d4c7cc040800000000000000
-      internalID: 4669243585482447109
+      spriteID: 7a11bfb8d6550d2f0800000000000000
+      internalID: -950165592386891353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CutCombedHair Recipe
+      name: RecipeCard CutComb
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 380
-        width: 780
-        height: 1179
+        x: 7050
+        y: 1580
+        width: 3256
+        height: 4918
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10612a4ca06e53070800000000000000
-      internalID: 8085621639936611841
+      spriteID: 8ff405e1f76f9d380800000000000000
+      internalID: -8945848158964920328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Outline
+      name: Recipe Outline
       rect:
         serializedVersion: 2
-        x: 125
-        y: 231
-        width: 669
-        height: 80
+        x: 570
+        y: 1020
+        width: 2722
+        height: 338
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a983d2612741d70800000000000000
-      internalID: 9012954193848736288
+      spriteID: 47e97d1f33a1f2c10800000000000000
+      internalID: 2030870767370477172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WhiteBarNoOutline
+      name: Recipe Fill
       rect:
         serializedVersion: 2
-        x: 128
-        y: 114
-        width: 663
-        height: 75
+        x: 568
+        y: 466
+        width: 2710
+        height: 325
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0db93cff7e24b3300800000000000000
-      internalID: 232853369935600592
+      spriteID: 27a5fddce7d659a90800000000000000
+      internalID: -7307814428951487886
       vertices: []
       indices: 
       edges: []

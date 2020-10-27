@@ -1,43 +1,22 @@
 fileFormatVersion: 2
-guid: 96fe3e42f9ae3fb4b82ba5dbada12efd
+guid: 9a17c232c26136844b6eb038850cbf6e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8672273644379427620
-    second: CutHair Sandwich
+      213: 5177879572103775908
+    second: Score WhiteBar
   - first:
-      213: 7000715514317182685
-    second: CutCombedHair Sandwich
+      213: 5581135386371150719
+    second: Score GreenBar
   - first:
-      213: 376608205487885149
-    second: Scissors Sandwich
+      213: 499215552160718873
+    second: Score
   - first:
-      213: -3553607150265737530
-    second: CombedHair Sandwich
+      213: -3362730692809230271
+    second: Score WhiteStar
   - first:
-      213: 6735991404948984397
-    second: NormalHair Sandwich
-  - first:
-      213: -956871704223669456
-    second: Comb Sandwich
-  - first:
-      213: -1927260212742416576
-    second: Sandwich Cut
-  - first:
-      213: -2111288478913431670
-    second: Sandwich CutComb
-  - first:
-      213: 6550176725400303983
-    second: Sandwich Scissors
-  - first:
-      213: 467128164680375811
-    second: Sandwich hair comb
-  - first:
-      213: -1693559983383569186
-    second: Sandwich normal
-  - first:
-      213: -4426825291496045865
-    second: Sandwich Comb
+      213: 2744029832559233623
+    second: Score GreenStar
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -125,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sandwich Cut
+      name: Score WhiteBar
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3382
-        width: 3386
-        height: 3382
+        x: 1123
+        y: 5986
+        width: 9288
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0479ebd2c0ff045e0800000000000000
-      internalID: -1927260212742416576
+      spriteID: 4a64ff889068bd740800000000000000
+      internalID: 5177879572103775908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sandwich CutComb
+      name: Score GreenBar
       rect:
         serializedVersion: 2
-        x: 3386
-        y: 3382
-        width: 3386
-        height: 3382
+        x: 1127
+        y: 5303
+        width: 9280
+        height: 553
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a877df3805233b2e0800000000000000
-      internalID: -2111288478913431670
+      spriteID: f73d304501d247d40800000000000000
+      internalID: 5581135386371150719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sandwich Scissors
+      name: Score
       rect:
         serializedVersion: 2
-        x: 6772
-        y: 3382
-        width: 3386
-        height: 3382
+        x: 192
+        y: 199
+        width: 10739
+        height: 4928
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6934850707e6ea50800000000000000
-      internalID: 6550176725400303983
+      spriteID: 910e3e456e19de600800000000000000
+      internalID: 499215552160718873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sandwich hair comb
+      name: Score WhiteStar
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3386
-        height: 3382
+        x: 11446
+        y: 1741
+        width: 1368
+        height: 1302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e9a5047929b7600800000000000000
-      internalID: 467128164680375811
+      spriteID: 1487dcb504e2551d0800000000000000
+      internalID: -3362730692809230271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sandwich normal
+      name: Score GreenStar
       rect:
         serializedVersion: 2
-        x: 3386
-        y: 0
-        width: 3386
-        height: 3382
+        x: 11446
+        y: 212
+        width: 1368
+        height: 1307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,29 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc1b900b244f78e0800000000000000
-      internalID: -1693559983383569186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sandwich Comb
-      rect:
-        serializedVersion: 2
-        x: 6772
-        y: 0
-        width: 3386
-        height: 3382
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d2c9a90ad1c092c0800000000000000
-      internalID: -4426825291496045865
+      spriteID: 75a84ce1890c41620800000000000000
+      internalID: 2744029832559233623
       vertices: []
       indices: 
       edges: []
@@ -253,7 +211,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4ed620497f621094ea5f73bdff04274b
+    spriteID: 053285d7c61071f47a8d9a93f865fabd
     internalID: 0
     vertices: []
     indices: 

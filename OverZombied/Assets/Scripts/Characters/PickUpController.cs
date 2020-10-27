@@ -20,7 +20,6 @@ public class PickUpController : MonoBehaviour
 
     public GameObject hand = null;
     public Image sandwich = null;
-    public Image pickedIcon = null;
 
     private bool startedThrowing = false;
 
@@ -105,18 +104,16 @@ public class PickUpController : MonoBehaviour
         #region UPDATE YOUR HOLDED ITEM SPRITE
         if (pickedObject != null)
         {
-            if (pickedIcon.sprite != pickedObject.data.sprite)
+            if (sandwich.sprite != pickedObject.data.sandwich)
             {
                 sandwich.enabled = true;
-                pickedIcon.enabled = true;
-                pickedIcon.sprite = pickedObject.data.sprite;
+                sandwich.sprite = pickedObject.data.sandwich;
             }
         }
         else
         {
             sandwich.enabled = false;
-            pickedIcon.enabled = false;
-            pickedIcon.sprite = null;
+            sandwich.sprite = null;
         }
         #endregion
     }

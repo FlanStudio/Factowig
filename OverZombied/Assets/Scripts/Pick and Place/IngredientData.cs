@@ -17,6 +17,7 @@ public class IngredientData : ScriptableObject
     public new string name = "Default";
 
     public Sprite sprite;
+    public Sprite sandwich;
 
     public float actionPressSeconds = 0f;
 

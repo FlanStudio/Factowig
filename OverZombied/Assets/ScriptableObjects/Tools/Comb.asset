@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9954c2955378e434ab043a3cb65f4faf, type: 3}
   m_Name: Comb
   m_EditorClassIdentifier: 
+  isWig: 0
+  wigIndex: 0
+  throwable: 1
   type: 0
   name: Comb
   sprite: {fileID: 21300000, guid: df857314f1d3842449de7bc041006d00, type: 3}
+  sandwich: {fileID: -4426825291496045865, guid: 96fe3e42f9ae3fb4b82ba5dbada12efd, type: 3}
   actionPressSeconds: 5
+  durability: 1
