@@ -38,6 +38,11 @@ public class PlaceableSurface : MonoBehaviour
 
         pickableObject.transform.SetParent(null);
 
+        if(pickableObject.hairReferencer)
+        {
+            pickableObject.hairReferencer.UpdateUI();
+        }
+
         if(obj.rb)
         {
             obj.rb.velocity = obj.rb.angularVelocity = Vector3.zero;

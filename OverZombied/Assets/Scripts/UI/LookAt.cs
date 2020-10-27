@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    public Transform target;
     private Vector3 targetPosition;
 
     private void Awake()
     {
-        targetPosition = target.position;        
+        targetPosition = Camera.main.transform.position;        
     }
 
     private void Update()

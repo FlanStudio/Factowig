@@ -10,9 +10,12 @@ public class Ingredient : MonoBehaviour
     public new MeshRenderer renderer;
     public new Collider collider;
 
+    public HairReferencer hairReferencer = null;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        hairReferencer = GetComponent<HairReferencer>();
     }
 
     public bool HasValidNextStepWith(Ingredient other)
