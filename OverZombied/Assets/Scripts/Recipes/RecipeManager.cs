@@ -13,9 +13,6 @@ public class RecipeManager : MonoBehaviour
     [SerializeField]
     public List<RecipeUI> recipeBoxes = null;
 
-    [Space]
-    public Sprite tickSprite = null;
-
     private int activeBoxes = 0;
     private bool spawnNewRecipes = true;
 

@@ -18,6 +18,7 @@ public class IngredientData : ScriptableObject
 
     public Sprite sprite;
     public Sprite sandwich;
+    public Sprite progressionBar;
 
     public float actionPressSeconds = 0f;
 

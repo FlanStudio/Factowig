@@ -19,11 +19,12 @@ public class Chair : MonoBehaviour
     private Canvas canvas = null;
     
     [SerializeField]
-    private Image iconIngredient = null;
-
-    [SerializeField]
     private RectTransform progressBar = null;
-
+    [SerializeField]
+    private RectTransform mask = null;
+    [SerializeField]
+    private Image recipeBar = null;
+    
     public bool PlaceWig(Ingredient wig)
     {
         if (!RecipeManager.Instance.HasMoreSteps(wig.data))
@@ -82,10 +83,12 @@ public class Chair : MonoBehaviour
         if(!actionStarted)
         {
             actionStarted = true;
-            iconIngredient.sprite = ingredient.data.sprite;
             canvas.gameObject.SetActive(true);
             this.ingredient = ingredient;
 
+            recipeBar.sprite = ingredient.data.progressionBar;
+
+            ingredient.icon.gameObject.SetActive(false);
             ingredient.gameObject.SetActive(true);
 
             stayHere = true;
@@ -94,14 +97,14 @@ public class Chair : MonoBehaviour
         }
 
         actionCounter += Time.deltaTime;
-        progressBar.anchoredPosition = new Vector2((1 - (actionCounter / this.ingredient.data.actionPressSeconds)) * -1.3f, progressBar.anchoredPosition.y);
 
-        if(actionCounter >= this.ingredient.data.actionPressSeconds)
+        float percent = Mathf.Clamp(actionCounter / this.ingredient.data.actionPressSeconds, 0f, 1f);
+        progressBar.anchoredPosition = new Vector2(-mask.rect.width * (1 - percent), progressBar.anchoredPosition.y);
+
+        if (actionCounter >= this.ingredient.data.actionPressSeconds)
         {
             actionStarted = false;
             actionCounter = 0f;
-
-            iconIngredient.sprite = RecipeManager.Instance.tickSprite;
 
             IngredientData newIngredientData = RecipeManager.Instance.GetResultingIngredient(wig.data, this.ingredient.data);
             HairReferencer refer = wig.GetComponent<HairReferencer>();

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1474941203}
   - component: {fileID: 1474941202}
   m_Layer: 10
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,3 +349,4 @@ MonoBehaviour:
   renderer: {fileID: 7506214198493723681}
   collider: {fileID: 4274590027553518563}
   hairReferencer: {fileID: 0}
+  icon: {fileID: 1474941202}

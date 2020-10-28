@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Ingredient : MonoBehaviour
@@ -11,6 +12,8 @@ public class Ingredient : MonoBehaviour
     public new Collider collider;
 
     public HairReferencer hairReferencer = null;
+
+    public Image icon;
 
     private void Awake()
     {

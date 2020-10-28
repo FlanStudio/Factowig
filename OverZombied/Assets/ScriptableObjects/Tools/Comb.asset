@@ -19,5 +19,6 @@ MonoBehaviour:
   name: Comb
   sprite: {fileID: 21300000, guid: df857314f1d3842449de7bc041006d00, type: 3}
   sandwich: {fileID: -4426825291496045865, guid: 96fe3e42f9ae3fb4b82ba5dbada12efd, type: 3}
+  progressionBar: {fileID: 6294063498822155610, guid: a033d6e9947dd5343a87a131750e4209, type: 3}
   actionPressSeconds: 5
   durability: 1
