@@ -1,22 +1,37 @@
 fileFormatVersion: 2
-guid: 9a17c232c26136844b6eb038850cbf6e
+guid: b893b67d48cdd2344bd7288aa1348f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5177879572103775908
-    second: Score WhiteBar
+      213: 6200102729641620244
+    second: CombedHair Recipe
   - first:
-      213: 5581135386371150719
-    second: Score GreenBar
+      213: 4669243585482447109
+    second: CutHair Recipe
   - first:
-      213: 499215552160718873
-    second: Score
+      213: 8085621639936611841
+    second: CutCombedHair Recipe
   - first:
-      213: -3362730692809230271
-    second: Score WhiteStar
+      213: 9012954193848736288
+    second: Outline
   - first:
-      213: 2744029832559233623
-    second: Score GreenStar
+      213: 232853369935600592
+    second: WhiteBarNoOutline
+  - first:
+      213: -3913812600408005812
+    second: RecipeCard Comb
+  - first:
+      213: -950165592386891353
+    second: RecipeCard Cut
+  - first:
+      213: -8945848158964920328
+    second: RecipeCard CutComb
+  - first:
+      213: 2030870767370477172
+    second: Recipe Outline
+  - first:
+      213: -7307814428951487886
+    second: Recipe Fill
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,12 +62,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 2
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -81,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,106 +119,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Score WhiteBar
+      name: RecipeCard Comb
       rect:
         serializedVersion: 2
-        x: 1123
-        y: 5986
-        width: 9288
-        height: 566
+        x: 178
+        y: 1596
+        width: 3482
+        height: 4918
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a64ff889068bd740800000000000000
-      internalID: 5177879572103775908
+      spriteID: c43ab3b1d285fa9c0800000000000000
+      internalID: -3913812600408005812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Score GreenBar
+      name: RecipeCard Cut
       rect:
         serializedVersion: 2
-        x: 1127
-        y: 5303
-        width: 9280
-        height: 553
+        x: 3677
+        y: 1580
+        width: 3482
+        height: 4918
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f73d304501d247d40800000000000000
-      internalID: 5581135386371150719
+      spriteID: 7a11bfb8d6550d2f0800000000000000
+      internalID: -950165592386891353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Score
+      name: RecipeCard CutComb
       rect:
         serializedVersion: 2
-        x: 192
-        y: 199
-        width: 10739
-        height: 4928
+        x: 6940
+        y: 1580
+        width: 3482
+        height: 4918
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 910e3e456e19de600800000000000000
-      internalID: 499215552160718873
+      spriteID: 8ff405e1f76f9d380800000000000000
+      internalID: -8945848158964920328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Score WhiteStar
+      name: Recipe Outline
       rect:
         serializedVersion: 2
-        x: 11446
-        y: 1741
-        width: 1368
-        height: 1302
+        x: 570
+        y: 1020
+        width: 2722
+        height: 338
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1487dcb504e2551d0800000000000000
-      internalID: -3362730692809230271
+      spriteID: 47e97d1f33a1f2c10800000000000000
+      internalID: 2030870767370477172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Score GreenStar
+      name: Recipe Fill
       rect:
         serializedVersion: 2
-        x: 11446
-        y: 212
-        width: 1368
-        height: 1307
+        x: 568
+        y: 466
+        width: 2710
+        height: 325
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a84ce1890c41620800000000000000
-      internalID: 2744029832559233623
+      spriteID: 27a5fddce7d659a90800000000000000
+      internalID: -7307814428951487886
       vertices: []
       indices: 
       edges: []
@@ -211,7 +226,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 053285d7c61071f47a8d9a93f865fabd
+    spriteID: e6fde53cae0329e4f8f285bbaa77b66d
     internalID: 0
     vertices: []
     indices: 
