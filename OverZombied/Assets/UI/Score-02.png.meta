@@ -19,7 +19,19 @@ TextureImporter:
     second: Score GreenStar
   - first:
       213: 5177879572103775908
-    second: Score-02_0
+    second: Score White Bar
+  - first:
+      213: 5581135386371150719
+    second: Score Green Bar
+  - first:
+      213: 499215552160718873
+    second: Score
+  - first:
+      213: -3362730692809230271
+    second: Score White Star
+  - first:
+      213: 2744029832559233623
+    second: Score Green Star
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +117,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Score White Bar
+      rect:
+        serializedVersion: 2
+        x: 4350
+        y: 6871
+        width: 9285
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a64ff889068bd740800000000000000
+      internalID: 5177879572103775908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Score Green Bar
+      rect:
+        serializedVersion: 2
+        x: 4358
+        y: 6188
+        width: 9277
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73d304501d247d40800000000000000
+      internalID: 5581135386371150719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Score
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 182
+        width: 13293
+        height: 5429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910e3e456e19de600800000000000000
+      internalID: 499215552160718873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Score White Star
+      rect:
+        serializedVersion: 2
+        x: 13658
+        y: 2642
+        width: 1366
+        height: 1306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1487dcb504e2551d0800000000000000
+      internalID: -3362730692809230271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Score Green Star
+      rect:
+        serializedVersion: 2
+        x: 13658
+        y: 1124
+        width: 1366
+        height: 1298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a84ce1890c41620800000000000000
+      internalID: 2744029832559233623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

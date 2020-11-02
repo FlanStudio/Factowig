@@ -38,6 +38,7 @@ public class ScreenScaleChecker : MonoBehaviour
             recipeUI.RepositionProgressBar();
         }
 
-        ScoreUI.Instance.RepositionProgressBar();
+        if(ScoreUI.Instance)
+            ScoreUI.Instance.RepositionProgressBar();
     }
 }
