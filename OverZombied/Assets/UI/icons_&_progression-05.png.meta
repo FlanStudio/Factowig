@@ -20,6 +20,21 @@ TextureImporter:
   - first:
       213: 2215612996315010014
     second: icons_&_progression-05_5
+  - first:
+      213: -1110769169144204675
+    second: icons_&_progression-05_0
+  - first:
+      213: 2061945762756418741
+    second: icons_&_progression-05_1
+  - first:
+      213: 7105840399496891230
+    second: icons_&_progression-05_2
+  - first:
+      213: 8766578358466596253
+    second: icons_&_progression-05_3
+  - first:
+      213: -3901736861902711186
+    second: icons_&_progression-05_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Comb Icon
+      name: icons_&_progression-05_0
       rect:
         serializedVersion: 2
         x: 319
@@ -115,41 +130,20 @@ TextureImporter:
         width: 1338
         height: 1338
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe179a18ccf6bc930800000000000000
-      internalID: 4164545204573532655
+      spriteID: d7234b56351c590f0800000000000000
+      internalID: -1110769169144204675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scissors Icon
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 340
-        width: 1338
-        height: 1341
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c48a5908ff9081e0800000000000000
-      internalID: -2197580730499169083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Comb Progression
+      name: icons_&_progression-05_1
       rect:
         serializedVersion: 2
         x: 2158
@@ -163,19 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5dfb01a761095750800000000000000
-      internalID: 6294063498822155610
+      spriteID: 5bcd73f1fb08d9c10800000000000000
+      internalID: 2061945762756418741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Progression White Bar
+      name: icons_&_progression-05_2
       rect:
         serializedVersion: 2
-        x: 2529
-        y: 1997
-        width: 2704
+        x: 3534
+        y: 2109
+        width: 2705
         height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,14 +178,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7b45f0a72d4b5610800000000000000
-      internalID: 1610966124314577786
+      spriteID: e5bc1aae1340d9260800000000000000
+      internalID: 7105840399496891230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scissor Progression
+      name: icons_&_progression-05_3
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 340
+        width: 1338
+        height: 1341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d4708d19429a970800000000000000
+      internalID: 8766578358466596253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_&_progression-05_4
       rect:
         serializedVersion: 2
         x: 2158
@@ -205,8 +220,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4a81087450c72f0800000000000000
-      internalID: -973897614768954197
+      spriteID: e66dd331ffe3ad9c0800000000000000
+      internalID: -3901736861902711186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_&_progression-05_5
+      rect:
+        serializedVersion: 2
+        x: 3534
+        y: 270
+        width: 2705
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3581508407fbe10800000000000000
+      internalID: 2215612996315010014
       vertices: []
       indices: 
       edges: []

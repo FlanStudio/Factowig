@@ -11,18 +11,14 @@ public class RecipeUI : MonoBehaviour
     public RectTransform maskTransform;
     public RectTransform progressBar;
 
-    private Image cardImage;
+    public Image cardImage;
+    public Image mainImage;
     private Image progressBarImage;
 
     [HideInInspector]
     public bool activated = false;
 
     public float counter { get; private set; } = 0f;
-
-    private void Awake()
-    {
-        cardImage = GetComponent<Image>();
-    }
 
     private void Update()
     {
@@ -42,6 +38,8 @@ public class RecipeUI : MonoBehaviour
         counter = 0f;
 
         cardImage.sprite = recipe.UISprite;
+        mainImage.sprite = recipe.UISprite;
+
         gameObject.SetActive(true);
 
         //LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.GetComponent<RectTransform>());

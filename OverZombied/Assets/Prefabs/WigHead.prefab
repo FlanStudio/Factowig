@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4164545204573532655, guid: a033d6e9947dd5343a87a131750e4209, type: 3}
+  m_Sprite: {fileID: -1110769169144204675, guid: a033d6e9947dd5343a87a131750e4209, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -215,6 +215,7 @@ MonoBehaviour:
   renderer: {fileID: 5951394216049634111}
   collider: {fileID: 7006110045140065118}
   hairReferencer: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!1 &4187114513185231622
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2197580730499169083, guid: a033d6e9947dd5343a87a131750e4209, type: 3}
+  m_Sprite: {fileID: 8766578358466596253, guid: a033d6e9947dd5343a87a131750e4209, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

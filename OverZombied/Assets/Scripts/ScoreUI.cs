@@ -24,20 +24,18 @@ public class ScoreUI : MonoBehaviour
     [SerializeField]
     private Sprite starGreen = null;
 
-    private RectTransform thisTransform = null;
+    public RectTransform mask = null;
 
     private void Awake()
     {
         Instance = this;
-
-        thisTransform = GetComponent<RectTransform>();
         progressBar = progressBarImage.GetComponent<RectTransform>();
     }
 
     public void RepositionProgressBar()
     {
         float percent = Mathf.Clamp(GameManager.Instance.currentMoney / GameManager.Instance.finalMoneyGoal, 0f, 1f);
-        progressBar.anchoredPosition = new Vector2(0 - thisTransform.rect.width * (1 - percent), progressBar.anchoredPosition.y);
+        progressBar.anchoredPosition = new Vector2(0 - mask.rect.width * (1 - percent), progressBar.anchoredPosition.y);
 
         if (percent > percents[0])
         {

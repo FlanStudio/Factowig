@@ -34,19 +34,19 @@ TextureImporter:
     second: Recipe Fill
   - first:
       213: 6200102729641620244
-    second: recipies_sprite-02_0
+    second: Recipes CombedHair
   - first:
       213: 4669243585482447109
-    second: recipies_sprite-02_1
+    second: Recipies CutHair
   - first:
       213: 8085621639936611841
-    second: recipies_sprite-02_2
+    second: Recipies CutCombedHair
   - first:
       213: 9012954193848736288
-    second: recipies_sprite-02_3
+    second: Recipies Outline
   - first:
       213: 232853369935600592
-    second: recipies_sprite-02_4
+    second: Recipies White Fill
   - first:
       213: -8075220762597151770
     second: recipies_sprite-02_5
@@ -300,7 +300,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Recipes CombedHair
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f73345903b0650800000000000000
+      internalID: 6200102729641620244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies CutHair
+      rect:
+        serializedVersion: 2
+        x: 3533
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509d3726d4c7cc040800000000000000
+      internalID: 4669243585482447109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies CutCombedHair
+      rect:
+        serializedVersion: 2
+        x: 7066
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10612a4ca06e53070800000000000000
+      internalID: 8085621639936611841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies Outline
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 698
+        width: 2723
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a983d2612741d70800000000000000
+      internalID: 9012954193848736288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies White Fill
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 266
+        width: 2712
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db93cff7e24b3300800000000000000
+      internalID: 232853369935600592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

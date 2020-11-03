@@ -20,4 +20,4 @@ MonoBehaviour:
   timeLimit: 60
   moneyInflow: 20
   moneyBonus: 20
-  UISprite: {fileID: -3913812600408005812, guid: b893b67d48cdd2344bd7288aa1348f97, type: 3}
+  UISprite: {fileID: 6200102729641620244, guid: b893b67d48cdd2344bd7288aa1348f97, type: 3}
