@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a36e35e1d0ff0b5448bc5b0027d82422, type: 2}
   - {fileID: 11400000, guid: d7da01e52279d204eb413eea649ff218, type: 2}
   - {fileID: 11400000, guid: 80aab53aeca7b6e46855d8b4cac9447a, type: 2}
-  timeLimit: 60
+  timeLimit: 30
   moneyInflow: 20
   moneyBonus: 20
   UISprite: {fileID: 8085621639936611841, guid: b893b67d48cdd2344bd7288aa1348f97, type: 3}
