@@ -215,6 +215,12 @@ TextureImporter:
   - first:
       213: -2890886351284462340
     second: recipies_sprite-02_60
+  - first:
+      213: 2030870767370477172
+    second: Recipes Outline
+  - first:
+      213: -7307814428951487886
+    second: Recipes White Fill
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -310,7 +316,7 @@ TextureImporter:
         width: 3533
         height: 5000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,7 +337,7 @@ TextureImporter:
         width: 3533
         height: 5000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,7 +358,7 @@ TextureImporter:
         width: 3533
         height: 5000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -365,43 +371,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Recipies Outline
+      name: Recipes Outline
       rect:
         serializedVersion: 2
-        x: 572
-        y: 698
-        width: 2723
-        height: 332
+        x: 546
+        y: 693
+        width: 2733
+        height: 342
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a983d2612741d70800000000000000
-      internalID: 9012954193848736288
+      spriteID: 47e97d1f33a1f2c10800000000000000
+      internalID: 2030870767370477172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Recipies White Fill
+      name: Recipes White Fill
       rect:
         serializedVersion: 2
         x: 556
-        y: 266
+        y: 250
         width: 2712
-        height: 318
+        height: 321
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0db93cff7e24b3300800000000000000
-      internalID: 232853369935600592
+      spriteID: 27a5fddce7d659a90800000000000000
+      internalID: -7307814428951487886
       vertices: []
       indices: 
       edges: []

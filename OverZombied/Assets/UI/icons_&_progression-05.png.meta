@@ -22,19 +22,34 @@ TextureImporter:
     second: icons_&_progression-05_5
   - first:
       213: -1110769169144204675
-    second: icons_&_progression-05_0
+    second: Icon Comb
   - first:
       213: 2061945762756418741
-    second: icons_&_progression-05_1
+    second: Progression Comb
   - first:
       213: 7105840399496891230
-    second: icons_&_progression-05_2
+    second: Icon Scissors
   - first:
       213: 8766578358466596253
-    second: icons_&_progression-05_3
+    second: Progression Scissors
   - first:
       213: -3901736861902711186
-    second: icons_&_progression-05_4
+    second: Progression White Fill
+  - first:
+      213: 4164545204573532655
+    second: Icon Comb
+  - first:
+      213: 6294063498822155610
+    second: Progression Comb
+  - first:
+      213: 1610966124314577786
+    second: Icon Scissors
+  - first:
+      213: -2197580730499169083
+    second: Progression Scissors
+  - first:
+      213: -973897614768954197
+    second: Progression White Fill
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons_&_progression-05_0
+      name: Icon Comb
       rect:
         serializedVersion: 2
         x: 319
@@ -136,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7234b56351c590f0800000000000000
-      internalID: -1110769169144204675
+      spriteID: fe179a18ccf6bc930800000000000000
+      internalID: 4164545204573532655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_&_progression-05_1
+      name: Progression Comb
       rect:
         serializedVersion: 2
         x: 2158
-        y: 2389
+        y: 2561
         width: 4378
-        height: 1338
+        height: 1334
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,35 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bcd73f1fb08d9c10800000000000000
-      internalID: 2061945762756418741
+      spriteID: a5dfb01a761095750800000000000000
+      internalID: 6294063498822155610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_&_progression-05_2
-      rect:
-        serializedVersion: 2
-        x: 3534
-        y: 2109
-        width: 2705
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5bc1aae1340d9260800000000000000
-      internalID: 7105840399496891230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons_&_progression-05_3
+      name: Icon Scissors
       rect:
         serializedVersion: 2
         x: 319
@@ -199,18 +193,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9d4708d19429a970800000000000000
-      internalID: 8766578358466596253
+      spriteID: a7b45f0a72d4b5610800000000000000
+      internalID: 1610966124314577786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_&_progression-05_4
+      name: Progression Scissors
       rect:
         serializedVersion: 2
         x: 2158
-        y: 550
+        y: 953
         width: 4378
         height: 1338
       alignment: 0
@@ -220,19 +214,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e66dd331ffe3ad9c0800000000000000
-      internalID: -3901736861902711186
+      spriteID: 5c48a5908ff9081e0800000000000000
+      internalID: -2197580730499169083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_&_progression-05_5
+      name: Progression White Fill
       rect:
         serializedVersion: 2
-        x: 3534
-        y: 270
-        width: 2705
+        x: 3296
+        y: 315
+        width: 2701
         height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed3581508407fbe10800000000000000
-      internalID: 2215612996315010014
+      spriteID: ba4a81087450c72f0800000000000000
+      internalID: -973897614768954197
       vertices: []
       indices: 
       edges: []
