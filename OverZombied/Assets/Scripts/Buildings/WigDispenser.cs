@@ -6,6 +6,9 @@ public class WigDispenser : MonoBehaviour
 {
     public static WigDispenser Instance;
 
+    public bool spawnInWaves = false;
+    public int waveSize = 0;
+
     [Tooltip("\"-1\" means an infinite amount")]
     public int amountItems = -1;
 
@@ -19,25 +22,18 @@ public class WigDispenser : MonoBehaviour
     private Animator trapAnimator = null;
 
     [SerializeField]
-    private Animator bustAnimator;
-
-    public GameObject[] bustHeadHairs;
-    public GameObject bustParent;
-
-    private Rigidbody bustRb;
+    private WigBust[] busts = null;
 
     private bool hairReady = true;
 
     private void Awake()
     {
         Instance = this;
-
-        bustRb = bustParent.GetComponent<Rigidbody>();
     }
 
     public GameObject GetObject()
     {
-        if (amountItems != -1 && itemsSpawned + 1 > amountItems)
+        if( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) /*|| (spawnInWaves && itemsSpawned + waveSize < amountItems)*/)
             return null;
 
         if (!hairReady)
@@ -48,33 +44,35 @@ public class WigDispenser : MonoBehaviour
         GameObject obj = Instantiate(wigPrefab);
         obj.SetActive(false);
 
-        foreach(GameObject gameObject in bustHeadHairs)
+        foreach(WigBust bust in busts)
         {
-            gameObject.SetActive(false);
+            if(!bust.hairsHidden)
+            {
+                bust.HideHairs();
+                break;
+            }
         }
 
-        hairReady = false;
-
-        StartCoroutine(NewWigCoroutine());
+        if( (spawnInWaves && itemsSpawned % waveSize == 0) || (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 <= amountItems) )
+        {
+            hairReady = false;
+            StartCoroutine(NewWigCoroutine());
+        }
 
         return obj;
     }
 
     private IEnumerator NewWigCoroutine()
     {
-        yield return new WaitUntil(() => { if (amountItems != -1 && itemsSpawned + 1 > amountItems) return false; else return true; });
+        yield return new WaitUntil(() => { if ( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) || (spawnInWaves && itemsSpawned + waveSize > amountItems)) return false; else return true; });
 
         trapAnimator.SetTrigger("Down");
 
-        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("opened") && bustRb.velocity == Vector3.zero) return true; else return false; });
-
-        //bustAnimator.SetTrigger("Down");   
-        //bustParent.transform.localPosition = Vector3.zero;
-        //yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = bustAnimator.GetCurrentAnimatorStateInfo(0); if ((stateInfo.normalizedTime - Mathf.Floor(stateInfo.normalizedTime)) >= 0.95f) return true; else return false; });
+        yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("opened") && busts[0].rb.velocity == Vector3.zero) return true; else return false; });
         
-        for (int i = 0; i < 2; ++i)
+        foreach(WigBust bust in busts)
         {
-            bustHeadHairs[i].SetActive(true);
+            bust.ShowHairs();
         }
 
         trapAnimator.SetTrigger("Up");

@@ -9,6 +9,8 @@ public class HairReferencer : MonoBehaviour
     
     public MeshRenderer[] hairs;
 
+    public bool updateUI = true;
+
     [SerializeField]
     Canvas canvas;
 
@@ -17,6 +19,9 @@ public class HairReferencer : MonoBehaviour
 
     public void UpdateUI()
     {
+        if (!updateUI)
+            return;
+
         for(int i = 0; i < 4; ++i)
         {
             if (hairs[i].gameObject.activeSelf)
