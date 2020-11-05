@@ -194,6 +194,7 @@ MonoBehaviour:
   - {fileID: 9043027850790965454}
   - {fileID: 5812513755842446165}
   - {fileID: 5398198332649038288}
+  updateUI: 1
   canvas: {fileID: 7082261345725017562}
   images:
   - {fileID: 77617489019732599}
@@ -522,8 +523,14 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8764294756139836385, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3205656538642511080, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
+    - {fileID: 7811609806828817849, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
+    - {fileID: 2067971147, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
 --- !u!1 &1525273243064741944 stripped
 GameObject:

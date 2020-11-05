@@ -11,6 +11,9 @@ public class RecipeManager : MonoBehaviour
     public List<Recipe> availableRecipes = null;
 
     [SerializeField]
+    public List<Recipe> totalRecipes = null;
+
+    [SerializeField]
     public List<RecipeUI> recipeBoxes = null;
 
     private int activeBoxes = 0;
@@ -74,7 +77,7 @@ public class RecipeManager : MonoBehaviour
 
     public bool HasMoreSteps(IngredientData ingredient)
     {
-        foreach (Recipe recipe in availableRecipes)
+        foreach (Recipe recipe in totalRecipes)
         {
             for(int i = 0; i < recipe.ingredients.Count; ++i)
             {
@@ -90,7 +93,7 @@ public class RecipeManager : MonoBehaviour
 
     public bool AnyRecipeHasConsecutive(IngredientData a, IngredientData b)
     {
-        foreach (Recipe recipe in availableRecipes)
+        foreach (Recipe recipe in totalRecipes)
         {
             for (int i = 0; i < recipe.ingredients.Count - 1; ++i)
             {
@@ -124,7 +127,7 @@ public class RecipeManager : MonoBehaviour
 
     public IngredientData GetResultingIngredient(IngredientData a, IngredientData b)
     {
-        foreach(Recipe recipe in availableRecipes)
+        foreach(Recipe recipe in totalRecipes)
         {
             for(int i = 0; i < recipe.ingredients.Count - 2; ++i)
             {

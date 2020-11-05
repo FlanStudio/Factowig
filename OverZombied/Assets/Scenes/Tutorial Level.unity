@@ -4664,7 +4664,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.05
+  m_fontSize: 45.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -70575,6 +70575,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce424dd444d71524e850c9c7888ccbeb, type: 2}
   - {fileID: 11400000, guid: d192594f795cad14bbeb38535bf83cb9, type: 2}
   - {fileID: 11400000, guid: 89a1674d433944f46a0232faa667d210, type: 2}
+  totalRecipes:
+  - {fileID: 11400000, guid: ce424dd444d71524e850c9c7888ccbeb, type: 2}
+  - {fileID: 11400000, guid: d192594f795cad14bbeb38535bf83cb9, type: 2}
+  - {fileID: 11400000, guid: 89a1674d433944f46a0232faa667d210, type: 2}
+  - {fileID: 11400000, guid: 34fbac04397ac3b44972f18c31db857d, type: 2}
   recipeBoxes:
   - {fileID: 1852309542}
   - {fileID: 999272881}
@@ -74430,7 +74435,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.8
+  m_fontSize: 38.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
