@@ -24,11 +24,14 @@ public class WigDispenser : MonoBehaviour
     [SerializeField]
     private WigBust[] busts = null;
 
+    private int emptyBusts = 0;
+
     private bool hairReady = true;
 
     private void Awake()
     {
         Instance = this;
+        itemsSpawned = 3;
     }
 
     public GameObject GetObject()
@@ -36,24 +39,24 @@ public class WigDispenser : MonoBehaviour
         if( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) /*|| (spawnInWaves && itemsSpawned + waveSize < amountItems)*/)
             return null;
 
-        if (!hairReady)
+        if (!hairReady || emptyBusts == waveSize)
             return null;
-
-        itemsSpawned++;
 
         GameObject obj = Instantiate(wigPrefab);
         obj.SetActive(false);
 
         foreach(WigBust bust in busts)
         {
-            if(!bust.hairsHidden)
+            if (!bust.hairsHidden)
             {
                 bust.HideHairs();
                 break;
             }
         }
 
-        if( (spawnInWaves && itemsSpawned % waveSize == 0) || (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 <= amountItems) )
+        emptyBusts++;
+
+        if( (spawnInWaves && emptyBusts == waveSize) || (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 <= amountItems) )
         {
             hairReady = false;
             StartCoroutine(NewWigCoroutine());
@@ -64,7 +67,7 @@ public class WigDispenser : MonoBehaviour
 
     private IEnumerator NewWigCoroutine()
     {
-        yield return new WaitUntil(() => { if ( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) || (spawnInWaves && itemsSpawned + waveSize > amountItems)) return false; else return true; });
+        yield return new WaitUntil(() => { if ( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) || (spawnInWaves && emptyBusts == waveSize && amountItems - itemsSpawned < waveSize)) return false; else return true; });
 
         trapAnimator.SetTrigger("Down");
 
@@ -80,5 +83,7 @@ public class WigDispenser : MonoBehaviour
         yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("Closed")) return true; else return false; });
 
         hairReady = true;
+        itemsSpawned += waveSize;
+        emptyBusts = 0;
     }
 }
