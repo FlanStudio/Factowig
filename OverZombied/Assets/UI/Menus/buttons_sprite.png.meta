@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 42329587338755895
-    second: buttons_sprite_0
+    second: Button 1 Blue
   - first:
       213: 7781839237369314691
-    second: buttons_sprite_1
+    second: Button 2 Blue
   - first:
       213: 8498929590904176876
-    second: buttons_sprite_2
+    second: Button 3 Blue
   - first:
       213: -8732090570933423121
-    second: buttons_sprite_3
+    second: Button 4 Blue
   - first:
       213: -6055214040430429220
-    second: buttons_sprite_4
+    second: Button 5 Blue
   - first:
       213: 3935086540241773341
-    second: buttons_sprite_5
+    second: Button 6 Blue
   - first:
       213: -4789475616596618982
-    second: buttons_sprite_6
+    second: Button 1 Yellow
   - first:
       213: -8519587438277116613
-    second: buttons_sprite_7
+    second: Button 2 Yellow
   - first:
       213: 5883866058353017023
-    second: buttons_sprite_8
+    second: Button 3 Yellow
   - first:
       213: 2169683078536341829
-    second: buttons_sprite_9
+    second: Button 4 Yellow
   - first:
       213: -2383882307051776825
-    second: buttons_sprite_10
+    second: Button 5 Yellow
   - first:
       213: 6640291065376280278
-    second: buttons_sprite_11
+    second: Button 6 Yellow
   - first:
       213: 3345486695510619619
     second: buttons_sprite_12
@@ -68,6 +68,165 @@ TextureImporter:
   - first:
       213: -9007574861894565326
     second: buttons_sprite_21
+  - first:
+      213: 976483906054281906
+    second: Button 1 Blue
+  - first:
+      213: -3584828651744435637
+    second: buttons_sprite_22
+  - first:
+      213: -4915768410265655610
+    second: buttons_sprite_23
+  - first:
+      213: -4963533835969611679
+    second: buttons_sprite_24
+  - first:
+      213: 6932346335727382195
+    second: buttons_sprite_25
+  - first:
+      213: 3156633610198539322
+    second: buttons_sprite_26
+  - first:
+      213: 4474430868592502110
+    second: buttons_sprite_27
+  - first:
+      213: -1078322591718692911
+    second: buttons_sprite_28
+  - first:
+      213: 118193153331480209
+    second: buttons_sprite_29
+  - first:
+      213: 1405113205947116460
+    second: buttons_sprite_30
+  - first:
+      213: -8815075794820296461
+    second: buttons_sprite_31
+  - first:
+      213: 6856868950064931538
+    second: buttons_sprite_32
+  - first:
+      213: -971941156227430594
+    second: buttons_sprite_33
+  - first:
+      213: 2336138346485378801
+    second: buttons_sprite_34
+  - first:
+      213: 4257194885176818131
+    second: buttons_sprite_35
+  - first:
+      213: 976483906054281906
+    second: Button 1 Blue
+  - first:
+      213: -3436518695312600131
+    second: buttons_sprite_36
+  - first:
+      213: 2175760531226302238
+    second: buttons_sprite_37
+  - first:
+      213: -870336366669265064
+    second: buttons_sprite_38
+  - first:
+      213: 760291980471617032
+    second: buttons_sprite_39
+  - first:
+      213: 3008874135081771098
+    second: buttons_sprite_40
+  - first:
+      213: -175910877718329380
+    second: buttons_sprite_41
+  - first:
+      213: 4801535594212350924
+    second: buttons_sprite_42
+  - first:
+      213: -383392762228248915
+    second: buttons_sprite_43
+  - first:
+      213: 6906317351348180973
+    second: buttons_sprite_44
+  - first:
+      213: 477165502087257647
+    second: buttons_sprite_45
+  - first:
+      213: 3765701714134934292
+    second: buttons_sprite_46
+  - first:
+      213: -595886251300415492
+    second: buttons_sprite_47
+  - first:
+      213: 769101727516573449
+    second: Large Button
+  - first:
+      213: 8854287382780918912
+    second: buttons_sprite_49
+  - first:
+      213: 8356146712235871842
+    second: buttons_sprite_50
+  - first:
+      213: -411089254414285316
+    second: buttons_sprite_51
+  - first:
+      213: -7570141648810856378
+    second: buttons_sprite_52
+  - first:
+      213: 3091966876116186149
+    second: buttons_sprite_53
+  - first:
+      213: 7617740076401418024
+    second: buttons_sprite_54
+  - first:
+      213: -4007960808596568691
+    second: buttons_sprite_55
+  - first:
+      213: -1398589989958003668
+    second: buttons_sprite_56
+  - first:
+      213: -8448564608185694309
+    second: buttons_sprite_57
+  - first:
+      213: 1880553316763300282
+    second: buttons_sprite_58
+  - first:
+      213: -5696475832612180633
+    second: buttons_sprite_59
+  - first:
+      213: 1218316156308312274
+    second: buttons_sprite_60
+  - first:
+      213: 5017884083694773762
+    second: buttons_sprite_61
+  - first:
+      213: 7390213222211734565
+    second: buttons_sprite_62
+  - first:
+      213: -7449267237244035295
+    second: buttons_sprite_63
+  - first:
+      213: -5146282580169615718
+    second: buttons_sprite_64
+  - first:
+      213: -5996754448528691232
+    second: buttons_sprite_65
+  - first:
+      213: -4341350664405169722
+    second: buttons_sprite_66
+  - first:
+      213: 377105190104876751
+    second: buttons_sprite_67
+  - first:
+      213: -1838963922212355323
+    second: buttons_sprite_68
+  - first:
+      213: 9085112709735790981
+    second: buttons_sprite_69
+  - first:
+      213: -833141587033721429
+    second: buttons_sprite_70
+  - first:
+      213: -6684170445547633070
+    second: buttons_sprite_71
+  - first:
+      213: 8147746237924796479
+    second: buttons_sprite_72
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,13 +314,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttons_sprite_0
+      name: Button 2 Blue
       rect:
         serializedVersion: 2
-        x: 5
-        y: 937
-        width: 358
-        height: 134
+        x: 374
+        y: 933
+        width: 374
+        height: 141
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +328,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73fb0d01982669000800000000000000
-      internalID: 42329587338755895
+      spriteID: 38d38927e85aefb60800000000000000
+      internalID: 7781839237369314691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 3 Blue
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 932
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce046e40f6342f570800000000000000
+      internalID: 8498929590904176876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 4 Blue
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 932
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3b9fce3e161d680800000000000000
+      internalID: -8732090570933423121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 5 Blue
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 932
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbbf2189ee87fba0800000000000000
+      internalID: -6055214040430429220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 6 Blue
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 932
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13288ffb5c3c9630800000000000000
+      internalID: 3935086540241773341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 1 Yellow
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a111d5c6d4d588db0800000000000000
+      internalID: -4789475616596618982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 2 Yellow
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dbc941d5854c980800000000000000
+      internalID: -8519587438277116613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 3 Yellow
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb00c1a8101b7a150800000000000000
+      internalID: 5883866058353017023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 4 Yellow
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549a553b3434c1e10800000000000000
+      internalID: 2169683078536341829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 5 Yellow
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c417dd0cafbaeed0800000000000000
+      internalID: -2383882307051776825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 6 Yellow
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 786
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de04fcca8d072c50800000000000000
+      internalID: 6640291065376280278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Large Button
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 310
+        width: 2211
+        height: 442
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fb3c042f56caa00800000000000000
+      internalID: 769101727516573449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button 1 Blue
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 933
+        width: 374
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba504d50fa2d8d00800000000000000
+      internalID: 976483906054281906
       vertices: []
       indices: 
       edges: []
