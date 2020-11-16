@@ -40,7 +40,7 @@ TextureImporter:
     second: Button 6 Yellow
   - first:
       213: 3345486695510619619
-    second: buttons_sprite_12
+    second: Buttons_Wide
   - first:
       213: 5888023463068501647
     second: buttons_sprite_13
@@ -227,6 +227,42 @@ TextureImporter:
   - first:
       213: 8147746237924796479
     second: buttons_sprite_72
+  - first:
+      213: 976483906054281906
+    second: Button Blue 1
+  - first:
+      213: -1329238964965453310
+    second: Button Blue 2
+  - first:
+      213: -3892250117887593827
+    second: Button Blue 3
+  - first:
+      213: 2567276108857951571
+    second: Button Blue 4
+  - first:
+      213: 4096972927505930292
+    second: Button Blue 5
+  - first:
+      213: -2475598918056095658
+    second: Button Blue 6
+  - first:
+      213: -2690252797676460696
+    second: Button Yellow 1
+  - first:
+      213: 8206670314105759838
+    second: Button Yellow 2
+  - first:
+      213: 6350042788394304157
+    second: Button Yellow 3
+  - first:
+      213: 7111541411282393952
+    second: Button Yellow 4
+  - first:
+      213: 361758358732704004
+    second: Button Yellow 5
+  - first:
+      213: 5307319001618793558
+    second: Button Yellow 6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -314,267 +350,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button 2 Blue
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 933
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38d38927e85aefb60800000000000000
-      internalID: 7781839237369314691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 3 Blue
-      rect:
-        serializedVersion: 2
-        x: 748
-        y: 932
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce046e40f6342f570800000000000000
-      internalID: 8498929590904176876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 4 Blue
-      rect:
-        serializedVersion: 2
-        x: 1122
-        y: 932
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe3b9fce3e161d680800000000000000
-      internalID: -8732090570933423121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 5 Blue
-      rect:
-        serializedVersion: 2
-        x: 1496
-        y: 932
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdbbf2189ee87fba0800000000000000
-      internalID: -6055214040430429220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 6 Blue
-      rect:
-        serializedVersion: 2
-        x: 1870
-        y: 932
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d13288ffb5c3c9630800000000000000
-      internalID: 3935086540241773341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 1 Yellow
+      name: Button Blue 1
       rect:
         serializedVersion: 2
         x: 0
-        y: 786
+        y: 929
         width: 374
-        height: 141
+        height: 151
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a111d5c6d4d588db0800000000000000
-      internalID: -4789475616596618982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 2 Yellow
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 786
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3dbc941d5854c980800000000000000
-      internalID: -8519587438277116613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 3 Yellow
-      rect:
-        serializedVersion: 2
-        x: 748
-        y: 786
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb00c1a8101b7a150800000000000000
-      internalID: 5883866058353017023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 4 Yellow
-      rect:
-        serializedVersion: 2
-        x: 1122
-        y: 786
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 549a553b3434c1e10800000000000000
-      internalID: 2169683078536341829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 5 Yellow
-      rect:
-        serializedVersion: 2
-        x: 1496
-        y: 786
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c417dd0cafbaeed0800000000000000
-      internalID: -2383882307051776825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 6 Yellow
-      rect:
-        serializedVersion: 2
-        x: 1870
-        y: 786
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6de04fcca8d072c50800000000000000
-      internalID: 6640291065376280278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Large Button
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 310
-        width: 2211
-        height: 442
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90fb3c042f56caa00800000000000000
-      internalID: 769101727516573449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button 1 Blue
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 933
-        width: 374
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -582,6 +366,258 @@ TextureImporter:
       bones: []
       spriteID: 2ba504d50fa2d8d00800000000000000
       internalID: 976483906054281906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Blue 2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 929
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20250a734389d8de0800000000000000
+      internalID: -1329238964965453310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Blue 3
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 929
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92765ac323fbf9c0800000000000000
+      internalID: -3892250117887593827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Blue 4
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 929
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35543dcd40cc0a320800000000000000
+      internalID: 2567276108857951571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Blue 5
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 929
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438126ebb2f5bd830800000000000000
+      internalID: 4096972927505930292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Blue 6
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 929
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650dcea76e7e4add0800000000000000
+      internalID: -2475598918056095658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8656e76855d4aaad0800000000000000
+      internalID: -2690252797676460696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58640d7b23f3e170800000000000000
+      internalID: 8206670314105759838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 3
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9206c6a542ef1850800000000000000
+      internalID: 6350042788394304157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 4
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b97f82c3541b260800000000000000
+      internalID: 7111541411282393952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 5
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4098ac28f49350500800000000000000
+      internalID: 361758358732704004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Yellow 6
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 778
+        width: 374
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6544b29338267a940800000000000000
+      internalID: 5307319001618793558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buttons_Wide
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 310
+        width: 2210
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5b4b6ac6e8d6e20800000000000000
+      internalID: 3345486695510619619
       vertices: []
       indices: 
       edges: []

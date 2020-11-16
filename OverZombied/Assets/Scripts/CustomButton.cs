@@ -3,35 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class CustomButton : Button
 {
-    public Sprite normalSprite;
-    public Sprite hoverSprite;
-    public Sprite clickSprite;
+    public Sprite normalSprite = null;
+    public Sprite hoverSprite = null;
+    public Sprite clickSprite = null;
 
-    private Image image = null;
+    private Image img = null;
 
-    private void Awake()
+    protected override void Awake()
     {
-        image = GetComponent<Image>();
+        img = GetComponent<Image>();
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
-
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
         base.OnPointerEnter(eventData);
-        image.sprite = hoverSprite;
+        img.sprite = hoverSprite;
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
         base.OnPointerExit(eventData);
-        image.sprite = normalSprite;
+        img.sprite = normalSprite;
+    }
+}
+
+[CustomEditor(typeof(CustomButton))]
+public class CustomButtonEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        //CustomButton button = (CustomButton)target;
+
+        //button.hoverSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
+        //button.clickSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
+
+        //DrawDefaultInspector();
     }
 }
