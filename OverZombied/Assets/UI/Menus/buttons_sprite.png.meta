@@ -184,22 +184,22 @@ TextureImporter:
     second: buttons_sprite_57
   - first:
       213: 1880553316763300282
-    second: buttons_sprite_58
+    second: Post-It dark green
   - first:
       213: -5696475832612180633
-    second: buttons_sprite_59
+    second: PauseMenu Blackboard
   - first:
       213: 1218316156308312274
-    second: buttons_sprite_60
+    second: PauseMenu Continue button
   - first:
       213: 5017884083694773762
-    second: buttons_sprite_61
+    second: PauseMenu Restart Button
   - first:
       213: 7390213222211734565
-    second: buttons_sprite_62
+    second: PauseMenu Settings button
   - first:
       213: -7449267237244035295
-    second: buttons_sprite_63
+    second: PauseMenu Save and Quit button
   - first:
       213: -5146282580169615718
     second: buttons_sprite_64
@@ -208,7 +208,7 @@ TextureImporter:
     second: Title
   - first:
       213: -4341350664405169722
-    second: Post-It yellow
+    second: Post-It green
   - first:
       213: 377105190104876751
     second: PauseMenu
@@ -311,6 +311,9 @@ TextureImporter:
   - first:
       213: -2740141441101876927
     second: buttons_sprite_74
+  - first:
+      213: 3345486695510619619
+    second: buttons_sprite_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -671,7 +674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Post-It yellow
+      name: Post-It green
       rect:
         serializedVersion: 2
         x: 1207
@@ -729,6 +732,132 @@ TextureImporter:
       bones: []
       spriteID: 6c4baf007156bf230800000000000000
       internalID: 3673641070525854918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Post-It dark green
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1537
+        width: 432
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1fbda2741191a10800000000000000
+      internalID: 1880553316763300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Blackboard
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 397
+        width: 868
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dad85596d02f0b0800000000000000
+      internalID: -5696475832612180633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Continue button
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 713
+        width: 385
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d050e8d61458e010800000000000000
+      internalID: 1218316156308312274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Restart Button
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 710
+        width: 403
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206a6bcfcfa13a540800000000000000
+      internalID: 5017884083694773762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Settings button
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 316
+        width: 404
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c435445cf4f8660800000000000000
+      internalID: 7390213222211734565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Save and Quit button
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 316
+        width: 403
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f1d176ae2ee9890800000000000000
+      internalID: -7449267237244035295
       vertices: []
       indices: 
       edges: []
