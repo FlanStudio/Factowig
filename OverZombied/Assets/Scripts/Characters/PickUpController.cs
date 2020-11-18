@@ -32,7 +32,7 @@ public class PickUpController : MonoBehaviour
     private void Update()
     {
         #region ACTION KEY CHECK
-        switch (InputController.Instance.controlsMode[movementController.playerID])
+        switch (InputController.Instance.playerInput[movementController.playerID].controlMode)
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {
@@ -59,7 +59,7 @@ public class PickUpController : MonoBehaviour
         #endregion
 
         #region THROW KEY CHECK
-        switch (InputController.Instance.controlsMode[movementController.playerID])
+        switch (InputController.Instance.playerInput[movementController.playerID].controlMode)
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {

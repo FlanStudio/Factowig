@@ -7,15 +7,15 @@ public class InputController : MonoBehaviour
 {
     public static InputController Instance;
 
-    public enum ControlsMode { KeyboardMouse, Controller };
+    public enum ControlsMode { None, KeyboardMouse, Controller };
 
     public class PlayerInput
     {
+        public ControlsMode controlMode = ControlsMode.None;
         public Gamepad gamepad = null;
         public Keyboard keyboard = null;
     }
 
-    public ControlsMode[] controlsMode { get; private set; } = new ControlsMode[4] {ControlsMode.Controller, ControlsMode.Controller, ControlsMode.Controller, ControlsMode.Controller};
     public PlayerInput[] playerInput = new PlayerInput[4] {new PlayerInput(), new PlayerInput(), new PlayerInput(), new PlayerInput()};
 
     [SerializeField]
@@ -51,7 +51,7 @@ public class InputController : MonoBehaviour
             {
                 if(playerInput[i].keyboard.anyKey.wasPressedThisFrame)
                 {
-                    controlsMode[i] = ControlsMode.KeyboardMouse;
+                    playerInput[i].controlMode = ControlsMode.KeyboardMouse;
                 }
             }
 
@@ -59,14 +59,14 @@ public class InputController : MonoBehaviour
             {
                 if(playerInput[i].gamepad.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic))
                 {
-                    controlsMode[i] = ControlsMode.Controller;
+                    playerInput[i].controlMode = ControlsMode.Controller;
                 }
             }
         }
 
         #region SINGLEPLAYER
         if (Gamepad.all.Count < 2)
-            switch (controlsMode[0])
+            switch (playerInput[0].controlMode)
             {
                 case ControlsMode.KeyboardMouse:
                     if (playerInput[0].keyboard.tabKey.wasPressedThisFrame)
@@ -99,14 +99,14 @@ public class InputController : MonoBehaviour
     private void SetInputs()
     {
         playerInput[0].keyboard = Keyboard.current;
-        controlsMode[0] = ControlsMode.KeyboardMouse;
+        playerInput[0].controlMode = ControlsMode.KeyboardMouse;
 
         for (int i = 0; i < 4; ++i)
         {
             if (i < Gamepad.all.Count)
             {
                 playerInput[i].gamepad = Gamepad.all[i];
-                controlsMode[i] = ControlsMode.Controller;
+                playerInput[i].controlMode = ControlsMode.Controller;
             }
         }
     }

@@ -205,13 +205,13 @@ TextureImporter:
     second: buttons_sprite_64
   - first:
       213: -5996754448528691232
-    second: buttons_sprite_65
+    second: Post-It blue
   - first:
       213: -4341350664405169722
-    second: buttons_sprite_66
+    second: Post-It yellow
   - first:
       213: 377105190104876751
-    second: buttons_sprite_67
+    second: PauseMenu
   - first:
       213: -1838963922212355323
     second: buttons_sprite_68
@@ -263,6 +263,54 @@ TextureImporter:
   - first:
       213: 5307319001618793558
     second: Button Yellow 6
+  - first:
+      213: 42329587338755895
+    second: Button Blue 1
+  - first:
+      213: 7781839237369314691
+    second: Button Blue 2
+  - first:
+      213: 8498929590904176876
+    second: Button Blue 3
+  - first:
+      213: -8732090570933423121
+    second: Button Blue 4
+  - first:
+      213: -6055214040430429220
+    second: Button Blue 5
+  - first:
+      213: 3935086540241773341
+    second: Button Blue 6
+  - first:
+      213: -4789475616596618982
+    second: Button Yellow 1
+  - first:
+      213: -8519587438277116613
+    second: Button Yellow 2
+  - first:
+      213: 5883866058353017023
+    second: Button Yellow 3
+  - first:
+      213: 2169683078536341829
+    second: Button Yellow 4
+  - first:
+      213: -2383882307051776825
+    second: Button Yellow 5
+  - first:
+      213: 6640291065376280278
+    second: Button Yellow 6
+  - first:
+      213: 3673641070525854918
+    second: Button Wide
+  - first:
+      213: 769101727516573449
+    second: buttons_sprite_48
+  - first:
+      213: -6603548186397667026
+    second: buttons_sprite_73
+  - first:
+      213: -2740141441101876927
+    second: buttons_sprite_74
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -354,7 +402,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -364,8 +412,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba504d50fa2d8d00800000000000000
-      internalID: 976483906054281906
+      spriteID: 73fb0d01982669000800000000000000
+      internalID: 42329587338755895
       vertices: []
       indices: 
       edges: []
@@ -375,7 +423,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 374
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -385,8 +433,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20250a734389d8de0800000000000000
-      internalID: -1329238964965453310
+      spriteID: 38d38927e85aefb60800000000000000
+      internalID: 7781839237369314691
       vertices: []
       indices: 
       edges: []
@@ -396,7 +444,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -406,8 +454,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d92765ac323fbf9c0800000000000000
-      internalID: -3892250117887593827
+      spriteID: ce046e40f6342f570800000000000000
+      internalID: 8498929590904176876
       vertices: []
       indices: 
       edges: []
@@ -417,7 +465,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1122
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -427,8 +475,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35543dcd40cc0a320800000000000000
-      internalID: 2567276108857951571
+      spriteID: fe3b9fce3e161d680800000000000000
+      internalID: -8732090570933423121
       vertices: []
       indices: 
       edges: []
@@ -438,7 +486,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1496
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -448,8 +496,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438126ebb2f5bd830800000000000000
-      internalID: 4096972927505930292
+      spriteID: cdbbf2189ee87fba0800000000000000
+      internalID: -6055214040430429220
       vertices: []
       indices: 
       edges: []
@@ -459,7 +507,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1870
-        y: 929
+        y: 2684
         width: 374
         height: 151
       alignment: 0
@@ -469,8 +517,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650dcea76e7e4add0800000000000000
-      internalID: -2475598918056095658
+      spriteID: d13288ffb5c3c9630800000000000000
+      internalID: 3935086540241773341
       vertices: []
       indices: 
       edges: []
@@ -480,7 +528,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -490,8 +538,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8656e76855d4aaad0800000000000000
-      internalID: -2690252797676460696
+      spriteID: a111d5c6d4d588db0800000000000000
+      internalID: -4789475616596618982
       vertices: []
       indices: 
       edges: []
@@ -501,7 +549,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 374
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -511,8 +559,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e58640d7b23f3e170800000000000000
-      internalID: 8206670314105759838
+      spriteID: b3dbc941d5854c980800000000000000
+      internalID: -8519587438277116613
       vertices: []
       indices: 
       edges: []
@@ -522,7 +570,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 748
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -532,8 +580,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9206c6a542ef1850800000000000000
-      internalID: 6350042788394304157
+      spriteID: fb00c1a8101b7a150800000000000000
+      internalID: 5883866058353017023
       vertices: []
       indices: 
       edges: []
@@ -543,7 +591,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1122
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -553,8 +601,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06b97f82c3541b260800000000000000
-      internalID: 7111541411282393952
+      spriteID: 549a553b3434c1e10800000000000000
+      internalID: 2169683078536341829
       vertices: []
       indices: 
       edges: []
@@ -564,7 +612,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1496
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -574,8 +622,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4098ac28f49350500800000000000000
-      internalID: 361758358732704004
+      spriteID: 7c417dd0cafbaeed0800000000000000
+      internalID: -2383882307051776825
       vertices: []
       indices: 
       edges: []
@@ -585,7 +633,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1870
-        y: 778
+        y: 2533
         width: 374
         height: 151
       alignment: 0
@@ -595,20 +643,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6544b29338267a940800000000000000
-      internalID: 5307319001618793558
+      spriteID: 6de04fcca8d072c50800000000000000
+      internalID: 6640291065376280278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_Wide
+      name: Post-It blue
       rect:
         serializedVersion: 2
-        x: 24
-        y: 310
-        width: 2210
-        height: 441
+        x: 163
+        y: 1512
+        width: 814
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,8 +664,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e5b4b6ac6e8d6e20800000000000000
-      internalID: 3345486695510619619
+      spriteID: 0ef243ae99f37cca0800000000000000
+      internalID: -5996754448528691232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Post-It yellow
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1537
+        width: 433
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c949ba729c60c3c0800000000000000
+      internalID: -4341350664405169722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 401
+        width: 857
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc648232c2fbb3500800000000000000
+      internalID: 377105190104876751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Wide
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2065
+        width: 2209
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4baf007156bf230800000000000000
+      internalID: 3673641070525854918
       vertices: []
       indices: 
       edges: []

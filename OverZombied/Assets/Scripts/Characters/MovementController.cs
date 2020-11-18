@@ -29,7 +29,7 @@ public class MovementController : MonoBehaviour
         movementNorm = Vector2.zero;
 
         #region MOVEMENT VECTOR
-        switch (InputController.Instance.controlsMode[playerID])
+        switch (InputController.Instance.playerInput[playerID].controlMode)
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {
