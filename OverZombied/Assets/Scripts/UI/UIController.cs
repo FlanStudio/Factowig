@@ -14,12 +14,28 @@ public class UIController : MonoBehaviour
 
     public void OnQuitPressed()
     {
+        //TODO: SAVE SETTINGS AND PROGRESSION AND QUIT THE GAME
         Application.Quit();
     }
 
     public void OnPlayPressed()
     {
         SceneManager.LoadScene("Tutorial");
+    }
+
+    public void OnRestartPressed()
+    {
+        TogglePauseMenu();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void TogglePauseMenu()
+    {
+        if (PauseMenu != null)
+        {
+            PauseMenu.SetActive(!PauseMenu.activeSelf);
+            Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;
+        }
     }
 
     private void Awake()
@@ -49,15 +65,6 @@ public class UIController : MonoBehaviour
                     }
                     break;
             }
-        }
-    }
-
-    private void TogglePauseMenu()
-    {
-        if(PauseMenu != null)
-        {
-            PauseMenu.SetActive(!PauseMenu.activeSelf);
-            Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;
         }
     }
 }

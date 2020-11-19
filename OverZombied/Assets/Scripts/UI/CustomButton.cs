@@ -32,13 +32,15 @@ public class CustomButton : Button
     public override void OnSelect(BaseEventData eventData)
     {
         base.OnSelect(eventData);
-        img.sprite = hoverSprite;
+        if(hoverSprite)
+            img.sprite = hoverSprite;
     }
 
     public override void OnDeselect(BaseEventData eventData)
     {
         base.OnDeselect(eventData);
-        img.sprite = normalSprite;
+        if(normalSprite)
+            img.sprite = normalSprite;
     }
 
     public override void OnPointerExit(PointerEventData eventData)
