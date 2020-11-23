@@ -13,9 +13,11 @@ public class CustomButton : Button
 
     private Image img = null;
 
+    private Animator animator = null;
     protected override void Awake()
     {
         img = GetComponent<Image>();
+        animator = GetComponent<Animator>();
     }
 
     public override void OnPointerDown(PointerEventData eventData)
@@ -34,6 +36,8 @@ public class CustomButton : Button
         base.OnSelect(eventData);
         if(hoverSprite)
             img.sprite = hoverSprite;
+
+        animator?.SetBool("selected", true);
     }
 
     public override void OnDeselect(BaseEventData eventData)
@@ -41,6 +45,8 @@ public class CustomButton : Button
         base.OnDeselect(eventData);
         if(normalSprite)
             img.sprite = normalSprite;
+
+        animator?.SetBool("selected", false);
     }
 
     public override void OnPointerExit(PointerEventData eventData)
