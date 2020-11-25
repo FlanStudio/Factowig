@@ -29,6 +29,12 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void OnSaveAndQuitPressed()
+    {
+        TogglePauseMenu();
+        SceneManager.LoadScene(0);
+    }
+
     public void TogglePauseMenu()
     {
         if (PauseMenu != null)

@@ -43,13 +43,13 @@ TextureImporter:
     second: Buttons_Wide
   - first:
       213: 5888023463068501647
-    second: buttons_sprite_13
+    second: Volume Slider empty
   - first:
       213: 6264293671679840095
-    second: buttons_sprite_14
+    second: esc
   - first:
       213: -4373235241863935855
-    second: buttons_sprite_15
+    second: B
   - first:
       213: 1776122471122649162
     second: buttons_sprite_16
@@ -211,7 +211,7 @@ TextureImporter:
     second: Post-It green
   - first:
       213: 377105190104876751
-    second: PauseMenu
+    second: PauseMenu Settings
   - first:
       213: -1838963922212355323
     second: buttons_sprite_68
@@ -313,7 +313,7 @@ TextureImporter:
     second: buttons_sprite_74
   - first:
       213: 3345486695510619619
-    second: buttons_sprite_12
+    second: PauseMenu Selection Rectangle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -695,13 +695,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu
+      name: PauseMenu Settings
       rect:
         serializedVersion: 2
-        x: 185
-        y: 401
-        width: 857
-        height: 967
+        x: 168
+        y: 387
+        width: 878
+        height: 987
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,7 +745,7 @@ TextureImporter:
         width: 432
         height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,12 +761,12 @@ TextureImporter:
       name: PauseMenu Blackboard
       rect:
         serializedVersion: 2
-        x: 1099
+        x: 1101
         y: 397
         width: 868
         height: 976
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -787,7 +787,7 @@ TextureImporter:
         width: 385
         height: 335
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -808,7 +808,7 @@ TextureImporter:
         width: 403
         height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -829,7 +829,7 @@ TextureImporter:
         width: 404
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -850,7 +850,7 @@ TextureImporter:
         width: 403
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -858,6 +858,111 @@ TextureImporter:
       bones: []
       spriteID: 12f1d176ae2ee9890800000000000000
       internalID: -7449267237244035295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Selection Rectangle
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 202
+        width: 564
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5b4b6ac6e8d6e20800000000000000
+      internalID: 3345486695510619619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Volume Slider empty
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 119
+        width: 370
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f860d51c42676b150800000000000000
+      internalID: 5888023463068501647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esc
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 56
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f443d97ed3fe650800000000000000
+      internalID: 6264293671679840095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 53
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1980b79c7b52f43c0800000000000000
+      internalID: -4373235241863935855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 56
+        width: 360
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40cad82afd06a810800000000000000
+      internalID: 1776122471122649162
       vertices: []
       indices: 
       edges: []
