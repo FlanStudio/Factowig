@@ -314,6 +314,291 @@ TextureImporter:
   - first:
       213: 3345486695510619619
     second: PauseMenu Selection Rectangle
+  - first:
+      213: 2297921805226165347
+    second: buttons_sprite_75
+  - first:
+      213: 3387108335198263775
+    second: buttons_sprite_76
+  - first:
+      213: -1484094688679735409
+    second: buttons_sprite_77
+  - first:
+      213: 3467077401736523158
+    second: buttons_sprite_78
+  - first:
+      213: -7709476153133083416
+    second: buttons_sprite_79
+  - first:
+      213: -7965390484700527064
+    second: buttons_sprite_80
+  - first:
+      213: -4136684803798926654
+    second: buttons_sprite_81
+  - first:
+      213: -1863112720884527920
+    second: buttons_sprite_82
+  - first:
+      213: 5580579533716258539
+    second: buttons_sprite_83
+  - first:
+      213: 7592637312764608260
+    second: buttons_sprite_84
+  - first:
+      213: 5386012560716724947
+    second: buttons_sprite_85
+  - first:
+      213: 6879743706646003690
+    second: buttons_sprite_86
+  - first:
+      213: -4046476609146088094
+    second: buttons_sprite_87
+  - first:
+      213: 7362118173682556871
+    second: buttons_sprite_88
+  - first:
+      213: 2166344999825004950
+    second: buttons_sprite_89
+  - first:
+      213: 5429872049289816570
+    second: buttons_sprite_90
+  - first:
+      213: -6733745060767305165
+    second: buttons_sprite_91
+  - first:
+      213: -802347733850627772
+    second: buttons_sprite_92
+  - first:
+      213: 234538861187911617
+    second: buttons_sprite_93
+  - first:
+      213: -200946001248442584
+    second: buttons_sprite_94
+  - first:
+      213: 8437411974152625167
+    second: buttons_sprite_95
+  - first:
+      213: 7610665541022392922
+    second: buttons_sprite_96
+  - first:
+      213: -7548930889312967763
+    second: buttons_sprite_97
+  - first:
+      213: 2224290949340394557
+    second: buttons_sprite_98
+  - first:
+      213: 6375504691467532913
+    second: buttons_sprite_99
+  - first:
+      213: -7936852165090878162
+    second: buttons_sprite_100
+  - first:
+      213: -7478299247165289443
+    second: buttons_sprite_101
+  - first:
+      213: -2028755770333302989
+    second: buttons_sprite_102
+  - first:
+      213: -1382993550192193355
+    second: buttons_sprite_103
+  - first:
+      213: -1523362087284668138
+    second: buttons_sprite_104
+  - first:
+      213: 2061463190169651838
+    second: buttons_sprite_105
+  - first:
+      213: -6784813376107643517
+    second: buttons_sprite_106
+  - first:
+      213: 4755217496006116621
+    second: buttons_sprite_107
+  - first:
+      213: 4747581339529393073
+    second: buttons_sprite_108
+  - first:
+      213: -3066356413408165340
+    second: buttons_sprite_109
+  - first:
+      213: 7590388759491623526
+    second: buttons_sprite_110
+  - first:
+      213: -3725125144660094570
+    second: buttons_sprite_111
+  - first:
+      213: 7465395636728995280
+    second: buttons_sprite_112
+  - first:
+      213: -4950918397676273267
+    second: buttons_sprite_113
+  - first:
+      213: 8022491903417846499
+    second: buttons_sprite_114
+  - first:
+      213: -6535323370876384421
+    second: buttons_sprite_115
+  - first:
+      213: -6268511473557410592
+    second: buttons_sprite_116
+  - first:
+      213: 637845566087506811
+    second: buttons_sprite_117
+  - first:
+      213: 2861373573200305690
+    second: buttons_sprite_118
+  - first:
+      213: 6522193601266391220
+    second: buttons_sprite_119
+  - first:
+      213: 1051375621732953186
+    second: buttons_sprite_120
+  - first:
+      213: -7868470640185479609
+    second: buttons_sprite_121
+  - first:
+      213: 1513775558408784395
+    second: buttons_sprite_122
+  - first:
+      213: -6796347558580365563
+    second: buttons_sprite_123
+  - first:
+      213: -4941154575258155718
+    second: buttons_sprite_124
+  - first:
+      213: 2008481685312366533
+    second: buttons_sprite_125
+  - first:
+      213: -1975190128041373730
+    second: buttons_sprite_126
+  - first:
+      213: -3548190470421872477
+    second: PauseMenu Button 1
+  - first:
+      213: -9120404959334565826
+    second: PauseMenu Button 2
+  - first:
+      213: 4213957384023653266
+    second: PauseMenu Button 3
+  - first:
+      213: -6617576827670797579
+    second: PauseMenu Button 4
+  - first:
+      213: 3792695177490149991
+    second: buttons_sprite_38
+  - first:
+      213: -5611666974106976393
+    second: buttons_sprite_60
+  - first:
+      213: 3134281641785651551
+    second: buttons_sprite_61
+  - first:
+      213: -2925313789006866251
+    second: buttons_sprite_62
+  - first:
+      213: -5043590054809796411
+    second: buttons_sprite_63
+  - first:
+      213: 7555934345911545037
+    second: buttons_sprite_97
+  - first:
+      213: 7652185987992514392
+    second: buttons_sprite_98
+  - first:
+      213: -2727870678323076171
+    second: buttons_sprite_99
+  - first:
+      213: -6658346189233797901
+    second: buttons_sprite_100
+  - first:
+      213: -1090293494388250018
+    second: buttons_sprite_101
+  - first:
+      213: 1097080978405857807
+    second: buttons_sprite_102
+  - first:
+      213: 5164576133188734367
+    second: buttons_sprite_103
+  - first:
+      213: -1640317716832729809
+    second: buttons_sprite_104
+  - first:
+      213: -8993170420640682731
+    second: buttons_sprite_105
+  - first:
+      213: -5067500649543538625
+    second: buttons_sprite_106
+  - first:
+      213: -2060701490254638954
+    second: buttons_sprite_107
+  - first:
+      213: 1544143485864807875
+    second: buttons_sprite_108
+  - first:
+      213: -7964336191998643386
+    second: buttons_sprite_109
+  - first:
+      213: 5046567079539917353
+    second: buttons_sprite_110
+  - first:
+      213: -4480940129907668958
+    second: buttons_sprite_111
+  - first:
+      213: -2224888958237232357
+    second: buttons_sprite_112
+  - first:
+      213: -8045277287276288348
+    second: buttons_sprite_113
+  - first:
+      213: 6545049358462851167
+    second: buttons_sprite_114
+  - first:
+      213: 7804230469127819957
+    second: buttons_sprite_115
+  - first:
+      213: 289012734868296250
+    second: buttons_sprite_116
+  - first:
+      213: 1463566162864370117
+    second: buttons_sprite_117
+  - first:
+      213: -15879974155869985
+    second: buttons_sprite_118
+  - first:
+      213: 5058136971267428280
+    second: buttons_sprite_119
+  - first:
+      213: 4116618031702592033
+    second: buttons_sprite_120
+  - first:
+      213: 5836602295850594645
+    second: buttons_sprite_121
+  - first:
+      213: 7886817993507108081
+    second: buttons_sprite_122
+  - first:
+      213: 5963561807888603258
+    second: buttons_sprite_123
+  - first:
+      213: 1464464951692539186
+    second: buttons_sprite_124
+  - first:
+      213: 7384685687440516416
+    second: buttons_sprite_125
+  - first:
+      213: -6762295428952856943
+    second: buttons_sprite_126
+  - first:
+      213: -7107635574464851308
+    second: PauseMenu Button 1
+  - first:
+      213: -5326878767453448830
+    second: PauseMenu Button 2
+  - first:
+      213: -3974956215862625090
+    second: PauseMenu Button 3
+  - first:
+      213: -3137195658409970356
+    second: PauseMenu Button 4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -375,10 +660,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -387,10 +672,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -762,9 +1047,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1101
-        y: 397
-        width: 868
-        height: 976
+        y: 398
+        width: 866
+        height: 974
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,90 +1059,6 @@ TextureImporter:
       bones: []
       spriteID: 76dad85596d02f0b0800000000000000
       internalID: -5696475832612180633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PauseMenu Continue button
-      rect:
-        serializedVersion: 2
-        x: 2125
-        y: 713
-        width: 385
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d050e8d61458e010800000000000000
-      internalID: 1218316156308312274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PauseMenu Restart Button
-      rect:
-        serializedVersion: 2
-        x: 2556
-        y: 710
-        width: 403
-        height: 350
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 206a6bcfcfa13a540800000000000000
-      internalID: 5017884083694773762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PauseMenu Settings button
-      rect:
-        serializedVersion: 2
-        x: 2122
-        y: 316
-        width: 404
-        height: 331
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52c435445cf4f8660800000000000000
-      internalID: 7390213222211734565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PauseMenu Save and Quit button
-      rect:
-        serializedVersion: 2
-        x: 2556
-        y: 316
-        width: 403
-        height: 331
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12f1d176ae2ee9890800000000000000
-      internalID: -7449267237244035295
       vertices: []
       indices: 
       edges: []
@@ -888,7 +1089,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 193
-        y: 119
+        y: 118
         width: 370
         height: 34
       alignment: 0
@@ -950,12 +1151,12 @@ TextureImporter:
       name: buttons_sprite_16
       rect:
         serializedVersion: 2
-        x: 191
-        y: 56
-        width: 360
-        height: 35
+        x: 192
+        y: 62
+        width: 370
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -963,6 +1164,90 @@ TextureImporter:
       bones: []
       spriteID: a40cad82afd06a810800000000000000
       internalID: 1776122471122649162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Button 1
+      rect:
+        serializedVersion: 2
+        x: 2125
+        y: 714
+        width: 384
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492d7175a1b9c5d90800000000000000
+      internalID: -7107635574464851308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Button 2
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 710
+        width: 402
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285dd58ebff1316b0800000000000000
+      internalID: -5326878767453448830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Button 3
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 316
+        width: 403
+        height: 331
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebcf6c3c16e16d8c0800000000000000
+      internalID: -3974956215862625090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu Button 4
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 315
+        width: 403
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4573959b217674d0800000000000000
+      internalID: -3137195658409970356
       vertices: []
       indices: 
       edges: []
