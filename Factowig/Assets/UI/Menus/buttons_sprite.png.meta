@@ -52,7 +52,7 @@ TextureImporter:
     second: B
   - first:
       213: 1776122471122649162
-    second: buttons_sprite_16
+    second: Volume Slider Full
   - first:
       213: -4693159038146635802
     second: buttons_sprite_17
@@ -439,16 +439,16 @@ TextureImporter:
     second: buttons_sprite_115
   - first:
       213: -6268511473557410592
-    second: buttons_sprite_116
+    second: PauseMenu button 1
   - first:
       213: 637845566087506811
-    second: buttons_sprite_117
+    second: PauseMenu button 2
   - first:
       213: 2861373573200305690
-    second: buttons_sprite_118
+    second: PauseMenu button 3
   - first:
       213: 6522193601266391220
-    second: buttons_sprite_119
+    second: PauseMenu button 4
   - first:
       213: 1051375621732953186
     second: buttons_sprite_120
@@ -556,16 +556,16 @@ TextureImporter:
     second: buttons_sprite_115
   - first:
       213: 289012734868296250
-    second: buttons_sprite_116
+    second: PauseMenu button 1
   - first:
       213: 1463566162864370117
-    second: buttons_sprite_117
+    second: PauseMenu button 2
   - first:
       213: -15879974155869985
-    second: buttons_sprite_118
+    second: PauseMenu button 3
   - first:
       213: 5058136971267428280
-    second: buttons_sprite_119
+    second: PauseMenu button 4
   - first:
       213: 4116618031702592033
     second: buttons_sprite_120
@@ -599,6 +599,18 @@ TextureImporter:
   - first:
       213: -3137195658409970356
     second: PauseMenu Button 4
+  - first:
+      213: -7107635574464851308
+    second: buttons_sprite_127
+  - first:
+      213: -5326878767453448830
+    second: buttons_sprite_128
+  - first:
+      213: -3974956215862625090
+    second: buttons_sprite_129
+  - first:
+      213: -3137195658409970356
+    second: buttons_sprite_130
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1005,7 +1017,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 25
-        y: 2065
+        y: 2066
         width: 2209
         height: 442
       alignment: 0
@@ -1148,7 +1160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_sprite_16
+      name: Volume Slider Full
       rect:
         serializedVersion: 2
         x: 192
@@ -1169,7 +1181,112 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu Button 1
+      name: buttons_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 2459
+        width: 448
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e71bd068bc8edeb0800000000000000
+      internalID: -4693159038146635802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 2083
+        width: 448
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1feb419637033ebf0800000000000000
+      internalID: -296339878233981199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1707
+        width: 448
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2324905236aaef280800000000000000
+      internalID: -9007574861894565326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1331
+        width: 448
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6670cfcaea7cbb0800000000000000
+      internalID: -4915768410265655610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_sprite_96
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 1961
+        width: 216
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5222fc8cf38e9960800000000000000
+      internalID: 7610665541022392922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu button 1
       rect:
         serializedVersion: 2
         x: 2125
@@ -1183,14 +1300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 492d7175a1b9c5d90800000000000000
-      internalID: -7107635574464851308
+      spriteID: 0ec662cd606c109a0800000000000000
+      internalID: -6268511473557410592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu Button 2
+      name: PauseMenu button 2
       rect:
         serializedVersion: 2
         x: 2556
@@ -1204,14 +1321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 285dd58ebff1316b0800000000000000
-      internalID: -5326878767453448830
+      spriteID: b7b2434b9251ad800800000000000000
+      internalID: 637845566087506811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu Button 3
+      name: PauseMenu button 3
       rect:
         serializedVersion: 2
         x: 2122
@@ -1225,14 +1342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebcf6c3c16e16d8c0800000000000000
-      internalID: -3974956215862625090
+      spriteID: a1e5b48ca14a5b720800000000000000
+      internalID: 2861373573200305690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu Button 4
+      name: PauseMenu button 4
       rect:
         serializedVersion: 2
         x: 2555
@@ -1246,8 +1363,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4573959b217674d0800000000000000
-      internalID: -3137195658409970356
+      spriteID: 4b81fc7368c738a50800000000000000
+      internalID: 6522193601266391220
       vertices: []
       indices: 
       edges: []
