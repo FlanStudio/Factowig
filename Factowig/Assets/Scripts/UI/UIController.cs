@@ -12,6 +12,10 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Selectable startSelected = null;
 
+    [SerializeField]
+    private List<GameObject> uiLevels = new List<GameObject>();
+    private int currentLevel = 0;
+
     public void OnQuitPressed()
     {
         //TODO: SAVE SETTINGS AND PROGRESSION AND QUIT THE GAME
@@ -27,6 +31,13 @@ public class UIController : MonoBehaviour
     {
         TogglePauseMenu();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnSettingsPressed()
+    {
+        uiLevels[currentLevel].SetActive(false);
+        currentLevel += 1;
+        uiLevels[currentLevel].SetActive(true);
     }
 
     public void OnSaveAndQuitPressed()
@@ -61,13 +72,27 @@ public class UIController : MonoBehaviour
                 case InputController.ControlsMode.KeyboardMouse:
                     if(playerInput.keyboard.escapeKey.wasPressedThisFrame)
                     {
-                        TogglePauseMenu();
+                        if (currentLevel == 0)
+                            TogglePauseMenu();
+                        else
+                        {
+                            uiLevels[currentLevel].SetActive(false);
+                            currentLevel -= 1;
+                            uiLevels[currentLevel].SetActive(true);
+                        }    
                     }
                     break;
                 case InputController.ControlsMode.Controller:
                     if(playerInput.gamepad.startButton.wasPressedThisFrame)
                     {
-                        TogglePauseMenu();
+                        if(currentLevel == 0)
+                            TogglePauseMenu();
+                        else
+                        {
+                            uiLevels[currentLevel].SetActive(false);
+                            currentLevel -= 1;
+                            uiLevels[currentLevel].SetActive(true);
+                        }
                     }
                     break;
             }
