@@ -630,7 +630,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33452709}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &33452712
 Camera:
   m_ObjectHideFlags: 0
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.85
+  m_fontSize: 19.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16516,11 +16516,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &450632871 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2062684519965840126, guid: 610eb2343817efa4e9d182ba963ec81e, type: 3}
-  m_PrefabInstance: {fileID: 4131520828873082001}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &453666636
 Mesh:
   m_ObjectHideFlags: 0
@@ -18624,21 +18619,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2359233586884694518, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
   m_PrefabInstance: {fileID: 669406002}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &499488389
-Animation:
+--- !u!95 &499488389
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499488387}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -3100369314251171874, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fc28ad3790346f4086235361008d8a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &501608004
 GameObject:
   m_ObjectHideFlags: 0
@@ -38216,21 +38215,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2359233586884694518, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
   m_PrefabInstance: {fileID: 402716572}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &928960826
-Animation:
+--- !u!95 &928960826
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928960824}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -3100369314251171874, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fc28ad3790346f4086235361008d8a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &935689282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42646,7 +42649,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.3
+  m_fontSize: 42.75
   m_fontSizeBase: 46
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -47046,21 +47049,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2359233586884694518, guid: 3aeddf5a179af8c4c8f89a921678c3e7, type: 3}
   m_PrefabInstance: {fileID: 3205656538668424136}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1202241369
-Animation:
+--- !u!95 &1202241369
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202241367}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -3100369314251171874, guid: 8bfbabaf35e1838468199aebbeb93cc2, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fc28ad3790346f4086235361008d8a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!43 &1202448388
 Mesh:
   m_ObjectHideFlags: 0
@@ -50424,7 +50431,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.65
+  m_fontSize: 50.3
   m_fontSizeBase: 47
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -58773,7 +58780,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.2
+  m_fontSize: 41.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -62061,11 +62068,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5951394216049634111, guid: 610eb2343817efa4e9d182ba963ec81e, type: 3}
   m_PrefabInstance: {fileID: 1647401882}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1647401885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2062684519965840126, guid: 610eb2343817efa4e9d182ba963ec81e, type: 3}
-  m_PrefabInstance: {fileID: 1647401882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1647401886 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 9043027850790965454, guid: 610eb2343817efa4e9d182ba963ec81e, type: 3}
@@ -64387,7 +64389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af25a98829cd32c4a8e02876f44a768b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 450632871}
+  head: {fileID: 0}
   hairMeshes:
   - {fileID: 224489047}
   - {fileID: 466269}
@@ -68968,7 +68970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af25a98829cd32c4a8e02876f44a768b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 1647401885}
+  head: {fileID: 0}
   hairMeshes:
   - {fileID: 1647401884}
   - {fileID: 1647401886}
@@ -71115,6 +71117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 0}
   startSelected: {fileID: 1345729524}
+  uiLevels: []
 --- !u!114 &1877794730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71810,7 +71813,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.25
+  m_fontSize: 27.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

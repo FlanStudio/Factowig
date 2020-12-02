@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class CustomButton : Button
 {
@@ -13,16 +14,33 @@ public class CustomButton : Button
 
     private Image img = null;
 
-    private Animator animator = null;
+    private Animator anim = null;
+
     protected override void Awake()
     {
         img = GetComponent<Image>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        if(anim)
+            anim.SetTrigger("OnClick");
         base.OnPointerDown(eventData);
+    }
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+        if (anim)
+            StartCoroutine(PlayClickAnimation(eventData));
+        else
+            base.OnPointerClick(eventData);
+    }
+
+    private IEnumerator PlayClickAnimation(PointerEventData eventData)
+    {
+        yield return new WaitUntil(() => { AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); if (info.IsName("Unfold") && info.normalizedTime >= 1f) return true; else return false; });
+        onClick.Invoke();
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
@@ -37,7 +55,8 @@ public class CustomButton : Button
         if(hoverSprite)
             img.sprite = hoverSprite;
 
-        animator?.SetBool("selected", true);
+        if(anim)
+            anim.SetBool("selected", true);
     }
 
     public override void OnDeselect(BaseEventData eventData)
@@ -46,7 +65,8 @@ public class CustomButton : Button
         if(normalSprite)
             img.sprite = normalSprite;
 
-        animator?.SetBool("selected", false);
+        if(anim)
+            anim.SetBool("selected", false);
     }
 
     public override void OnPointerExit(PointerEventData eventData)
