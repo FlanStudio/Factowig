@@ -4512,7 +4512,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.3
+  m_fontSize: 31.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -32004,6 +32004,7 @@ GameObject:
   - component: {fileID: 813066748}
   - component: {fileID: 813066750}
   - component: {fileID: 813066749}
+  - component: {fileID: 813066751}
   m_Layer: 5
   m_Name: PauseMenu Level 0
   m_TagString: Untagged
@@ -32069,6 +32070,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813066747}
   m_CullTransparentMesh: 0
+--- !u!114 &813066751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813066747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6532d17ec209746bd7eb70c80aa930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelected: {fileID: 16894223}
 --- !u!43 &813857699
 Mesh:
   m_ObjectHideFlags: 0
@@ -53428,7 +53442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30889338, y: 0.5133476}
   m_AnchorMax: {x: 0.7658559, y: 0.5961591}
-  m_AnchoredPosition: {x: -0.0000076293945, y: -0.000022888184}
+  m_AnchoredPosition: {x: 0, y: -0.000022888184}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339447518
@@ -67755,7 +67769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.039692547, y: 0.26751488}
   m_AnchorMax: {x: 0.79600006, y: 0.7324852}
-  m_AnchoredPosition: {x: 0.6029358, y: 0.007376671}
+  m_AnchoredPosition: {x: 0.6029358, y: 0.007375717}
   m_SizeDelta: {x: -0.9432373, y: -0.42094612}
   m_Pivot: {x: 0.000000078231096, y: 0.5}
 --- !u!114 &1726248703
@@ -77500,7 +77514,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.2
+  m_fontSize: 26.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -80178,6 +80192,7 @@ GameObject:
   - component: {fileID: 2005346338}
   - component: {fileID: 2005346340}
   - component: {fileID: 2005346339}
+  - component: {fileID: 2005346342}
   m_Layer: 5
   m_Name: Settings Level 1
   m_TagString: Untagged
@@ -80243,6 +80258,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005346337}
   m_CullTransparentMesh: 0
+--- !u!114 &2005346342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005346337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4cfea706abc834caf5bbf93188ea1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  BBack: {fileID: 883548720}
+  escBack: {fileID: 414007159}
+  startSelected: {fileID: 485642426}
 --- !u!43 &2009428267
 Mesh:
   m_ObjectHideFlags: 0

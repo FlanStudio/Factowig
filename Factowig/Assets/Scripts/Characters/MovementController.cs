@@ -4,7 +4,6 @@ public class MovementController : MonoBehaviour
 {    
     private Vector2 movementNorm = Vector2.zero;
 
-    public float idleStickThreshold = 0.2f;
     public float speed = 5f;
     public float rotationSpeed = 15f;
 
@@ -57,7 +56,7 @@ public class MovementController : MonoBehaviour
                 }
         }
 
-        if (movementNorm.magnitude < idleStickThreshold)
+        if (movementNorm.magnitude < InputController.idleStickThreshold)
         {
             movementNorm = Vector2.zero;
             playerAnimator.SetFloat("speed", 0f);

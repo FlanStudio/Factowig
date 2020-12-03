@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static uint musicVolume = 5u;
-    public static uint fxVolume = 5u;
+    public static float musicVolume = 1f;
+    public static float fxVolume = 1f;
 }

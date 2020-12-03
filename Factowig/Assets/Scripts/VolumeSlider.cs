@@ -49,6 +49,13 @@ public class VolumeSlider : Slider
 
     private bool isClicked = false;
 
+    private float percent = 1f;
+
+    private float volumeCD = 0.4f;
+    private float volumeSmallCD = 0.3f;
+    private float volumeTimer = 0f;
+    private bool stickStarted = false;
+
     protected override void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -59,15 +66,53 @@ public class VolumeSlider : Slider
     {
         if(isClicked)
         {
-            float percent = (Mouse.current.position.ReadValue().x - rectTransform.position.x) / progressBar.rect.width;
+            percent = (Mouse.current.position.ReadValue().x - rectTransform.position.x) / progressBar.rect.width;
             percent = Mathf.Floor(percent * 10) / 10;
             percent = Mathf.Clamp(percent, 0, 1f);
 
-            progressBar.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x - (1 - percent) * progressBar.rect.width, progressBar.anchoredPosition.y);
-
-            text.text = (percent * 10).ToString();
+            OnVolumeChanged();
         }
         
+        if(currentSelectionState == SelectionState.Selected)
+        {
+            InputController.PlayerInput player1Input = InputController.Instance.playerInput[0];
+            switch (player1Input.controlMode)
+            {
+                case InputController.ControlsMode.KeyboardMouse:
+                    break;
+                case InputController.ControlsMode.Controller:
+                    if(volumeTimer > 0f) volumeTimer -= Time.unscaledDeltaTime;
+                    if (volumeTimer < 0f) volumeTimer = 0f;
+                    Vector2 value = player1Input.gamepad.leftStick.ReadValue();
+                    if (Mathf.Abs(value.x) >= InputController.idleStickThreshold)
+                    {
+                        if (Mathf.Abs(player1Input.gamepad.leftStick.ReadValueFromPreviousFrame().x) < InputController.idleStickThreshold)
+                            volumeTimer = volumeCD;
+                        if (volumeTimer == 0f)
+                        {
+                            if (value.x < 0)
+                            {
+                                percent = (Mathf.Round(percent * 10) - 1) / 10;
+                                percent = Mathf.Clamp(percent, 0f, 1f);
+                            }
+                            else
+                            {
+                                percent = (Mathf.Round(percent * 10) + 1) / 10;
+                                percent = Mathf.Clamp(percent, 0f, 1f);
+                            }
+
+                            OnVolumeChanged();
+
+                            volumeTimer = volumeSmallCD;
+                        }
+
+                    }
+                    else
+                        volumeTimer = 0f;
+                    break;
+            }
+        }
+
         base.Update();
     }
 
@@ -89,10 +134,28 @@ public class VolumeSlider : Slider
     public override void OnSelect(BaseEventData eventData)
     {
         selectionSquare.SetActive(true);
+        base.OnSelect(eventData);
     }
 
     public override void OnDeselect(BaseEventData eventData)
     {
         selectionSquare.SetActive(false);
+        base.OnDeselect(eventData);
+    }
+
+    private void OnVolumeChanged()
+    {
+        progressBar.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x - (1 - percent) * progressBar.rect.width, progressBar.anchoredPosition.y);
+        text.text = (percent * 10).ToString();
+
+        switch (mode)
+        {
+            case AUDIOMODE.Music:
+                AudioManager.musicVolume = percent;
+                break;
+            case AUDIOMODE.FX:
+                AudioManager.fxVolume = percent;
+                break;
+        }
     }
 }

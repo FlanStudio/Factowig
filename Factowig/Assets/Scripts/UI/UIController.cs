@@ -47,12 +47,9 @@ public class UIController : MonoBehaviour
     }
 
     public void TogglePauseMenu()
-    {
-        if (PauseMenu != null)
-        {
-            PauseMenu.SetActive(!PauseMenu.activeSelf);
-            Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;
-        }
+    {      
+        PauseMenu.SetActive(!PauseMenu.activeSelf);
+        Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;     
     }
 
     private void Awake()
@@ -63,39 +60,46 @@ public class UIController : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < InputController.Instance.playerInput.Length; ++i)
+        #region TOGGLE PAUSE MENU
+        if (PauseMenu != null)
         {
-            InputController.PlayerInput playerInput = InputController.Instance.playerInput[i];
-
-            switch(playerInput.controlMode)
+            for (int i = 0; i < InputController.Instance.playerInput.Length; ++i)
             {
-                case InputController.ControlsMode.KeyboardMouse:
-                    if(playerInput.keyboard.escapeKey.wasPressedThisFrame)
-                    {
-                        if (currentLevel == 0)
-                            TogglePauseMenu();
-                        else
+                InputController.PlayerInput playerInput = InputController.Instance.playerInput[i];
+
+                switch (playerInput.controlMode)
+                {
+                    case InputController.ControlsMode.KeyboardMouse:
+                        if (playerInput.keyboard.escapeKey.wasPressedThisFrame)
                         {
-                            uiLevels[currentLevel].SetActive(false);
-                            currentLevel -= 1;
-                            uiLevels[currentLevel].SetActive(true);
-                        }    
-                    }
-                    break;
-                case InputController.ControlsMode.Controller:
-                    if(playerInput.gamepad.startButton.wasPressedThisFrame)
-                    {
-                        if(currentLevel == 0)
-                            TogglePauseMenu();
-                        else
-                        {
-                            uiLevels[currentLevel].SetActive(false);
-                            currentLevel -= 1;
-                            uiLevels[currentLevel].SetActive(true);
+                            if (currentLevel == 0)
+                                TogglePauseMenu();
+                            else
+                            {
+                                uiLevels[currentLevel].SetActive(false);
+                                currentLevel -= 1;
+                                uiLevels[currentLevel].SetActive(true);
+                            }
                         }
-                    }
-                    break;
+                        break;
+                    case InputController.ControlsMode.Controller:
+                        if (playerInput.gamepad.startButton.wasPressedThisFrame)
+                        {
+                            TogglePauseMenu();
+                        }
+                        else if(playerInput.gamepad.buttonEast.wasPressedThisFrame)
+                        {
+                            if (currentLevel != 0)
+                            {
+                                uiLevels[currentLevel].SetActive(false);
+                                currentLevel -= 1;
+                                uiLevels[currentLevel].SetActive(true);
+                            }                         
+                        }
+                        break;
+                }
             }
         }
+        #endregion
     }
 }

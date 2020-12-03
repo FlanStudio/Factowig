@@ -21,6 +21,8 @@ public class InputController : MonoBehaviour
     [SerializeField]
     private MovementController[] movementControllers = null;
 
+    public static float idleStickThreshold = 0.2f;
+
     private void Awake()
     {
         Instance = this;
