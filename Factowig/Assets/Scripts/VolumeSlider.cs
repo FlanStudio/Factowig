@@ -54,7 +54,6 @@ public class VolumeSlider : Slider
     private float volumeCD = 0.4f;
     private float volumeSmallCD = 0.3f;
     private float volumeTimer = 0f;
-    private bool stickStarted = false;
 
     protected override void Awake()
     {
