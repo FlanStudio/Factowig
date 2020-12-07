@@ -69,7 +69,7 @@ public class UIController : MonoBehaviour
     private void Update()
     {
         #region TOGGLE PAUSE MENU
-        if (uiLevels.Count > 0 && currentLevel == 0)
+        if (PauseMenu && uiLevels.Count > 0 && currentLevel == 0)
         {
             InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
 

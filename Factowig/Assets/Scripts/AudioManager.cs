@@ -6,4 +6,10 @@ public class AudioManager : MonoBehaviour
 {
     public static float musicVolume = 1f;
     public static float fxVolume = 1f;
+
+    private void Awake()
+    {
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        fxVolume = PlayerPrefs.GetFloat("fxVolume");
+    }
 }

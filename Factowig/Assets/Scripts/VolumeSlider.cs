@@ -58,6 +58,18 @@ public class VolumeSlider : Slider
     protected override void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+
+        switch(mode)
+        {
+            case AUDIOMODE.Music:
+                percent = AudioManager.musicVolume;
+                break;
+            case AUDIOMODE.FX:
+                percent = AudioManager.fxVolume;
+                break;
+        }
+        OnVolumeChanged();
+
         base.Awake();
     }
 

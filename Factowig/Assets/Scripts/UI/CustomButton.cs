@@ -22,9 +22,32 @@ public class CustomButton : Button
         anim = GetComponent<Animator>();
     }
 
+    protected void Update()
+    {
+        if (currentSelectionState != SelectionState.Selected)
+            return;
+
+        InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
+        switch (playerInput.controlMode)
+        {
+            case InputController.ControlsMode.KeyboardMouse:
+                break;
+            case InputController.ControlsMode.Controller:
+                if(playerInput.gamepad.buttonSouth.wasPressedThisFrame)
+                {
+                    if (anim)
+                    {
+                        anim.SetTrigger("OnClick");
+                        StartCoroutine(PlayClickAnimation());
+                    }
+                }
+                break;
+        }
+    }
+
     public override void OnPointerDown(PointerEventData eventData)
     {
-        if(anim)
+        if (anim)
             anim.SetTrigger("OnClick");
         base.OnPointerDown(eventData);
     }
@@ -32,15 +55,25 @@ public class CustomButton : Button
     public override void OnPointerClick(PointerEventData eventData)
     {
         if (anim)
-            StartCoroutine(PlayClickAnimation(eventData));
+            StartCoroutine(PlayClickAnimation());
         else
             base.OnPointerClick(eventData);
     }
 
-    private IEnumerator PlayClickAnimation(PointerEventData eventData)
+    public override void OnSubmit(BaseEventData eventData)
     {
-        yield return new WaitUntil(() => { AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); if (info.IsName("Unfold") && info.normalizedTime >= 1f) return true; else return false; });
-        onClick.Invoke();
+        StartCoroutine(PlayClickAnimation(eventData));
+    }
+
+    private IEnumerator PlayClickAnimation(BaseEventData eventData = null)
+    {
+        if(anim)
+            yield return new WaitUntil(() => { AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); if (info.IsName("Unfold") && info.normalizedTime >= 1f) return true; else return false; });
+
+        if (eventData != null)
+            base.OnSubmit(eventData);
+        else
+            onClick.Invoke();
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
@@ -52,8 +85,9 @@ public class CustomButton : Button
     public override void OnSelect(BaseEventData eventData)
     {
         base.OnSelect(eventData);
-        if(hoverSprite)
-            img.sprite = hoverSprite;
+
+        if(img && hoverSprite)
+            img.sprite = hoverSprite;  
 
         if(anim)
             anim.SetBool("selected", true);

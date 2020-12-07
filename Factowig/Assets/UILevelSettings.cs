@@ -44,6 +44,10 @@ public class UILevelSettings : UILevel
 
     private void SaveAndGoPauseMenu()
     {
+        PlayerPrefs.SetFloat("musicVolume", AudioManager.musicVolume);
+        PlayerPrefs.SetFloat("fxVolume", AudioManager.fxVolume);
+        PlayerPrefs.Save();
+
         UIController.Instance.TransitionFromTo(id, 0);
     }
 }
