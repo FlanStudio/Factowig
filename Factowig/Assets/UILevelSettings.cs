@@ -8,17 +8,11 @@ public class UILevelSettings : UILevel
     public GameObject BBack = null;
     public GameObject escBack = null;
 
-    public Selectable startSelected = null;
-
-    private void OnEnable()
-    {
-        if(startSelected)
-            startSelected.Select();
-    }
-
     private void Update()
     {
-        switch(InputController.Instance.playerInput[0].controlMode)
+        InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
+
+        switch(playerInput.controlMode)
         {
             case InputController.ControlsMode.KeyboardMouse:
                 if(BBack.activeSelf)
@@ -26,6 +20,12 @@ public class UILevelSettings : UILevel
                     BBack.SetActive(false);
                     escBack.SetActive(true);
                 }
+
+                if(playerInput.keyboard.escapeKey.wasPressedThisFrame)
+                {
+                    SaveAndGoPauseMenu();
+                }
+
                 break;
             case InputController.ControlsMode.Controller:
                 if(escBack.activeSelf)
@@ -33,7 +33,17 @@ public class UILevelSettings : UILevel
                     escBack.SetActive(false);
                     BBack.SetActive(true);
                 }
+
+                if(playerInput.gamepad.buttonEast.wasPressedThisFrame)
+                {
+                    SaveAndGoPauseMenu();
+                }
                 break;
         }
+    }
+
+    private void SaveAndGoPauseMenu()
+    {
+        UIController.Instance.TransitionFromTo(id, 0);
     }
 }

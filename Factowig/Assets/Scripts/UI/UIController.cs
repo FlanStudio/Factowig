@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject PauseMenu;
+    public static UIController Instance;
 
     [SerializeField]
-    private Selectable startSelected = null;
+    private GameObject PauseMenu = null;
 
     [SerializeField]
     private List<GameObject> uiLevels = new List<GameObject>();
@@ -47,58 +46,45 @@ public class UIController : MonoBehaviour
     }
 
     public void TogglePauseMenu()
-    {      
+    {
         PauseMenu.SetActive(!PauseMenu.activeSelf);
         Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;     
     }
 
+    public void TransitionFromTo(int from, int to)
+    {
+        if (currentLevel != from)
+            return;
+
+        uiLevels[from].SetActive(false);
+        currentLevel = to;
+        uiLevels[to].SetActive(true);
+    }
+
     private void Awake()
     {
-        if (startSelected)
-            startSelected.Select();
+        Instance = this;
     }
 
     private void Update()
     {
         #region TOGGLE PAUSE MENU
-        if (PauseMenu != null)
+        if (uiLevels.Count > 0 && currentLevel == 0)
         {
-            for (int i = 0; i < InputController.Instance.playerInput.Length; ++i)
-            {
-                InputController.PlayerInput playerInput = InputController.Instance.playerInput[i];
+            InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
 
-                switch (playerInput.controlMode)
-                {
-                    case InputController.ControlsMode.KeyboardMouse:
-                        if (playerInput.keyboard.escapeKey.wasPressedThisFrame)
-                        {
-                            if (currentLevel == 0)
-                                TogglePauseMenu();
-                            else
-                            {
-                                uiLevels[currentLevel].SetActive(false);
-                                currentLevel -= 1;
-                                uiLevels[currentLevel].SetActive(true);
-                            }
-                        }
-                        break;
-                    case InputController.ControlsMode.Controller:
-                        if (playerInput.gamepad.startButton.wasPressedThisFrame)
-                        {
-                            TogglePauseMenu();
-                        }
-                        else if(playerInput.gamepad.buttonEast.wasPressedThisFrame)
-                        {
-                            if (currentLevel != 0)
-                            {
-                                uiLevels[currentLevel].SetActive(false);
-                                currentLevel -= 1;
-                                uiLevels[currentLevel].SetActive(true);
-                            }                         
-                        }
-                        break;
-                }
-            }
+            switch (playerInput.controlMode)
+            {
+                case InputController.ControlsMode.KeyboardMouse:
+                    if (playerInput.keyboard.escapeKey.wasPressedThisFrame)
+                        TogglePauseMenu();
+                    break;
+                case InputController.ControlsMode.Controller:
+                    if (playerInput.gamepad.startButton.wasPressedThisFrame || (playerInput.gamepad.buttonEast.wasPressedThisFrame && PauseMenu.activeSelf))
+                        TogglePauseMenu();
+
+                    break;
+            }              
         }
         #endregion
     }
