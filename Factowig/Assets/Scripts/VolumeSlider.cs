@@ -86,15 +86,16 @@ public class VolumeSlider : Slider
         
         if(currentSelectionState == SelectionState.Selected)
         {
+            if (volumeTimer > 0f) volumeTimer -= Time.unscaledDeltaTime;
+            if (volumeTimer < 0f) volumeTimer = 0f;
+
             InputController.PlayerInput player1Input = InputController.Instance.playerInput[0];
             switch (player1Input.controlMode)
             {
                 case InputController.ControlsMode.KeyboardMouse:
                     break;
                 case InputController.ControlsMode.Controller:
-                    if(volumeTimer > 0f) volumeTimer -= Time.unscaledDeltaTime;
-                    if (volumeTimer < 0f) volumeTimer = 0f;
-                    Vector2 value = player1Input.gamepad.leftStick.ReadValue();
+                    Vector2 value = player1Input.gamepad.leftStick.ReadValue();                   
                     if (Mathf.Abs(value.x) >= InputController.idleStickThreshold)
                     {
                         if (Mathf.Abs(player1Input.gamepad.leftStick.ReadValueFromPreviousFrame().x) < InputController.idleStickThreshold)
@@ -116,10 +117,43 @@ public class VolumeSlider : Slider
 
                             volumeTimer = volumeSmallCD;
                         }
-
                     }
                     else
-                        volumeTimer = 0f;
+                    {
+                        value = Vector2.zero;
+
+                        if (player1Input.gamepad.dpad.left.isPressed)
+                            value -= Vector2.right;
+                        else if (player1Input.gamepad.dpad.right.isPressed)
+                            value += Vector2.right;
+
+                        if (value.x != 0)
+                        {
+                            if (player1Input.gamepad.dpad.right.wasPressedThisFrame || player1Input.gamepad.dpad.left.wasPressedThisFrame)
+                                volumeTimer = volumeCD;
+                            if (volumeTimer == 0f)
+                            {
+                                if (value.x < 0)
+                                {
+                                    percent = (Mathf.Round(percent * 10) - 1) / 10;
+                                    percent = Mathf.Clamp(percent, 0f, 1f);
+                                }
+                                else
+                                {
+                                    percent = (Mathf.Round(percent * 10) + 1) / 10;
+                                    percent = Mathf.Clamp(percent, 0f, 1f);
+                                }
+
+                                OnVolumeChanged();
+
+                                volumeTimer = volumeSmallCD;
+                            }
+
+                        }
+                        else
+                            volumeTimer = 0f;
+                    }
+                    
                     break;
             }
         }
