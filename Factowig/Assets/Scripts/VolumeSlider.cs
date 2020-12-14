@@ -51,8 +51,8 @@ public class VolumeSlider : Slider
 
     private float percent = 1f;
 
-    private float volumeCD = 0.4f;
-    private float volumeSmallCD = 0.3f;
+    private float volumeCD = 0.2f;
+    private float volumeSmallCD = 0.1f;
     private float volumeTimer = 0f;
 
     protected override void Awake()
