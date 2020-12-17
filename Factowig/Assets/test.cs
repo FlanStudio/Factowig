@@ -14,14 +14,9 @@ public class test : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.digit1Key.wasPressedThisFrame)
+        if(Keyboard.current.digit1Key.wasPressedThisFrame)
         {
-            rectTransform.anchoredPosition -= new Vector2(rectTransform.rect.width * 0.1f, 0f);
-        }
-
-        if (Keyboard.current.digit2Key.wasPressedThisFrame)
-        {
-            rectTransform.anchoredPosition += new Vector2(rectTransform.rect.width * 0.1f, 0f);
+            transform.rotation = Quaternion.LookRotation((transform.position - Camera.main.transform.position).normalized);
         }
     }
 }

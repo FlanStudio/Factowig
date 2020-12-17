@@ -8,6 +8,8 @@ using UnityEngine.Events;
 
 public class CustomButton : Button
 {
+    public GameObject selectionBox = null;
+    
     public Sprite normalSprite = null;
     public Sprite hoverSprite = null;
     public Sprite clickSprite = null;
@@ -86,6 +88,9 @@ public class CustomButton : Button
     {
         base.OnSelect(eventData);
 
+        if (selectionBox)
+            selectionBox.SetActive(true);
+
         if(img && hoverSprite)
             img.sprite = hoverSprite;  
 
@@ -96,6 +101,10 @@ public class CustomButton : Button
     public override void OnDeselect(BaseEventData eventData)
     {
         base.OnDeselect(eventData);
+
+        if (selectionBox)
+            selectionBox.SetActive(false);
+
         if(normalSprite)
             img.sprite = normalSprite;
 
