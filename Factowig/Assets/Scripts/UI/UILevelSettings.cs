@@ -8,6 +8,13 @@ public class UILevelSettings : UILevel
     public GameObject BBack = null;
     public GameObject escBack = null;
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        AudioManager.Instance.PlaySettingsBSO();
+    }
+
     private void Update()
     {
         InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];

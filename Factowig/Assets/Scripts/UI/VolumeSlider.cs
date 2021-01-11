@@ -75,13 +75,16 @@ public class VolumeSlider : Slider
 
     protected override void Update()
     {
-        if(isClicked)
+        float prevPercent = percent;
+
+        if (isClicked)
         {
             percent = (Mouse.current.position.ReadValue().x - rectTransform.position.x) / progressBar.rect.width;
             percent = Mathf.Floor(percent * 10) / 10;
             percent = Mathf.Clamp(percent, 0, 1f);
 
-            OnVolumeChanged();
+            if (prevPercent != percent)
+                OnVolumeChanged();
         }
         
         if(currentSelectionState == SelectionState.Selected)
@@ -90,6 +93,7 @@ public class VolumeSlider : Slider
             if (volumeTimer < 0f) volumeTimer = 0f;
 
             InputController.PlayerInput player1Input = InputController.Instance.playerInput[0];
+
             switch (player1Input.controlMode)
             {
                 case InputController.ControlsMode.KeyboardMouse:
@@ -113,7 +117,8 @@ public class VolumeSlider : Slider
                                 percent = Mathf.Clamp(percent, 0f, 1f);
                             }
 
-                            OnVolumeChanged();
+                            if(prevPercent != percent)
+                                OnVolumeChanged();
 
                             volumeTimer = volumeSmallCD;
                         }
@@ -144,7 +149,8 @@ public class VolumeSlider : Slider
                                     percent = Mathf.Clamp(percent, 0f, 1f);
                                 }
 
-                                OnVolumeChanged();
+                                if (prevPercent != percent)
+                                    OnVolumeChanged();
 
                                 volumeTimer = volumeSmallCD;
                             }
@@ -202,5 +208,8 @@ public class VolumeSlider : Slider
                 AudioManager.fxVolume = percent;
                 break;
         }
+
+        AudioManager.Instance.ApplyVolumesToSources();
+        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.TICK);
     }
 }
