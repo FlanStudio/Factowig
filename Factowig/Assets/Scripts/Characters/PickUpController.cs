@@ -173,6 +173,8 @@ public class PickUpController : MonoBehaviour
                 {
                     selector.selectedSurface.PlacePickableObject(pickedObject);
                     pickedObject = null;
+
+                    AudioManager.Instance.PlaySoundEffect(AudioManager.FX.PLACE);
                 }
             }
         }
@@ -193,6 +195,8 @@ public class PickUpController : MonoBehaviour
                 GameObject obj = selector.selectedGenerator.GetObject();
                 pickedObject = obj.GetComponent<Ingredient>();
                 movementController.playerAnimator.SetTrigger("Pick or Place");
+
+                AudioManager.Instance.PlaySoundEffect(AudioManager.FX.PICK);
 
                 yield return new WaitUntil(() => { AnimatorStateInfo stateInfo = movementController.playerAnimator.GetCurrentAnimatorStateInfo(0); if (stateInfo.IsName("Pick or Place") && stateInfo.normalizedTime >= 0.5f ) return true; else return false; });
 
@@ -255,7 +259,9 @@ public class PickUpController : MonoBehaviour
         {
             bool stayHere;
             if (selector.selectedChair.ApplyIngredient(pickedObject, out stayHere))
+            {
                 pickedObject = null;
+            }
 
             if(stayHere)
             {
@@ -264,6 +270,9 @@ public class PickUpController : MonoBehaviour
                 transform.LookAt(selector.selectedChair.transform.position);
 
                 movementController.playerAnimator.SetBool("working", true);
+
+                if(AudioManager.Instance.GetPlayingFX() != AudioManager.FX.WORKING)
+                    AudioManager.Instance.PlaySoundEffect(AudioManager.FX.WORKING, true);
             }
             else
             {
@@ -293,6 +302,7 @@ public class PickUpController : MonoBehaviour
         if(selector.selectedChair != null)
         {
             movementController.playerAnimator.SetBool("working", false);
+            AudioManager.Instance.StopSoundEffects();
         }
         else if(startedThrowing && pickedObject != null && pickedObject.data.throwable)
         {

@@ -12,7 +12,12 @@ public class UILevelSettings : UILevel
     {
         base.OnEnable();
 
-        AudioManager.Instance.PlaySettingsBSO();
+        AudioManager.Instance.PlayBSO(AudioManager.BSO.SETTINGS);
+    }
+
+    private void OnDisable()
+    {
+        AudioManager.Instance.PauseBSO();
     }
 
     private void Update()

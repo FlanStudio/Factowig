@@ -17,6 +17,8 @@ public class TimeRemainingUI : MonoBehaviour
     private RectTransform thisTransform;
 
     private float timer;
+    private bool timeOutFXPlayed = false;
+
 
     private void Awake()
     {
@@ -37,5 +39,11 @@ public class TimeRemainingUI : MonoBehaviour
 
         timer -= Time.deltaTime;
         if (timer < 0f) timer = 0f;
+
+        if (!timeOutFXPlayed && timer == 0f)
+        {
+            AudioManager.Instance.PlaySoundEffect(AudioManager.FX.TIMEOUT);
+            timeOutFXPlayed = true;
+        }
     }
 }

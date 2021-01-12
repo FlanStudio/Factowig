@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public enum BSO
+    {
+        NONE = -1,
+        LEVEL,
+        SETTINGS
+    }
+
     public enum FX
     {
         NONE = -1,
-        TICK
+        TICK,
+        PLACE,
+        PICK,
+        WORKING,
+        TIMEOUT
     }
 
     public static AudioManager Instance = null;
@@ -22,7 +33,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource FXAudioSource = null;
 
     [SerializeField]
-    private AudioClip settingsBSO = null;
+    private AudioClip[] BSOs = null;
 
     [SerializeField]
     private AudioClip[] fxEffects = null;
@@ -35,6 +46,8 @@ public class AudioManager : MonoBehaviour
         fxVolume = PlayerPrefs.GetFloat("fxVolume");
 
         ApplyVolumesToSources();
+
+        PlayBSO(BSO.LEVEL);
     }
 
     public void ApplyVolumesToSources()
@@ -43,18 +56,40 @@ public class AudioManager : MonoBehaviour
         FXAudioSource.volume = fxVolume;
     }
 
-    public void PlaySettingsBSO()
+    public void PlayBSO(BSO bso)
     {
-        if(settingsBSO != null && BSOAudioSource != null)
+        if(BSOs[(int)bso] != null && BSOAudioSource != null)
         {
-            BSOAudioSource.clip = settingsBSO;
+            BSOAudioSource.clip = BSOs[(int)bso];
             BSOAudioSource.Play();
         }
     }
 
-    public void PlaySoundEffect(FX effect)
+    public void PauseBSO()
     {
+        BSOAudioSource.Pause();
+    }
+
+    public void PlaySoundEffect(FX effect, bool loop = false)
+    {
+        FXAudioSource.loop = loop;
         FXAudioSource.clip = fxEffects[(int)effect];
         FXAudioSource.Play();
+    }
+
+    public void StopSoundEffects()
+    {
+        FXAudioSource.Stop();
+    }
+
+    public FX GetPlayingFX()
+    {
+        if (FXAudioSource.isPlaying)
+        {
+            for (int i = 0; i < fxEffects.Length; ++i)
+                if (fxEffects[i] == FXAudioSource.clip)
+                    return (FX)i;
+        }
+        return FX.NONE;
     }
 }

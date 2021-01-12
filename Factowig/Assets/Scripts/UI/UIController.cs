@@ -48,7 +48,12 @@ public class UIController : MonoBehaviour
     public void TogglePauseMenu()
     {
         PauseMenu.SetActive(!PauseMenu.activeSelf);
-        Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;     
+        Time.timeScale = PauseMenu.activeSelf ? 0f : 1f;
+
+        if (!PauseMenu.activeSelf)
+        {
+            AudioManager.Instance.PlayBSO(AudioManager.BSO.LEVEL);
+        }
     }
 
     public void TransitionFromTo(int from, int to)
@@ -84,7 +89,7 @@ public class UIController : MonoBehaviour
                         TogglePauseMenu();
 
                     break;
-            }              
+            }  
         }
         #endregion
     }

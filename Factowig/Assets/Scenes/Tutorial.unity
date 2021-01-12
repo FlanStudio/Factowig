@@ -74112,9 +74112,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BSOAudioSource: {fileID: 1877794737}
   FXAudioSource: {fileID: 1877794736}
-  settingsBSO: {fileID: 8300000, guid: b97008cf61d69334880c44ec4a01ebf1, type: 3}
+  BSOs:
+  - {fileID: 8300000, guid: 08bcaae718bdbba4591b88ce7d183c6b, type: 3}
+  - {fileID: 8300000, guid: b97008cf61d69334880c44ec4a01ebf1, type: 3}
   fxEffects:
   - {fileID: 8300000, guid: af0a87b7ea3bc054cac6b9d0d6f99deb, type: 3}
+  - {fileID: 8300000, guid: 641ce2301e20f194280b9ba11030840a, type: 3}
+  - {fileID: 8300000, guid: 4b2d439b2c9560740b6e792061d49762, type: 3}
+  - {fileID: 8300000, guid: 1ac7eade41fa9d54eb33b43064f733a5, type: 3}
+  - {fileID: 8300000, guid: eb59de3ec03f73c4e8f22bb9b0baabe2, type: 3}
 --- !u!82 &1877794736
 AudioSource:
   m_ObjectHideFlags: 0
@@ -74225,7 +74231,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
