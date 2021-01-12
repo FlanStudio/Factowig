@@ -19,7 +19,6 @@ public class TimeRemainingUI : MonoBehaviour
     private float timer;
     private bool timeOutFXPlayed = false;
 
-
     private void Awake()
     {
         timer = GameManager.Instance.levelDurationSeconds;

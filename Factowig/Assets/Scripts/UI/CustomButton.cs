@@ -69,9 +69,11 @@ public class CustomButton : Button
 
     private IEnumerator PlayClickAnimation(BaseEventData eventData = null)
     {
-        if(anim)
-            yield return new WaitUntil(() => { AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); if (info.IsName("Unfold") && info.normalizedTime >= 1f) return true; else return false; });
+        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.CLICK);
 
+        if (anim)
+            yield return new WaitUntil(() => { AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0); if (info.IsName("Unfold") && info.normalizedTime >= 1f) return true; else return false; });
+        
         if (eventData != null)
             base.OnSubmit(eventData);
         else

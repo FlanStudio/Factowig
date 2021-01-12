@@ -70,6 +70,7 @@ public class WigDispenser : MonoBehaviour
         yield return new WaitUntil(() => { if ( (!spawnInWaves && amountItems != -1 && itemsSpawned + 1 > amountItems) || (spawnInWaves && emptyBusts == waveSize && amountItems - itemsSpawned < waveSize)) return false; else return true; });
 
         trapAnimator.SetTrigger("Down");
+        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.WIGS);
 
         yield return new WaitUntil(() => { if (trapAnimator.GetCurrentAnimatorStateInfo(0).IsName("opened") && busts[0].rb.velocity == Vector3.zero) return true; else return false; });
         

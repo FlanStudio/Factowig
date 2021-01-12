@@ -18,7 +18,11 @@ public class AudioManager : MonoBehaviour
         PLACE,
         PICK,
         WORKING,
-        TIMEOUT
+        TIMEOUT,
+        BELT,
+        THROW,
+        CLICK,
+        WIGS
     }
 
     public static AudioManager Instance = null;
@@ -30,7 +34,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource BSOAudioSource = null;
 
     [SerializeField]
-    private AudioSource FXAudioSource = null;
+    private AudioSource[] FXAudioSources = null;
 
     [SerializeField]
     private AudioClip[] BSOs = null;
@@ -53,7 +57,8 @@ public class AudioManager : MonoBehaviour
     public void ApplyVolumesToSources()
     {
         BSOAudioSource.volume = musicVolume;
-        FXAudioSource.volume = fxVolume;
+        foreach (AudioSource audioSource in FXAudioSources)
+            audioSource.volume = fxVolume;
     }
 
     public void PlayBSO(BSO bso)
@@ -72,24 +77,43 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundEffect(FX effect, bool loop = false)
     {
-        FXAudioSource.loop = loop;
-        FXAudioSource.clip = fxEffects[(int)effect];
-        FXAudioSource.Play();
+        bool played = false;
+        foreach(AudioSource fx in FXAudioSources)
+        {
+            if (!fx.isPlaying)
+            {
+                fx.loop = loop;
+                fx.clip = fxEffects[(int)effect];
+                fx.Play();
+                played = true;
+            }
+        }
+
+        if(!played)
+        {
+            FXAudioSources[0].loop = loop;
+            FXAudioSources[0].clip = fxEffects[(int)effect];
+            FXAudioSources[0].Play();
+        }
     }
 
     public void StopSoundEffects()
     {
-        FXAudioSource.Stop();
+        foreach(AudioSource fx in FXAudioSources)
+            fx.Stop();
     }
 
-    public FX GetPlayingFX()
+    public bool IsPlayingFX(FX fx)
     {
-        if (FXAudioSource.isPlaying)
+        foreach(AudioSource audioSource in FXAudioSources)
         {
-            for (int i = 0; i < fxEffects.Length; ++i)
-                if (fxEffects[i] == FXAudioSource.clip)
-                    return (FX)i;
+            if(audioSource.isPlaying)
+            {               
+                if (fxEffects[(int)fx] == audioSource.clip)
+                    return true;
+            }
         }
-        return FX.NONE;
+
+        return false;
     }
 }

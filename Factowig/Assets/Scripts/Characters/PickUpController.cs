@@ -143,7 +143,10 @@ public class PickUpController : MonoBehaviour
                 pickedObject.transform.SetParent(null);
                 pickedObject.transform.position = transform.position;
                 if (selector.selectedDeliverer.Deliver(pickedObject))
+                {
                     pickedObject = null;
+                    AudioManager.Instance.PlaySoundEffect(AudioManager.FX.BELT);
+                }
             }        
         }
 
@@ -271,7 +274,7 @@ public class PickUpController : MonoBehaviour
 
                 movementController.playerAnimator.SetBool("working", true);
 
-                if(AudioManager.Instance.GetPlayingFX() != AudioManager.FX.WORKING)
+                if (!AudioManager.Instance.IsPlayingFX(AudioManager.FX.WORKING))
                     AudioManager.Instance.PlaySoundEffect(AudioManager.FX.WORKING, true);
             }
             else
@@ -315,8 +318,10 @@ public class PickUpController : MonoBehaviour
             pickedObject.rb.AddForce(transform.TransformDirection(localThrowDirection).normalized * throwStrength, ForceMode.Impulse);
             pickedObject = null;
             startedThrowing = false;
+
+            AudioManager.Instance.PlaySoundEffect(AudioManager.FX.CLICK);
         }
-        
+
         movementController.move = true;
         movementController.rotate = true;
     }
