@@ -44,10 +44,12 @@ public class RecipeDeliverer : MonoBehaviour
         RecipeUI recipeUI = RecipeManager.Instance.GetRecipeUI(ingredient, out index);
         if(!recipeUI)
         {
+            AudioManager.Instance.PlaySoundEffect(AudioManager.FX.WRONGDELIVERY);
             GameManager.Instance.currentMoney -= GameManager.Instance.moneyPenaltyOnFail;
         }      
         else
         {
+            AudioManager.Instance.PlaySoundEffect(AudioManager.FX.CORRECTDELIVERY);
             RecipeManager.Instance.RecipeDelivered(recipeUI);
             GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow + recipeUI.recipe.moneyBonus * (1 - Mathf.Clamp(recipeUI.counter / recipeUI.recipe.timeLimit, 0f, 1f));
         }

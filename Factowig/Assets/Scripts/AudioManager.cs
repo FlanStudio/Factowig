@@ -22,7 +22,10 @@ public class AudioManager : MonoBehaviour
         BELT,
         THROW,
         CLICK,
-        WIGS
+        WIGS,
+        NEWRECIPE,
+        WRONGDELIVERY,
+        CORRECTDELIVERY
     }
 
     public static AudioManager Instance = null;
@@ -86,11 +89,13 @@ public class AudioManager : MonoBehaviour
                 fx.clip = fxEffects[(int)effect];
                 fx.Play();
                 played = true;
+                break;
             }
         }
 
         if(!played)
         {
+            FXAudioSources[0].Stop();
             FXAudioSources[0].loop = loop;
             FXAudioSources[0].clip = fxEffects[(int)effect];
             FXAudioSources[0].Play();

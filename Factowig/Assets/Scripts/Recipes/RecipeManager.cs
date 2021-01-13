@@ -24,6 +24,8 @@ public class RecipeManager : MonoBehaviour
     private AnimationCurve activateCurve = null;
     public float recipeRespawnTime = 5f;
 
+    private bool firstLoop = true;
+
     private void Awake()
     {
         Instance = this;
@@ -43,6 +45,13 @@ public class RecipeManager : MonoBehaviour
                     recipeBox.gameObject.SetActive(true);
                     recipeBox.SetRecipe(availableRecipes[Random.Range(0, availableRecipes.Count)]);
                     activeBoxes++;
+
+                    if(firstLoop)
+                    {
+                        firstLoop = false;
+                        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.NEWRECIPE);
+                    }
+
                     break;
                 }
             }
@@ -164,5 +173,7 @@ public class RecipeManager : MonoBehaviour
 
         recipeUI.SetRecipe(availableRecipes[Random.Range(0, availableRecipes.Count)]);
         recipeUI.gameObject.SetActive(true);
+
+        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.NEWRECIPE);
     }
 }
