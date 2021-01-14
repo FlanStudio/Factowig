@@ -59,7 +59,7 @@ public class InputController : MonoBehaviour
 
             if(playerInput[i].gamepad != null)
             {
-                if(playerInput[i].gamepad.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic))
+                if ((playerInput[i].gamepad.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic)) || playerInput[i].gamepad.leftStick.ReadValue() != Vector2.zero)
                 {
                     playerInput[i].controlMode = ControlsMode.Controller;
                 }
