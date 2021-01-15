@@ -80,6 +80,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundEffect(FX effect, bool loop = false)
     {
+        if (FXAudioSources.Length == 0)
+            return;
+
         bool played = false;
         foreach(AudioSource fx in FXAudioSources)
         {

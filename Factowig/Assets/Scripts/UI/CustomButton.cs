@@ -120,17 +120,21 @@ public class CustomButton : Button
     }
 }
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(CustomButton))]
 public class CustomButtonEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        //CustomButton button = (CustomButton)target;
+        CustomButton button = (CustomButton)target;
 
-        //button.hoverSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
-        //button.clickSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
+        button.hoverSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
+        button.clickSprite = (Sprite)EditorGUILayout.ObjectField("Sprite", null, typeof(Sprite), allowSceneObjects: true);
 
-        //DrawDefaultInspector();
+        DrawDefaultInspector();
     }
 }
+
+#endif

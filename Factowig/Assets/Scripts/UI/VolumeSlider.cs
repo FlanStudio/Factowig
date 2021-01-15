@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.InputSystem;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(VolumeSlider))]
 public class VolumeSliderEditor : Editor
 {
@@ -35,6 +37,8 @@ public class VolumeSliderEditor : Editor
         //base.OnInspectorGUI();
     }
 }
+
+#endif
 
 public class VolumeSlider : Slider
 {

@@ -21,11 +21,6 @@ public class UIController : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnPlayPressed()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
-
     public void OnRestartPressed()
     {
         TogglePauseMenu();

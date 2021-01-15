@@ -8,8 +8,8 @@ public class Ingredient : MonoBehaviour
 {
     public IngredientData data;
     public Rigidbody rb;
-    public new MeshRenderer renderer;
-    public new Collider collider;
+    public MeshRenderer renderer;
+    public Collider collider;
 
     public HairReferencer hairReferencer = null;
 
