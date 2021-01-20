@@ -32,15 +32,28 @@ public class MovementController : MonoBehaviour
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {
-                    if (InputController.Instance.playerInput[playerID].keyboard.wKey.isPressed)
-                        movementNorm += new Vector2(0, 1);
-                    if (InputController.Instance.playerInput[playerID].keyboard.sKey.isPressed)
-                        movementNorm += new Vector2(0, -1);
-                    if (InputController.Instance.playerInput[playerID].keyboard.aKey.isPressed)
-                        movementNorm += new Vector2(-1, 0);
-                    if (InputController.Instance.playerInput[playerID].keyboard.dKey.isPressed)
-                        movementNorm += new Vector2(1, 0);
-
+                    if(playerID == 1 && InputController.Instance.playerInput[0].controlMode == InputController.ControlsMode.KeyboardMouse)
+                    {
+                        if (InputController.Instance.playerInput[playerID].keyboard.upArrowKey.isPressed)
+                            movementNorm += new Vector2(0, 1);
+                        if (InputController.Instance.playerInput[playerID].keyboard.downArrowKey.isPressed)
+                            movementNorm += new Vector2(0, -1);
+                        if (InputController.Instance.playerInput[playerID].keyboard.leftArrowKey.isPressed)
+                            movementNorm += new Vector2(-1, 0);
+                        if (InputController.Instance.playerInput[playerID].keyboard.rightArrowKey.isPressed)
+                            movementNorm += new Vector2(1, 0);
+                    }
+                    else
+                    {
+                        if (InputController.Instance.playerInput[playerID].keyboard.wKey.isPressed)
+                            movementNorm += new Vector2(0, 1);
+                        if (InputController.Instance.playerInput[playerID].keyboard.sKey.isPressed)
+                            movementNorm += new Vector2(0, -1);
+                        if (InputController.Instance.playerInput[playerID].keyboard.aKey.isPressed)
+                            movementNorm += new Vector2(-1, 0);
+                        if (InputController.Instance.playerInput[playerID].keyboard.dKey.isPressed)
+                            movementNorm += new Vector2(1, 0);
+                    }
                     break;
                 }
 

@@ -36,7 +36,15 @@ public class PickUpController : MonoBehaviour
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {
-                    if(InputController.Instance.playerInput[movementController.playerID].keyboard.eKey.wasPressedThisFrame)
+                    if(movementController.playerID == 1 && InputController.Instance.playerInput[0].controlMode == InputController.ControlsMode.KeyboardMouse)
+                    {
+                        if (InputController.Instance.playerInput[movementController.playerID].keyboard.kKey.wasPressedThisFrame)
+                        {
+                            StartCoroutine(ActionKeyPressed());
+                        }
+                    }
+
+                    else if(InputController.Instance.playerInput[movementController.playerID].keyboard.eKey.wasPressedThisFrame)
                     {
                         StartCoroutine(ActionKeyPressed());
                     }
@@ -63,18 +71,37 @@ public class PickUpController : MonoBehaviour
         {
             case InputController.ControlsMode.KeyboardMouse:
                 {
-                    if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasPressedThisFrame)
+                    if (movementController.playerID == 1 && InputController.Instance.playerInput[0].controlMode == InputController.ControlsMode.KeyboardMouse)
                     {
-                        UseKeyPressed();
+                        if (InputController.Instance.playerInput[movementController.playerID].keyboard.jKey.wasPressedThisFrame)
+                        {
+                            UseKeyPressed();
+                        }
+                        else if (InputController.Instance.playerInput[movementController.playerID].keyboard.jKey.wasReleasedThisFrame)
+                        {
+                            UseKeyReleased();
+                        }
+                        else if (InputController.Instance.playerInput[movementController.playerID].keyboard.jKey.isPressed)
+                        {
+                            UseKeyRepeated();
+                        }
                     }
-                    else if(InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasReleasedThisFrame)
+                    else
                     {
-                        UseKeyReleased();
+                        if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasPressedThisFrame)
+                        {
+                            UseKeyPressed();
+                        }
+                        else if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.wasReleasedThisFrame)
+                        {
+                            UseKeyReleased();
+                        }
+                        else if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.isPressed)
+                        {
+                            UseKeyRepeated();
+                        }
                     }
-                    else if (InputController.Instance.playerInput[movementController.playerID].keyboard.qKey.isPressed)
-                    {
-                        UseKeyRepeated();
-                    }
+                    
 
                     break;
                 }

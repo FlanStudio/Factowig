@@ -16,7 +16,7 @@ public class InputController : MonoBehaviour
         public Keyboard keyboard = null;
     }
 
-    public PlayerInput[] playerInput = new PlayerInput[4] {new PlayerInput(), new PlayerInput(), new PlayerInput(), new PlayerInput()};
+    public PlayerInput[] playerInput { get { return InmutableData.Instance.playerInput; } set { InmutableData.Instance.playerInput = value; } }
 
     [SerializeField]
     private MovementController[] movementControllers = null;
@@ -29,45 +29,45 @@ public class InputController : MonoBehaviour
 
         SetInputs();
 
-        InputSystem.onDeviceChange +=
-        (device, change) =>
-        {
-            switch (change)
-            {
-                case InputDeviceChange.Added:                 
-                case InputDeviceChange.Disconnected:                 
-                case InputDeviceChange.Reconnected:                   
-                case InputDeviceChange.Removed:
-                default:
-                    SetInputs();
-                    break;
-            }
-        };
+        //InputSystem.onDeviceChange +=
+        //(device, change) =>
+        //{
+        //    switch (change)
+        //    {
+        //        case InputDeviceChange.Added:                 
+        //        case InputDeviceChange.Disconnected:                 
+        //        case InputDeviceChange.Reconnected:                   
+        //        case InputDeviceChange.Removed:
+        //        default:
+        //            SetInputs();
+        //            break;
+        //    }
+        //};
     }
 
     private void Update()
     {
-        for(int i = 0; i < 4; ++i)
-        {
-            if(playerInput[i].keyboard != null)
-            {
-                if(playerInput[i].keyboard.anyKey.wasPressedThisFrame)
-                {
-                    playerInput[i].controlMode = ControlsMode.KeyboardMouse;
-                }
-            }
+        //for(int i = 0; i < 2; ++i)
+        //{
+        //    if(playerInput[i].keyboard != null)
+        //    {
+        //        if(playerInput[i].keyboard.anyKey.wasPressedThisFrame)
+        //        {
+        //            playerInput[i].controlMode = ControlsMode.KeyboardMouse;
+        //        }
+        //    }
 
-            if(playerInput[i].gamepad != null)
-            {
-                if ((playerInput[i].gamepad.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic)) || playerInput[i].gamepad.leftStick.ReadValue() != Vector2.zero)
-                {
-                    playerInput[i].controlMode = ControlsMode.Controller;
-                }
-            }
-        }
+        //    if(playerInput[i].gamepad != null)
+        //    {
+        //        if ((playerInput[i].gamepad.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic)) || playerInput[i].gamepad.leftStick.ReadValue() != Vector2.zero)
+        //        {
+        //            playerInput[i].controlMode = ControlsMode.Controller;
+        //        }
+        //    }
+        //}
 
         #region SINGLEPLAYER
-        if (Gamepad.all.Count < 2)
+        if (playerInput[1].controlMode == ControlsMode.None)
             switch (playerInput[0].controlMode)
             {
                 case ControlsMode.KeyboardMouse:
@@ -98,18 +98,41 @@ public class InputController : MonoBehaviour
         #endregion
     }
 
+    public int SetInput(ControlsMode mode, int id = -1, Gamepad gamepad = null)
+    {
+        switch(id)
+        {
+            case -1:
+                for (int i = 0; i < 2; ++i)
+                {
+                    if (playerInput[i].controlMode == ControlsMode.None)
+                    {
+                        playerInput[i].controlMode = mode;
+                        if (gamepad != null)
+                            playerInput[i].gamepad = gamepad;
+
+                        return i;
+                    }
+                    else if (playerInput[i].gamepad == gamepad && gamepad != null)
+                        return -1;
+                }
+                break;
+            case 0:
+            case 1:
+                if(playerInput[id].controlMode == ControlsMode.None)
+                {
+                    playerInput[id].controlMode = mode;
+                    return id;
+                }
+                break;
+        }
+
+        return -2;
+    }
+
     private void SetInputs()
     {
-        playerInput[0].keyboard = Keyboard.current;
-        playerInput[0].controlMode = ControlsMode.KeyboardMouse;
-
-        for (int i = 0; i < 4; ++i)
-        {
-            if (i < Gamepad.all.Count)
-            {
-                playerInput[i].gamepad = Gamepad.all[i];
-                playerInput[i].controlMode = ControlsMode.Controller;
-            }
-        }
+        foreach(PlayerInput input in playerInput)
+            input.keyboard = Keyboard.current;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class CustomButton : Button
 {
@@ -29,13 +30,13 @@ public class CustomButton : Button
         if (currentSelectionState != SelectionState.Selected)
             return;
 
-        InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
-        switch (playerInput.controlMode)
-        {
-            case InputController.ControlsMode.KeyboardMouse:
-                break;
-            case InputController.ControlsMode.Controller:
-                if(playerInput.gamepad.buttonSouth.wasPressedThisFrame)
+        //InputController.PlayerInput playerInput = InputController.Instance.playerInput[0];
+        //switch (playerInput.controlMode)
+        //{
+        //    case InputController.ControlsMode.KeyboardMouse:
+        //        break;
+        //    case InputController.ControlsMode.Controller:
+                if(Gamepad.current/*gamepad*/.buttonSouth.wasPressedThisFrame)
                 {
                     if (anim)
                     {
@@ -43,8 +44,8 @@ public class CustomButton : Button
                         StartCoroutine(PlayClickAnimation());
                     }
                 }
-                break;
-        }
+        //        break;
+        //}
     }
 
     public override void OnPointerDown(PointerEventData eventData)

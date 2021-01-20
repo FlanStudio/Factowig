@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
 
 public class UILevelSaves : UILevel
@@ -14,40 +17,39 @@ public class UILevelSaves : UILevel
 
     private void Update()
     {
-        switch(InputController.Instance.playerInput[0].controlMode)
+        if (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold)
         {
-            case InputController.ControlsMode.KeyboardMouse:
-                if(!escLabel.activeSelf)
-                {
-                    escLabel.SetActive(true);
-                    bLabel.SetActive(false);
-                }
-
-                if(InputController.Instance.playerInput[0].keyboard.escapeKey.wasPressedThisFrame)
-                {
-                    StartCoroutine(OnBackPressed());
-                }
-
-                break;
-            case InputController.ControlsMode.Controller:
-                if (!bLabel.activeSelf)
-                {
-                    bLabel.SetActive(true);
-                    escLabel.SetActive(false);
-                }
-
-                if (InputController.Instance.playerInput[0].gamepad.buttonEast.wasPressedThisFrame)
-                {
-                    StartCoroutine(OnBackPressed());
-                }
-
-                break;
+            if (!bLabel.activeSelf)
+            {
+                bLabel.SetActive(true);
+                escLabel.SetActive(false);
+            }
         }
+
+        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.delta.IsActuated(0.2f))
+        {
+            if (!escLabel.activeSelf)
+            {
+                escLabel.SetActive(true);
+                bLabel.SetActive(false);
+            }
+        }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            StartCoroutine(OnBackPressed());
+        }
+
+        if (Gamepad.current.buttonEast.wasPressedThisFrame)
+        {
+            StartCoroutine(OnBackPressed());
+        }
+        
     }
 
     public void OnPlayPressed()
     {
-        SceneManager.LoadScene("Tutorial");
+        UIController.Instance.TransitionFromTo(1, 2);
     }
 
     private IEnumerator OnBackPressed()
