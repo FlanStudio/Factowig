@@ -17,6 +17,18 @@ public class UILevelPlayersInput : UILevel
     private Image playLabel = null;
 
     [SerializeField]
+    private Image escImage = null;
+
+    [SerializeField]
+    private Image BImage = null;
+
+    [SerializeField]
+    private Sprite player1DefaultLabel = null;
+
+    [SerializeField]
+    private Sprite player2DefaultLabel = null;
+
+    [SerializeField]
     private Sprite keyboardImg = null;
 
     [SerializeField]
@@ -33,10 +45,14 @@ public class UILevelPlayersInput : UILevel
             case InputController.ControlsMode.KeyboardMouse:
                 if (player1Input.keyboard.spaceKey.wasPressedThisFrame)
                     Play();
+                if (player1Input.keyboard.escapeKey.wasPressedThisFrame)
+                    Back();
                 break;
             case InputController.ControlsMode.Controller:
                 if (player1Input.gamepad.startButton.wasPressedThisFrame)
                     Play();
+                if (player1Input.gamepad.buttonEast.wasPressedThisFrame)
+                    Back();
                 break;
         }
 
@@ -46,6 +62,8 @@ public class UILevelPlayersInput : UILevel
             {
                 player1.sprite = keyboardImg;
                 playLabel.sprite = spaceLabel;
+                BImage.gameObject.SetActive(false);
+                escImage.gameObject.SetActive(true);
             }
         }
 
@@ -65,7 +83,11 @@ public class UILevelPlayersInput : UILevel
 
                 switch (id)
                 {
-                    case 0: player1.sprite = gamepadImg; break;
+                    case 0: 
+                        player1.sprite = gamepadImg; 
+                        escImage.gameObject.SetActive(false); 
+                        BImage.gameObject.SetActive(true);
+                        break;
                     case 1: player2.sprite = gamepadImg; break;
                 }
             }
@@ -75,5 +97,19 @@ public class UILevelPlayersInput : UILevel
     private void Play()
     {
         SceneManager.LoadScene("Tutorial");
+    }
+
+    private void Back()
+    {
+        player1.sprite = player1DefaultLabel;
+        player2.sprite = player2DefaultLabel;
+
+        for(int i = 0; i < 2; ++i)
+        {
+            InputController.Instance.playerInput[i].controlMode = InputController.ControlsMode.None;
+            InputController.Instance.playerInput[i].gamepad = null;
+        }
+
+        UIController.Instance.TransitionFromTo(2, 1);
     }
 }

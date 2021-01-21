@@ -9734,6 +9734,10 @@ MonoBehaviour:
   player1: {fileID: 562682939}
   player2: {fileID: 260619935}
   playLabel: {fileID: 1740421738}
+  escImage: {fileID: 1201233497}
+  BImage: {fileID: 717573491}
+  player1DefaultLabel: {fileID: -5611666974106976393, guid: d935066624fbfaa4f900ac87469839a0, type: 3}
+  player2DefaultLabel: {fileID: 3134281641785651551, guid: d935066624fbfaa4f900ac87469839a0, type: 3}
   keyboardImg: {fileID: -4007960808596568691, guid: d935066624fbfaa4f900ac87469839a0, type: 3}
   gamepadImg: {fileID: 7617740076401418024, guid: d935066624fbfaa4f900ac87469839a0, type: 3}
   spaceLabel: {fileID: 4257194885176818131, guid: d935066624fbfaa4f900ac87469839a0, type: 3}
