@@ -42,6 +42,8 @@ public class RecipeUI : MonoBehaviour
 
         gameObject.SetActive(true);
 
+        AudioManager.Instance.PlaySoundEffect(AudioManager.FX.NEWRECIPE);
+
         //LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent.GetComponent<RectTransform>());
     }
 
