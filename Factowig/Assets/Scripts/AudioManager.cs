@@ -49,8 +49,8 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
 
-        musicVolume = PlayerPrefs.GetFloat("musicVolume");
-        fxVolume = PlayerPrefs.GetFloat("fxVolume");
+        musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
+        fxVolume = PlayerPrefs.GetFloat("fxVolume", 0.5f);
 
         ApplyVolumesToSources();
 
