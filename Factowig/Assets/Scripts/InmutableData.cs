@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InmutableData : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class InmutableData : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-
-        DontDestroyOnLoad(this);
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
 }
