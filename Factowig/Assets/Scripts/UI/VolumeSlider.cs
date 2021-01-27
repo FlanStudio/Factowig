@@ -6,6 +6,8 @@ using UnityEditor;
 using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.InputSystem;
+using System.Linq;
+using UnityEngine.InputSystem.Controls;
 
 #if UNITY_EDITOR
 
@@ -16,6 +18,7 @@ public class VolumeSliderEditor : Editor
     private SerializedProperty progressBar;
     private SerializedProperty selectionSquare;
     private SerializedProperty text;
+    private SerializedProperty useGenericInputs;
 
     private void OnEnable()
     {
@@ -23,15 +26,19 @@ public class VolumeSliderEditor : Editor
         progressBar = serializedObject.FindProperty("progressBar");
         selectionSquare = serializedObject.FindProperty("selectionSquare");
         text = serializedObject.FindProperty("text");
+        useGenericInputs = serializedObject.FindProperty("useGenericInputs");
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+
         EditorGUILayout.PropertyField(mode);
         EditorGUILayout.PropertyField(progressBar);
         EditorGUILayout.PropertyField(selectionSquare);
         EditorGUILayout.PropertyField(text);
+        EditorGUILayout.PropertyField(useGenericInputs);
+
         serializedObject.ApplyModifiedProperties();
 
         //base.OnInspectorGUI();
@@ -48,6 +55,8 @@ public class VolumeSlider : Slider
     public RectTransform progressBar = null;
     public GameObject selectionSquare = null;
     public TextMeshProUGUI text;
+
+    public bool useGenericInputs = false;
 
     private RectTransform rectTransform = null;
 
@@ -97,6 +106,20 @@ public class VolumeSlider : Slider
             if (volumeTimer < 0f) volumeTimer = 0f;
 
             InputController.PlayerInput player1Input = InputController.Instance.playerInput[0];
+
+            if(useGenericInputs)
+            {
+                if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.delta.IsActuated(0.2f))
+                {
+                    player1Input.controlMode = InputController.ControlsMode.KeyboardMouse;
+                }
+
+                if (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold)
+                {
+                    player1Input.controlMode = InputController.ControlsMode.Controller;
+                    player1Input.gamepad = Gamepad.current;
+                }
+            }
 
             switch (player1Input.controlMode)
             {

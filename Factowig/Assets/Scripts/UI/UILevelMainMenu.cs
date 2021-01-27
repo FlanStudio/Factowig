@@ -10,10 +10,39 @@ public class UILevelMainMenu : UILevel
     public void OnPlayPressed()
     {
         if(!corStarted)
-            StartCoroutine(OnPlayPressedCorroutine());       
+            StartCoroutine(OnPlayPressedCoroutine());       
     }
 
-    public IEnumerator OnPlayPressedCorroutine()
+    public void OnSettingsPressed()
+    {
+        if (!corStarted)
+            StartCoroutine(OnSettingsPressedCoroutine());
+    }
+
+    public IEnumerator OnPlayPressedCoroutine()
+    {
+        corStarted = true;
+
+        //Hide UI
+        StartCoroutine(FadeOut());
+
+        yield return new WaitUntil(() => fadeEnded == true);
+
+        //settingsButtonAnimator.set
+
+        //Blend cameras
+        VCamReferencer.Instance.vcam2.gameObject.SetActive(true);
+        VCamReferencer.Instance.vcam1.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(2);
+
+        //Transition to UILevelSaves
+        UIController.Instance.TransitionFromTo(0, 1);
+
+        corStarted = false;
+    }
+
+    public IEnumerator OnSettingsPressedCoroutine()
     {
         corStarted = true;
 
@@ -31,13 +60,8 @@ public class UILevelMainMenu : UILevel
         yield return new WaitForSeconds(2);
 
         //Transition to UILevelSettings
-        UIController.Instance.TransitionFromTo(0, 1);
+        UIController.Instance.TransitionFromTo(0, 3);
 
         corStarted = false;
-    }
-
-    private IEnumerator OnSettingsClickCorroutine()
-    {
-        yield return null;
     }
 }
