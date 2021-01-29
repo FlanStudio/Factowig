@@ -114,7 +114,7 @@ public class VolumeSlider : Slider
                     player1Input.controlMode = InputController.ControlsMode.KeyboardMouse;
                 }
 
-                if (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold)
+                if (Gamepad.current != null && (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold))
                 {
                     player1Input.controlMode = InputController.ControlsMode.Controller;
                     player1Input.gamepad = Gamepad.current;

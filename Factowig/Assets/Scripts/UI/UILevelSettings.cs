@@ -25,7 +25,7 @@ public class UILevelSettings : UILevel
     {
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
-            if (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold)
+            if (Gamepad.current != null && (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold))
             {
                 if (!BBack.activeSelf)
                 {
@@ -48,7 +48,7 @@ public class UILevelSettings : UILevel
                 StartCoroutine(OnBackPressed());
             }
 
-            if (Gamepad.current.buttonEast.wasPressedThisFrame)
+            if (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame)
             {
                 StartCoroutine(OnBackPressed());
             }

@@ -36,7 +36,7 @@ public class CustomButton : Button
         //    case InputController.ControlsMode.KeyboardMouse:
         //        break;
         //    case InputController.ControlsMode.Controller:
-                if(Gamepad.current/*gamepad*/.buttonSouth.wasPressedThisFrame)
+                if(Gamepad.current != null && Gamepad.current/*gamepad*/.buttonSouth.wasPressedThisFrame)
                 {
                     if (anim)
                     {

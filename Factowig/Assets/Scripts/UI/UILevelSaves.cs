@@ -17,7 +17,7 @@ public class UILevelSaves : UILevel
 
     private void Update()
     {
-        if (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold)
+        if (Gamepad.current != null && (Gamepad.current.allControls.Any(x => x is ButtonControl && x.IsPressed() && !x.synthetic) || Gamepad.current.leftStick.ReadValue().magnitude >= InputController.idleStickThreshold))
         {
             if (!bLabel.activeSelf)
             {
@@ -40,7 +40,7 @@ public class UILevelSaves : UILevel
             StartCoroutine(OnBackPressed());
         }
 
-        if (Gamepad.current.buttonEast.wasPressedThisFrame)
+        if (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame)
         {
             StartCoroutine(OnBackPressed());
         }
