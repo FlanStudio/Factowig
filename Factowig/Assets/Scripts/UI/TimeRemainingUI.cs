@@ -43,6 +43,8 @@ public class TimeRemainingUI : MonoBehaviour
         {
             AudioManager.Instance.PlaySoundEffect(AudioManager.FX.TIMEOUT);
             timeOutFXPlayed = true;
+
+            UIController.Instance.EnableScoreScreen();
         }
     }
 }

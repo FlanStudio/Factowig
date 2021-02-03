@@ -46,12 +46,18 @@ public class RecipeDeliverer : MonoBehaviour
         {
             AudioManager.Instance.PlaySoundEffect(AudioManager.FX.WRONGDELIVERY);
             GameManager.Instance.currentMoney -= GameManager.Instance.moneyPenaltyOnFail;
+            GameManager.Instance.failedMoney += GameManager.Instance.moneyPenaltyOnFail;
         }      
         else
         {
             AudioManager.Instance.PlaySoundEffect(AudioManager.FX.CORRECTDELIVERY);
             RecipeManager.Instance.RecipeDelivered(recipeUI);
-            GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow + recipeUI.recipe.moneyBonus * (1 - Mathf.Clamp(recipeUI.counter / recipeUI.recipe.timeLimit, 0f, 1f));
+
+            float bonus = recipeUI.recipe.moneyBonus * (1 - Mathf.Clamp(recipeUI.counter / recipeUI.recipe.timeLimit, 0f, 1f));
+
+            GameManager.Instance.currentMoney += recipeUI.recipe.moneyInflow + bonus;
+            GameManager.Instance.deliveredMoney += recipeUI.recipe.moneyInflow;
+            GameManager.Instance.bonusMoney += bonus;
         }
 
         WigDispenser.Instance.itemsSpawned -= 1;

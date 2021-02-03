@@ -12,6 +12,9 @@ public class UIController : MonoBehaviour
     private GameObject PauseMenu = null;
 
     [SerializeField]
+    private GameObject ScoreScreen = null;
+
+    [SerializeField]
     private List<GameObject> uiLevels = new List<GameObject>();
     private int currentLevel = 0;
 
@@ -49,6 +52,11 @@ public class UIController : MonoBehaviour
         {
             AudioManager.Instance.PlayBSO(AudioManager.BSO.LEVEL);
         }
+    }
+
+    public void EnableScoreScreen()
+    {
+        ScoreScreen.SetActive(true);
     }
 
     public void TransitionFromTo(int from, int to)

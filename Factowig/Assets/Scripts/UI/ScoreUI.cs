@@ -40,14 +40,17 @@ public class ScoreUI : MonoBehaviour
         if (percent > percents[0])
         {
             stars[0].sprite = starGreen;
+            GameManager.Instance.stars = 1;
 
             if(percent > percents[1])
             {
                 stars[1].sprite = starGreen;
+                GameManager.Instance.stars = 2;
 
                 if(percent >= percents[2])
                 {
                     stars[2].sprite = starGreen;
+                    GameManager.Instance.stars = 3;
                 }
             }
         }
