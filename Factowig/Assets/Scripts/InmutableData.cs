@@ -13,6 +13,9 @@ public class InmutableData : MonoBehaviour
     {
         if(Instance != null)
         {
+            if(SceneManager.GetActiveScene().buildIndex == 0)
+                Instance.playerInput = new InputController.PlayerInput[2] { new InputController.PlayerInput(), new InputController.PlayerInput() };
+
             Destroy(gameObject);
         }
         else

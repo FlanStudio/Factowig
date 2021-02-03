@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UILevelScore : MonoBehaviour
 {
@@ -10,21 +11,15 @@ public class UILevelScore : MonoBehaviour
     [System.Serializable]
     private struct Star
     {
-        [SerializeField]
         public Image empty;
-
-        [SerializeField]
         public Image filled;
     }
 
     [System.Serializable]
-    public struct ButtonUI
+    private struct ButtonUI
     {
-        [SerializeField]
-        private Image controller;
-
-        [SerializeField]
-        private Image keyboard;
+        public Image controller;
+        public Image keyboard;
     }
 
     [SerializeField]
@@ -71,5 +66,58 @@ public class UILevelScore : MonoBehaviour
                 stars[i].filled.gameObject.SetActive(false);
             }
         }
+
+        switch(InputController.Instance.playerInput[0].controlMode)
+        {
+            case InputController.ControlsMode.KeyboardMouse:
+                replayButton.keyboard.gameObject.SetActive(true);
+                replayButton.controller.gameObject.SetActive(false);
+
+                backButton.keyboard.gameObject.SetActive(true);
+                backButton.controller.gameObject.SetActive(false);
+                break;
+            case InputController.ControlsMode.Controller:
+                replayButton.keyboard.gameObject.SetActive(false);
+                replayButton.controller.gameObject.SetActive(true);
+
+                backButton.keyboard.gameObject.SetActive(false);
+                backButton.controller.gameObject.SetActive(true);
+                break;
+        }
+    }
+
+    private void Update()
+    {
+        switch (InputController.Instance.playerInput[0].controlMode)
+        {
+            case InputController.ControlsMode.KeyboardMouse:
+                if(InputController.Instance.playerInput[0].keyboard.spaceKey.wasPressedThisFrame)
+                    Restart();
+                else if(InputController.Instance.playerInput[0].keyboard.escapeKey.wasPressedThisFrame)
+                    MainMenu(); 
+                break;
+            case InputController.ControlsMode.Controller:
+                if (InputController.Instance.playerInput[0].gamepad.buttonSouth.wasPressedThisFrame)
+                    Restart();
+                else if (InputController.Instance.playerInput[0].gamepad.buttonEast.wasPressedThisFrame)
+                    MainMenu();
+                    break;
+        }
+    }
+
+    private void Restart()
+    {
+        //TODO: SAVE PROGRESS ON DISK
+
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void MainMenu()
+    {
+        //TODO: SAVE PROGRESS ON DISK
+        
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }

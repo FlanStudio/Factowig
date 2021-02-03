@@ -74644,7 +74644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f817a86fa8680843ac11658857c0a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDurationSeconds: 30
+  levelDurationSeconds: 120
   currentMoney: 0
   moneyPenaltyOnFail: 10
   finalMoneyGoal: 100
