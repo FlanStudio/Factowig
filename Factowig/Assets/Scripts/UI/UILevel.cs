@@ -16,15 +16,12 @@ public abstract class UILevel : MonoBehaviour
 
     protected bool fadeEnded = true;
 
-    protected void Awake()
-    {
-        group = GetComponent<CanvasGroup>();
-    }
-
     protected virtual void OnEnable()
     {
         if (startSelected)
             startSelected.Select();
+
+        group = GetComponent<CanvasGroup>();
 
         StartCoroutine(FadeIn());
     }

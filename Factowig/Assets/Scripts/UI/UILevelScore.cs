@@ -9,7 +9,7 @@ public class UILevelScore : MonoBehaviour
 {
     #region REFERENCES
     [System.Serializable]
-    private struct Star
+    public struct Star
     {
         public Image empty;
         public Image filled;
@@ -107,7 +107,7 @@ public class UILevelScore : MonoBehaviour
 
     private void Restart()
     {
-        //TODO: SAVE PROGRESS ON DISK
+        SavesManager.Instance.Save();
 
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -115,8 +115,8 @@ public class UILevelScore : MonoBehaviour
 
     private void MainMenu()
     {
-        //TODO: SAVE PROGRESS ON DISK
-        
+        SavesManager.Instance.Save();
+       
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }

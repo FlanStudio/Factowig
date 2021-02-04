@@ -60007,10 +60007,10 @@ RectTransform:
   m_Father: {fileID: 1296146648}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.577507, y: 0.13921605}
-  m_AnchorMax: {x: 0.75097835, y: 0.23689047}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.0000076294, y: 0}
+  m_AnchorMin: {x: 0.54166406, y: 0.13913852}
+  m_AnchorMax: {x: 0.71500003, y: 0.2368615}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: -0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1528340842
 PrefabInstance:
@@ -74625,6 +74625,7 @@ GameObject:
   - component: {fileID: 1877794734}
   - component: {fileID: 1877794735}
   - component: {fileID: 1877794737}
+  - component: {fileID: 1877794736}
   m_Layer: 0
   m_Name: Masters
   m_TagString: Untagged
@@ -74644,7 +74645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f817a86fa8680843ac11658857c0a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDurationSeconds: 120
+  levelDurationSeconds: 70
   currentMoney: 0
   moneyPenaltyOnFail: 10
   finalMoneyGoal: 100
@@ -74800,6 +74801,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2b9694ea44d188c4ca16ec93d7898777, type: 3}
   - {fileID: 8300000, guid: 39dc6e23021fd37439b8c107867f2efc, type: 3}
   - {fileID: 8300000, guid: ea5425fcae255da4484d52ea7d05c94c, type: 3}
+--- !u!114 &1877794736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877794728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689e47b5647764b4bb1513cde490399d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1877794737
 AudioSource:
   m_ObjectHideFlags: 0
