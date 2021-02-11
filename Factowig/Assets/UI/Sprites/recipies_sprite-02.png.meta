@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: b893b67d48cdd2344bd7288aa1348f97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6200102729641620244
+    second: CombedHair Recipe
+  - first:
+      213: 4669243585482447109
+    second: CutHair Recipe
+  - first:
+      213: 8085621639936611841
+    second: CutCombedHair Recipe
+  - first:
+      213: 9012954193848736288
+    second: Outline
+  - first:
+      213: 232853369935600592
+    second: WhiteBarNoOutline
+  - first:
+      213: -3913812600408005812
+    second: RecipeCard Comb
+  - first:
+      213: -950165592386891353
+    second: RecipeCard Cut
+  - first:
+      213: -8945848158964920328
+    second: RecipeCard CutComb
+  - first:
+      213: 2030870767370477172
+    second: Recipe Outline
+  - first:
+      213: -7307814428951487886
+    second: Recipe Fill
+  - first:
+      213: 6200102729641620244
+    second: Recipes CombedHair
+  - first:
+      213: 4669243585482447109
+    second: Recipies CutHair
+  - first:
+      213: 8085621639936611841
+    second: Recipies CutCombedHair
+  - first:
+      213: 9012954193848736288
+    second: Recipies Outline
+  - first:
+      213: 232853369935600592
+    second: Recipies White Fill
+  - first:
+      213: -8075220762597151770
+    second: recipies_sprite-02_5
+  - first:
+      213: -4313816286816630078
+    second: recipies_sprite-02_6
+  - first:
+      213: 1533088562581031791
+    second: recipies_sprite-02_7
+  - first:
+      213: -753610826610689494
+    second: recipies_sprite-02_8
+  - first:
+      213: -4978587432400361494
+    second: recipies_sprite-02_9
+  - first:
+      213: 4468173999694982024
+    second: recipies_sprite-02_10
+  - first:
+      213: 5333153262857272464
+    second: recipies_sprite-02_11
+  - first:
+      213: 3423293538013694606
+    second: recipies_sprite-02_12
+  - first:
+      213: 7975591283490269822
+    second: recipies_sprite-02_13
+  - first:
+      213: 1177394886488310825
+    second: recipies_sprite-02_14
+  - first:
+      213: -5541102490949201919
+    second: recipies_sprite-02_15
+  - first:
+      213: 2595441867848332703
+    second: recipies_sprite-02_16
+  - first:
+      213: -6089240556919926767
+    second: recipies_sprite-02_17
+  - first:
+      213: -8584421889433896876
+    second: recipies_sprite-02_18
+  - first:
+      213: 5114751440091629235
+    second: recipies_sprite-02_19
+  - first:
+      213: -2657879559129790046
+    second: recipies_sprite-02_20
+  - first:
+      213: -4522646875820039408
+    second: recipies_sprite-02_21
+  - first:
+      213: 2023525588880483863
+    second: recipies_sprite-02_22
+  - first:
+      213: -724651722215154172
+    second: recipies_sprite-02_23
+  - first:
+      213: -8451797913834909183
+    second: recipies_sprite-02_24
+  - first:
+      213: 1029850499667900004
+    second: recipies_sprite-02_25
+  - first:
+      213: -2109559258138683595
+    second: recipies_sprite-02_26
+  - first:
+      213: -5181567893522837375
+    second: recipies_sprite-02_27
+  - first:
+      213: 4978487116296830105
+    second: recipies_sprite-02_28
+  - first:
+      213: -424420114647556200
+    second: recipies_sprite-02_29
+  - first:
+      213: -3526101761595134581
+    second: recipies_sprite-02_30
+  - first:
+      213: -75305731326733874
+    second: recipies_sprite-02_31
+  - first:
+      213: -5960013705276259611
+    second: recipies_sprite-02_32
+  - first:
+      213: 5254971073244574445
+    second: recipies_sprite-02_33
+  - first:
+      213: -2576627289193614367
+    second: recipies_sprite-02_34
+  - first:
+      213: 6655802822641864891
+    second: recipies_sprite-02_35
+  - first:
+      213: -6956639033244068805
+    second: recipies_sprite-02_36
+  - first:
+      213: -1870737593015218520
+    second: recipies_sprite-02_37
+  - first:
+      213: -6704532237147638225
+    second: recipies_sprite-02_38
+  - first:
+      213: -629483263720290063
+    second: recipies_sprite-02_39
+  - first:
+      213: -2279285731872922536
+    second: recipies_sprite-02_40
+  - first:
+      213: 2842028922895722473
+    second: recipies_sprite-02_41
+  - first:
+      213: 9189305777709617934
+    second: recipies_sprite-02_42
+  - first:
+      213: -3475519205037015448
+    second: recipies_sprite-02_43
+  - first:
+      213: 5740371830807015856
+    second: recipies_sprite-02_44
+  - first:
+      213: -8861398213403596230
+    second: recipies_sprite-02_45
+  - first:
+      213: -4569806743037563748
+    second: recipies_sprite-02_46
+  - first:
+      213: -643762599498900346
+    second: recipies_sprite-02_47
+  - first:
+      213: -8904509012737111548
+    second: recipies_sprite-02_48
+  - first:
+      213: 8119999781430755742
+    second: recipies_sprite-02_49
+  - first:
+      213: 6442850354450106565
+    second: recipies_sprite-02_50
+  - first:
+      213: 6968878596780556397
+    second: recipies_sprite-02_51
+  - first:
+      213: 4568203245237066411
+    second: recipies_sprite-02_52
+  - first:
+      213: -1288727601221915064
+    second: recipies_sprite-02_53
+  - first:
+      213: 2055572293435954260
+    second: recipies_sprite-02_54
+  - first:
+      213: -532556928425978888
+    second: recipies_sprite-02_55
+  - first:
+      213: -6917151521687820993
+    second: recipies_sprite-02_56
+  - first:
+      213: -2965424941774840072
+    second: recipies_sprite-02_57
+  - first:
+      213: 7048355814599020284
+    second: recipies_sprite-02_58
+  - first:
+      213: -7894659172235424298
+    second: recipies_sprite-02_59
+  - first:
+      213: -2890886351284462340
+    second: recipies_sprite-02_60
+  - first:
+      213: 2030870767370477172
+    second: Recipes Outline
+  - first:
+      213: -7307814428951487886
+    second: Recipes White Fill
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Recipes CombedHair
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f73345903b0650800000000000000
+      internalID: 6200102729641620244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies CutHair
+      rect:
+        serializedVersion: 2
+        x: 3533
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509d3726d4c7cc040800000000000000
+      internalID: 4669243585482447109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipies CutCombedHair
+      rect:
+        serializedVersion: 2
+        x: 7066
+        y: 1126
+        width: 3533
+        height: 5000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10612a4ca06e53070800000000000000
+      internalID: 8085621639936611841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipes Outline
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 693
+        width: 2733
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e97d1f33a1f2c10800000000000000
+      internalID: 2030870767370477172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Recipes White Fill
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 250
+        width: 2712
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a5fddce7d659a90800000000000000
+      internalID: -7307814428951487886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e6fde53cae0329e4f8f285bbaa77b66d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
