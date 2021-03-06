@@ -40,7 +40,7 @@ public class UIController : MonoBehaviour
     public void OnSaveAndQuitPressed()
     {
         TogglePauseMenu();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void TogglePauseMenu()

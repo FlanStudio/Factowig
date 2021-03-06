@@ -14,7 +14,7 @@ public class InmutableData : MonoBehaviour
     {
         if(Instance != null)
         {
-            if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 Destroy(Instance.gameObject);
                 Instance = this;
